@@ -1,5 +1,5 @@
 <template>
-  <div :class="{'has-logo':showLogo}">
+  <div :class="{'has-logo':showLogo}" data-VWW="|layout|components|Sidebar|index|.vue">
     <logo v-if="showLogo" :collapse="isCollapse" />
     <el-scrollbar wrap-class="scrollbar-wrapper">
       <el-menu
@@ -49,6 +49,8 @@ export default {
     isCollapse() {
       return !this.sidebar.opened
     }
-  }
+  },
+  mounted() {
+  },
 }
 </script>

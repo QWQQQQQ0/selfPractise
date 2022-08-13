@@ -1,5 +1,5 @@
 <template>
-  <div class="components-container">
+  <div class="components-container" data-VWW="|views|components-demo|split-pane|.vue">
     <aside><strong>SplitPane</strong> If you've used
       <a href="https://codepen.io/" target="_blank"> codepen</a>,
       <a href="https://jsfiddle.net/" target="_blank"> jsfiddle </a>will not be unfamiliar.

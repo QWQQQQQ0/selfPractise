@@ -1,5 +1,5 @@
 <template>
-  <div class="chart-container">
+  <div class="chart-container" data-VWW="|views|charts|mix-chart|.vue">
     <chart height="100%" width="100%" />
   </div>
 </template>

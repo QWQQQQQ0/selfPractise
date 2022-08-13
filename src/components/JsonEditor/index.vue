@@ -1,5 +1,5 @@
 <template>
-  <div class="json-editor">
+  <div class="json-editor" data-VWW="|components|JsonEditor|index|.vue">
     <textarea ref="textarea" />
   </div>
 </template>
@@ -39,7 +39,7 @@ export default {
       theme: 'rubyblue',
       lint: true
     })
-
+    console.log(this.value);
     this.jsonEditor.setValue(JSON.stringify(this.value, null, 2))
     this.jsonEditor.on('change', cm => {
       this.$emit('changed', cm.getValue())

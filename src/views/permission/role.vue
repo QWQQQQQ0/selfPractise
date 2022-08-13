@@ -1,7 +1,6 @@
 <template>
-  <div class="app-container">
+  <div class="app-container" data-VWW="|views|permission|role|.vue">
     <el-button type="primary" @click="handleAddRole">New Role</el-button>
-
     <el-table :data="rolesList" style="width: 100%;margin-top:30px;" border>
       <el-table-column align="center" label="Role Key" width="220">
         <template slot-scope="scope">
@@ -62,7 +61,7 @@
 <script>
 import path from 'path'
 import { deepClone } from '@/utils'
-import { getRoutes, getRoles, addRole, deleteRole, updateRole } from '@/api/role'
+// import { getRoutes, getRoles, addRole, deleteRole, updateRole } from '@/api/role'
 
 const defaultRole = {
   key: '',
@@ -98,12 +97,18 @@ export default {
   },
   methods: {
     async getRoutes() {
-      const res = await getRoutes()
+      const res = await this.$request({
+        url: '/vue-element-admin/routes',
+        method: 'get'
+      })
       this.serviceRoutes = res.data
       this.routes = this.generateRoutes(res.data)
     },
     async getRoles() {
-      const res = await getRoles()
+      const res = await this.$request({
+        url: '/vue-element-admin/roles',
+        method: 'get'
+      })
       this.rolesList = res.data
     },
 
@@ -175,7 +180,10 @@ export default {
         type: 'warning'
       })
         .then(async() => {
-          await deleteRole(row.key)
+          await this.$request({
+            url: `/vue-element-admin/role/${$index}`,
+            method: 'delete'
+          })
           this.rolesList.splice($index, 1)
           this.$message({
             type: 'success',
@@ -208,7 +216,11 @@ export default {
       this.role.routes = this.generateTree(deepClone(this.serviceRoutes), '/', checkedKeys)
 
       if (isEdit) {
-        await updateRole(this.role.key, this.role)
+        await this.$request({
+          url: `/vue-element-admin/role/${this.role.key}`,
+          method: 'put',
+          data: this.role
+        })
         for (let index = 0; index < this.rolesList.length; index++) {
           if (this.rolesList[index].key === this.role.key) {
             this.rolesList.splice(index, 1, Object.assign({}, this.role))
@@ -216,7 +228,11 @@ export default {
           }
         }
       } else {
-        const { data } = await addRole(this.role)
+        const { data } = await this.$request({
+          url: '/vue-element-admin/role',
+          method: 'post',
+          data: this.role
+        })
         this.role.key = data.key
         this.rolesList.push(this.role)
       }

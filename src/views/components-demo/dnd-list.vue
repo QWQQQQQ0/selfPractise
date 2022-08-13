@@ -1,5 +1,5 @@
 <template>
-  <div class="components-container">
+  <div class="components-container" data-VWW="|views|components-demo|dnd-list|.vue">
     <aside>drag-list base on
       <a href="https://github.com/SortableJS/Vue.Draggable" target="_blank">Vue.Draggable</a>
     </aside>

@@ -1,0 +1,58 @@
+.login{
+    width: 600px;
+    padding: 20.0004px;
+    border: 9.9996px solid steelblue;
+    border-radius: 15px;
+    margin: 20.0004px auto;
+ 
+}
+.login > form{
+    width: 100%;
+    height: 100%;
+    margin-top: 20.0004px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+/* 错误提示框 */
+.login > form > span{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -39.9996px;
+    font-size: 24px;
+    color: brown;
+    display: none;
+}
+.login > form > span.active{
+    display: block;
+}
+.login > form > label{
+    width: 380.0004px;
+    height: 39.9996px;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+.login > form > label > input {
+    font-size: 20.0004px;
+    padding-left: 20.0004px;
+    height: 30px;
+}
+.login > form > p{
+    display: flex;
+    height: 30px;
+    align-items: center;
+    font-size: 20.0004px;
+    line-height: 30px;
+}
+.login > form > p > a{
+    color: turquoise;
+    width: auto;
+}
+.login > form > button{
+    font-size: 20.0004px;
+    padding: 9.9996px auto;
+}

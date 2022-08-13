@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta http-equiv="X-UA-Compatible" content="ie=edg">
+        <link rel="stylesheet" href="./css/public.css">
+        <link rel="stylesheet" href="./css/index.css">
+        <link rel="stylesheet" href="./css/index-1.css">
+        <link rel="stylesheet" href="./font/iconfont.css">
+        <script>
+            document.documentElement.style.fontSize = document.documentElement.clientWidth/1200 * 12 + 'px'
+        </script>
+        <style>
+            
+        </style>
+        <title>电商布局</title>
+    </head>
+    <body>
+        <div id="fixHeader">
+            <div id="viscosity">
+                <input id="search" type="search" placeholder="xxx">
+                <span class="iconfont icon-link"></span>
+                <button class="iconfont icon-fangdajing"></button>
+                <div id="shopping-cart"><span class="iconfont icon-icon-test"></span> 我的购物车</div>
+            </div>
+        </div>
+        <div class="header">
+            <div class="address iconfont icon-wxbdingwei" style="color: red;">
+                <span style="margin: 0;">address</span>
+            </div>
+            <div class="on">
+                <div class="head_pic">
+                    <form action="">
+                        <label for="headPic">
+                            <img src="http://127.0.0.1:3007/api/0.jpg"><input id="headPic" type="file">
+                        </label>
+                    </form>
+                </div>
+                <span id="username">wwwsq</span>
+                <button class="self" style="color: #999; font-size: 12px;">个人中心</button>
+                <button class="logout" style="color: #999; text-decoration-line: underline;font-size: 12px;">注销</button>
+            </div>
+            <div class="off active">
+                <span>您好</span><a href="./login.html">请登录</a>
+            </div>
+            <div class="message">
+                <div id="jdQRcode">
+                    <img src="https://img12.360buyimg.com/img/jfs/t1/67481/15/565/28110/5cec9234E71c47244/dc4cf353fd96922e.png.webp" alt="00">
+                    <div id="triangle"></div>
+                    <div id="otherQR">
+                        <div class="mobil-pop-item">
+                            <img src="https://img12.360buyimg.com/img/jfs/t1/67481/15/565/28110/5cec9234E71c47244/dc4cf353fd96922e.png.webp" alt="">
+                        </div>
+                        <div class="mobil-pop-item">
+                            <img src="https://img14.360buyimg.com/img/jfs/t1/36947/5/10895/15408/5cec924bE6c038530/5cf21582b416c186.jpg.webp" alt="">
+                        </div>
+                        <div class="mobil-pop-item">
+                            <img src="https://img10.360buyimg.com/img/jfs/t1/133427/32/6189/44062/5f2a5467Efff804d1/7cbc252ed5993190.png.webp" alt="">
+                        </div>
+                        <div class="mobil-pop-item">
+                            <img src="https://img13.360buyimg.com/img/jfs/t1/93019/8/17752/28300/5e8c23b8E4c6c7c13/9c45c518ad785873.png.webp" alt="">
+                        </div>
+                        <div class="mobil-pop-item">
+                            <img src="https://img12.360buyimg.com/img/jfs/t1/170279/40/10824/19657/6045bf7dE610d6258/3e925badd90757a3.jpg.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    我的订单
+                </div><span></span>
+                <div id="myjd" >
+                    我的京东
+                    <span class="iconfont icon-down" ></span>
+                    <ul class="myjd ">
+                        <ul class="top">
+                            <li>待处理订单</li>
+                            <li>我的问答</li>
+                            <li>维修退换货</li>
+                            <li>我的关注</li>
+                            <li>降价商品</li>
+                        </ul>
+                        <ul class="bottom">
+                            <li>我的京豆</li>
+                            <li>我的优惠卷</li>
+                            <li>我的白条</li>
+                            <li>我的理财</li>
+                        </ul>
+                    </ul>
+                </div><span></span>
+                <div>
+                    京东会员
+                </div><span></span>
+                <div id="etpc" style="color: red;">
+                    企业采购
+                    <span class="iconfont icon-down" ></span>
+                    <ul>
+                        <li><a href="">企业购</a></li>
+                        <li><a href="">公共频道</a></li>
+                        <li><a href="">工业品</a></li>
+                        <li><a href="">商用场景管</a></li>
+                        <li><a href="">礼品卡</a></li>
+                        <li><a href="">微信企业购</a></li>
+                        <li><a href="">工品优选</a></li>
+                        <li><a href="">京东锦鲤</a></li>
+                        <li><a href="">大中型客户采购</a></li>
+                    </ul>
+                </div><span></span>
+                <div id="customer-service">
+                    客户服务
+                    <span class="iconfont icon-down" ></span>
+                    <ul>
+                        
+                        <ul class="customer">
+                            <h4>客户</h4>
+                            <li><a href="">帮助中心</a></li>
+                            <li><a href="">售后服务</a></li>
+                            <li><a href="">在线客服</a></li>
+                            <li><a href="">意见建议</a></li>
+                            <li><a href="">电话客服</a></li>
+                            <li><a href="">客服邮箱</a></li>
+                            <li><a href="">金融咨询</a></li>
+                            <li><a href="">全球售客服</a></li>
+                            <li><a href="">企业客服</a></li>
+                        </ul>
+                        
+                        <ul class="merchant">
+                            <h4>商户</h4>
+                            <li><a href="">合作招商</a></li>
+                            <li><a href="">成长中心</a></li>
+                            <li><a href="">商家后台</a></li>
+                            <li><a href="">京麦工作台</a></li>
+                            <li><a href="">商家帮助</a></li>
+                            <li><a href="">规则平台</a></li>
+
+                        </ul>
+                    </ul>
+                </div><span></span>
+                <div>
+                    网站导航
+                </div><span></span>
+                <div>
+                    手机京东
+                </div><span></span>
+                <div>
+                    网站无障碍
+                </div>
+            </div>
+            
+        </div>
+        <header id="header">
+            <div id="logo">
+                <img src="https://img1.360buyimg.com/da/jfs/t1/31022/15/6795/70332/5c90a829E8c89e387/ee4f9471a2383d4a.gif?v=0.9813669296359071" alt="">
+            </div>
+            <div id="search-part">
+                <div id="viscosity">
+                    <input id="search" type="search" placeholder="xxx">
+                    <span class="iconfont icon-link"></span>
+                    <button class="iconfont icon-fangdajing"></button>
+                    <div id="shopping-cart"><span class="iconfont icon-icon-test"></span> 我的购物车</div>
+                </div>
+                <div id="hot-words">
+                    <span style="color: red;">京东家装节</span>
+                    <span>品质建材</span>
+                    <span>红米k50</span>
+                    <span>进口超市</span>
+                    <span>换新季</span>
+                    <span>Ubras</span>
+                    <span>家装节</span>
+                    <span>IPAD AIRS</span>
+                </div>
+                <div id="nav-items">
+                    <span style="color: red; font-weight: bold; font-style: italic;">秒杀</span>
+                    <span style="color: red; font-weight: bold;">优惠卷</span>
+                    <span>PLUS会员</span>
+                    <span>品牌闪购</span>
+                    <span>拍卖</span>
+                    <span>京东家电</span>
+                    <span>京东超市</span>
+                    <span>京东生鲜</span>
+                    <span>京东国际</span>
+                    <span>京东云</span>
+                </div>
+                
+            </div>
+        </header>
+        <div class="banner container">
+            <ul class="left">
+                <div id="categories">
+                    <ul class="itemCate" id="mainCate">
+                    </ul>
+                    <!-- <ul class="itemCate">
+                        <li><a>111</a></li>
+                        <li><a>3333</a></li>
+                        <li><a>444444</a></li>
+                    </ul>
+                    <ul class="itemCate">
+                        <li><a>111</a></li>
+                        <li><a>3333</a></li>
+                        <li><a>444444</a></li>
+                    </ul> -->
+                </div>
+            </ul>
+            <div class="middle">
+                <div class="main">
+                    <!-- <img class="active" src="http://127.0.0.1:3007/api/banner/1.jpg" alt=""> -->
+                    <div class="leftBtn">&lt;</div>
+                    <div class="rightBtn">&gt;</div>
+                    <ul class="pointer">
+                    </ul>
+                    
+                </div>
+                <ul class="side">
+                    <li>
+                        <img src="https://img14.360buyimg.com/pop/s380x300_jfs/t1/220883/21/14955/41924/623446a6E7f6c51e9/4002c9c0435ed856.jpg.webp" alt="">
+                    </li>
+                    <li>
+                        <img src="https://img10.360buyimg.com/babel/s380x300_jfs/t1/154848/7/7426/82296/5fc072eeE20809200/34dca267e049d035.jpg.webp" alt="">
+                    </li>
+                    <li>
+                        <img src="https://img13.360buyimg.com/babel/s380x300_jfs/t1/96983/40/21058/99053/61d57a93Ed5d47c2f/ffce68b5ad102f55.png.webp" alt="">
+                    </li>
+                </ul>
+
+            </div>
+            <div class="right">
+                <div id="rtop">
+                    <div id="rtopT">
+                        <img src="data:image/png;base64,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" alt="">
+                        <a href="">aaa</a>
+                        <a href="">ccc</a>
+                    </div>
+                    <div id="rtopB">
+                        <a href="">新人福利</a>
+                        <a href="">PLUS会员</a>
+                    </div>
+                </div>
+                <div id="rmiddle">
+                    <span></span>
+                    <div >京东快报<a style="display: inline;" href="">更多 &gt;</a></div>
+                    <ul id="rmiddleli">
+                        <li>
+                            <a href=""><span>最新</span>拯救发际线大作战，快试试蜂花洗发水</a>
+                        </li>
+                        <li>
+                            <a href=""><span>热门</span></a>
+                        </li>
+                        <li>
+                            <a href=""><span>热门</span></a>
+                        </li>
+                        <li>
+                            <a href=""><span style="padding-right: 2.0004px;">HOT</span></a>
+                        </li>
+                        
+                    </ul>
+                    
+                </div>
+                <div id="rbottom">
+                    <span></span>
+                    <div><img src="./static/png/eed6f6cbf1de3aaa.png" alt=""><span>话费</span></div>
+                    <div><img src="./static/png/jipiao.png" alt=""><span>机票</span></div>
+                    <div><img src="./static/png/jiudian.png" alt=""><span>酒店</span></div>
+                    <div><img src="./static/png/youxi.png" alt=""><span>游戏</span></div>
+                    <div><img src="./static/png/jiayouka.png" alt=""><span>加油卡</span></div>
+                    <div><img src="./static/png/huochepiao.png" alt=""><span>火车票</span></div>
+                    <div><img src="./static/png/zhongchou.png" alt=""><span>众筹</span></div>
+                    <div><img src="./static/png/licai.png" alt=""><span>理财</span></div>
+                    <div><img src="./static/png/baitiao.png" alt=""><span>白条</span></div>
+                    <div><img src="./static/png/dianyingpiao.png" alt=""><span>电影票</span></div>
+                    <div><img src="./static/png/qiyegou.png" alt=""><span>企业购</span></div>
+                    <div><img src="./static/png/lipinka.png" alt=""><span>礼品卡</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="app">
+            <div id="secondSkll" >
+                <div id="secondSkllL" class="secondSkllside">
+                    <h2>京东秒杀</h2>
+                    <p>点场</p>
+                    <div >
+                        <span id="hour"></span>
+                        <span id="mintue"></span>
+                        <span id="second"></span>
+                    </div>
+                    
+                </div>
+                <div id="SkillRotationMap">
+                    <div id="lBtn" class="KillBtn">&lt;</div>
+                    <div id="rBtn" class="KillBtn">&gt;</div>
+                    <div id="SkillBox" style="left: -800px;">
+                        <a class="SkillRotationMap" ><img src="./static/png/金龙鱼.jpg.webp" alt="xxx"> <span></span>
+                            <h6 class="seckill-item__name">金龙鱼 食用油 浓香花生油5L  压榨一级 家用炒菜桶装</h6>
+                            <h6 class="item_price"><i>¥ </i>13500:00</h6>
+                        </a>
+                        <a class="SkillRotationMap" ><img src="./static/png/乐学.jpg.webp" alt="xxx"> <span></span>
+                            <h6 class="seckill-item__name">乐学英文字母+会话（全3册）新东方童书</h6>
+                            <h6 class="item_price"><i>¥ </i>13500:00</h6>
+                        </a>
+                        <a class="SkillRotationMap" ><img src="./static/png/床.jpg.webp" alt="xxx"> <span></span>
+                            <h6 class="seckill-item__name">【咨询送补贴】木月 榻榻米床北欧单人床小户型经济型简约现代卧室高箱储物床 榻榻米床 1.2*2.0米</h6>
+                            <h6 class="item_price"><i>¥ </i>13500:00</h6>
+                        </a>
+                        <a class="SkillRotationMap" ><img src="./static/png/希捷.jpg.webp" alt="xxx"> <span></span>
+                            <h6 class="seckill-item__name">希捷(Seagate) 移动硬盘 2TB USB3.0 简 2.5英寸 高速 轻薄 便携 兼容PS4</h6>
+                            <h6 class="item_price"><i>¥ </i>13500:00</h6>
+                        </a>
+                        <a class="SkillRotationMap"><img src="./static/png/gangq.jpg.webp" alt="xxx"> <span></span>
+                            <h6 class="seckill-item__name">BRUNO德国布鲁诺钢琴高端立式钢琴全新演奏UP122德国品质成人家用考级全国联保</h6>
+                            <h6 class="item_price"><i>¥ </i>13500:00</h6>
+                        </a>
+                        <a class="SkillRotationMap"><img src="./static/png/酒.jpg.webp" alt="xxx"> <span></span>
+                            <h6 class="seckill-item__name">格兰昆奇（GLENKINCHIE）12年 苏格兰 低地产区 单一麦芽 威士忌 洋酒 700ml</h6>
+                            <h6 class="item_price"><i>¥ </i>9999:00</h6>
+                        </a>
+                        <a class="SkillRotationMap"><img src="./static/png/华硕电脑.jpg.webp" alt="xxx"> <span></span>
+                            <h6 class="seckill-item__name">华硕天选air 2022 12代英特尔酷睿i7 15.6英寸轻薄游戏本(i7-12650H 16G 512G RTX3070 2.5K 165Hz100%P3)</h6>
+                            <h6 class="item_price"><i>¥ </i>13500:00</h6>
+                        </a>
+                        <a class="SkillRotationMap"><img src="./static/png/跑步机.jpg.webp" alt="xxx"> <span></span>
+                            <h6 class="seckill-item__name">SOLE（速尔）椭圆机家用智能椭圆仪太空漫步机整机原装进口磁控轻音运动健身器材踏步登山机铝合金四轨E25L</h6>
+                            <h6 class="item_price"><i>¥ </i>13500:00</h6>
+                        </a>
+                        <a class="SkillRotationMap" ><img src="./static/png/茅台.jpg.webp" alt="xxx" > <span></span>
+                            <h6 class="seckill-item__name">茅台 赖茅 传承蓝 酱香型白酒 53度 500ml*6瓶 整箱装 贵州茅台酒股份有限公司出品 高端白酒 商务送礼</h6>
+                            <h6 class="item_price"><i>¥ </i>13500:00</h6>
+                        </a>
+                        <a class="SkillRotationMap" ><img src="./static/png/荣耀x30.jpg.webp" alt="xxx" ><span></span>
+                            <h6 class="seckill-item__name">荣耀X30 新品5G手机 幻夜黑 8G+256G【碎屏险套餐】</h6>
+                            <h6 class="item_price"><i>¥ </i>13500:00</h6>
+                        </a>
+                        <a class="SkillRotationMap" ><img src="./static/png/德系腕表.jpg.webp" alt="xxx" ><span></span>
+                            <h6 class="seckill-item__name">NOMOS德系腕表 Tangente系列经典101手动机械腕表德表男女同款简约商务百搭钢底送女友直径35mm</h6>
+                            <h6 class="item_price"><i>¥ </i>13500:00</h6>
+                        </a>
+                        <a class="SkillRotationMap" ><img src="./static/png/汤臣.jpg.webp" alt="xxx" ><span></span>
+                            <h6 class="seckill-item__name">汤臣倍健健力多 氨糖硫酸软骨素钙片 中老年成人 升级氨基葡萄糖营养品 补软骨护关节120粒*2</h6>
+                            <h6 class="item_price"><i>¥ </i>13500:00</h6>
+                        </a>
+                        <a class="SkillRotationMap" ><img src="./static/png/ad跑步机.jpg.webp" alt="xxx"> <span></span>
+                            <h6 class="seckill-item__name">AD跑步机家用款小型走步机室内折叠静音智能多功能家庭式电动迷你减肥健身器材 A2 【豪华智能款单】手机APP/蓝牙音箱/280斤承重(Seagate) 移动硬盘 2TB USB3.0 简 2.5英寸 高速 轻薄 便携 兼容PS4合金四轨E25L</h6>
+                            <h6 class="item_price"><i>¥ </i>13500:00</h6>
+                        </a>
+                        <a class="SkillRotationMap" ><img src="./static/png/枕头.jpg.webp" alt="xxx"> <span></span>
+                            <h6 class="seckill-item__name">翼眠无压枕头 成人颈椎【非】乳胶亲肤单双人硅胶透气记忆高低长枕 波浪形颈椎枕头 【非】乳胶枕 果胶枕 浅紫色</h6>
+                            <h6 class="item_price"><i>¥ </i>13500:00</h6>
+                        </a>
+                        <a class="SkillRotationMap" ><img src="./static/png/牛仔裤.jpg.webp" alt="xxx"> <span></span>
+                            <h6 class="seckill-item__name"> 三粒扣蓝灰色单裤 28(建议体重100-110斤）E25L</h6>
+                            <h6 class="item_price"><i>¥ </i>13500:00</h6>
+                        </a>
+                        <a class="SkillRotationMap" ><img src="./static/png/散热器.jpg.webp" alt="xxx"> <span></span>
+                            <h6 class="seckill-item__name">努比亚 红魔手机散热器 半导体制冷吃鸡神器 苹果13/12promax涡轮散热背夹黑鲨小米多尺寸通用  氘锋透明版</h6>
+                            <h6 class="item_price"><i>¥ </i>13500:00</h6>
+                        </a>
+                        <a class="SkillRotationMap" ><img src="./static/png/简爱酸奶.jpg.webp" alt="xxx"> <span></span>
+                            <h6 class="seckill-item__name">简爱 原味裸酸奶 1.08kg*1瓶 家庭装酸奶 大容量低温酸奶酸牛奶生鲜乳品 简爱酸奶 风味发酵乳</h6>
+                            <h6 class="item_price"><i>¥ </i>13500:00</h6>
+                        </a>
+                        <a class="SkillRotationMap" ><img src="./static/png/炒锅.jpg.webp" alt="xxx"> <span></span>
+                            <h6 class="seckill-item__name">柏铁匠 正宗章丘铁锅 炒锅轻便款 家用炒菜锅老式物理不粘锅无涂层煤气灶锅 轻便锤印款32CM  锅把一体</h6>
+                            <h6 class="item_price"><i>¥ </i>13500:00</h6>
+                        </a>
+                        <a class="SkillRotationMap" ><img src="./static/png/pico.jpg.webp" alt="xxx"> <span></span>
+                            <h6 class="seckill-item__name">Pico 【30天免费体验无忧退货】Neo3  256G先锋版   骁龙XR2 瞳距调节 畅玩Steam VR一体机</h6>
+                            <h6 class="item_price"><i>¥ </i>13500:00</h6>
+                        </a>
+                        <a class="SkillRotationMap" ><img src="./static/png/奥利奥.jpg.webp" alt="xxx"> <span></span>
+                            <h6 class="seckill-item__name">奥利奥（Oreo）夹心饼干休闲零食 早餐饼干办公室下午茶网红小吃 经典原味349g独立小包装（新老包装随机）</h6>
+                            <h6 class="item_price"><i>¥ </i>13500:00</h6>
+                        </a>
+                        <a class="SkillRotationMap" ><img src="./static/png/金龙鱼.jpg.webp" alt="xxx"> <span></span>
+                            <h6 class="seckill-item__name">金龙鱼 食用油 浓香花生油5L  压榨一级 家用炒菜桶装</h6>
+                            <h6 class="item_price"><i>¥ </i>13500:00</h6>
+                        </a>
+                        <a class="SkillRotationMap" ><img src="./static/png/乐学.jpg.webp" alt="xxx"> <span></span>
+                            <h6 class="seckill-item__name">乐学英文字母+会话（全3册）新东方童书</h6>
+                            <h6 class="item_price"><i>¥ </i>13500:00</h6>
+                        </a>
+                        <a class="SkillRotationMap" ><img src="./static/png/床.jpg.webp" alt="xxx"> <span></span>
+                            <h6 class="seckill-item__name">【咨询送补贴】木月 榻榻米床北欧单人床小户型经济型简约现代卧室高箱储物床 榻榻米床 1.2*2.0米</h6>
+                            <h6 class="item_price"><i>¥ </i>13500:00</h6>
+                        </a>
+                        <a class="SkillRotationMap" ><img src="./static/png/希捷.jpg.webp" alt="xxx"> <span></span>
+                            <h6 class="seckill-item__name">希捷(Seagate) 移动硬盘 2TB USB3.0 简 2.5英寸 高速 轻薄 便携 兼容PS4</h6>
+                            <h6 class="item_price"><i>¥ </i>13500:00</h6>
+                        </a>
+                        <a class="SkillRotationMap"><img src="./static/png/gangq.jpg.webp" alt="xxx"> <span></span>
+                            <h6 class="seckill-item__name">BRUNO德国布鲁诺钢琴高端立式钢琴全新演奏UP122德国品质成人家用考级全国联保</h6>
+                            <h6 class="item_price"><i>¥ </i>13500:00</h6>
+                        </a>
+                        <a class="SkillRotationMap"><img src="./static/png/酒.jpg.webp" alt="xxx"> <span></span>
+                            <h6 class="seckill-item__name">格兰昆奇（GLENKINCHIE）12年 苏格兰 低地产区 单一麦芽 威士忌 洋酒 700ml</h6>
+                            <h6 class="item_price"><i>¥ </i>9999:00</h6>
+                        </a>
+                        <a class="SkillRotationMap"><img src="./static/png/华硕电脑.jpg.webp" alt="xxx"> <span></span>
+                            <h6 class="seckill-item__name">华硕天选air 2022 12代英特尔酷睿i7 15.6英寸轻薄游戏本(i7-12650H 16G 512G RTX3070 2.5K 165Hz100%P3)</h6>
+                            <h6 class="item_price"><i>¥ </i>13500:00</h6>
+                        </a>
+                        <a class="SkillRotationMap"><img src="./static/png/跑步机.jpg.webp" alt="xxx"> <span></span>
+                            <h6 class="seckill-item__name">SOLE（速尔）椭圆机家用智能椭圆仪太空漫步机整机原装进口磁控轻音运动健身器材踏步登山机铝合金四轨E25L</h6>
+                            <h6 class="item_price"><i>¥ </i>13500:00</h6>
+                        </a>
+                    </div>
+                </div>
+                <div id="secondSkllR" class="secondSkllside">
+
+                    <a class="SkllsideR active" href="">
+                        <img src="https://img12.360buyimg.com/seckillcms/s130x130_jfs/t19300/155/1621638871/101183/82c5e74c/5ad046e8N8fd37811.jpg.webp" alt="xx">
+                        <div>
+                            <p>马爹利秒杀专场</p>
+                            <h5>全场爆款直降</h5>
+                            <p class="colorTitle">品牌秒杀&gt;</p>
+                        </div>
+                    </a>
+                    <a class="SkllsideR" href="">
+                        <img src="https://img14.360buyimg.com/seckillcms/s130x130_jfs/t1/218097/20/5281/199567/6198c780E83d4769c/1ebbf0f09b4c41d9.jpg.webp" alt="xx">
+                        <div>
+                            <p>医药城 正品好药</p>
+                            <h5>9.9元起</h5>
+                            <p class="colorTitle">品牌秒杀&gt;</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <div id="barginAndFPu">
+                <div id="barginPrice">
+                    <div class="barginAndFPuText">
+                        <div class="mainTitle"><h3>每日特价<span>&gt;</span></h3></div>
+                        <div>
+                            <span id="select">精选</span>
+                            <span id="food">美食</span>
+                            <span id="department">百货</span>
+                            <span id="self">个护</span>
+                            <span id="pre">预告</span>
+                        </div>
+                    </div>
+                    <div id="barginPricePic" class="barginPricePic">
+                        <a id="barginPricePicBig">
+                            <span id="lowestPrice">xxx天最低价</span>
+                            <img src="" alt="">
+                            <span>xxxxxxxxxxx</span>
+                            <span>￥000000</span>
+                            <span>已抢xxx件</span>
+                        </a>
+                        <a class="barginPricePicLit" href=""><img src="" alt=""> <p class="itemInfo_lowest">xxxxxxxxxxxxxxx</p><p class="itemPrice_lowest">￥000000</p></a>
+                        <a class="barginPricePicLit" href=""><img src="" alt=""> <p class="itemInfo_lowest">xxxxxxxxxxxxxxx</p><p class="itemPrice_lowest">￥000000</p></a>
+                        <a class="barginPricePicLit" href=""><img src="" alt=""> <p class="itemInfo_lowest">xxxxxxxxxxxxxxx</p><p class="itemPrice_lowest">￥000000</p></a>
+                        <a class="barginPricePicLit" href=""><img src="" alt=""> <p class="itemInfo_lowest">xxxxxxxxxxxxxxx</p><p class="itemPrice_lowest">￥000000</p></a>
+                    </div>
+                </div>
+                <div id="flashPutchase">
+                    <div class="barginAndFPuText">
+                        <div class="mainTitle"><h3>品牌闪购<span>&gt;</span></h3></div>
+                    </div>
+                    <div class="barginPricePic">
+                        <div id="flashPutchaseBig">
+                            <span>香奈儿代工厂</span>
+                            <span>低至8折</span><span>|仅剩</span>
+                            <span style="font-weight: bolder;margin-right: 2.0004px;">2</span><span>天</span>
+                            <img src="https://img30.360buyimg.com/seckillcms/s390x390_jfs/t1/161915/23/23913/51412/62048415E2570d4cc/afcbd4870d5fd7e2.jpg!cc_130x130.webp" alt="">
+                        </div>
+                        <div id="goods_other">
+                            <a href=""><h6>五金机电闪购</h6><img src="https://img30.360buyimg.com/seckillcms/s300x150_jfs/t1/218418/31/16365/15354/6246b834E0efda044/187adfb1126a81e0.png!cc_300x150.webp" alt=""></a>
+                            <a href=""><img src="" alt=""></a>
+                            <a href=""><img src="" alt=""></a>
+                            <a href=""><img src="" alt=""></a>
+                            <a href=""><img src="" alt=""></a>
+                            <a href=""><img src="" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="foundGoods">
+                <div id="foundLogo">
+                    <div id="LogoBg">
+                        <h5>发现好货</h5>
+                        <p>探索新生活</p>
+                    </div>
+                </div>
+                <div id="foundRoMap">
+                    <div id="scollBar">
+                        <div id="scollPoint"></div>
+                    </div>
+                    <div id="foundBox">
+                        <a href="" style="background-color: #999;"></a>
+                        <a href="" style="background-color:aqua;"></a>
+                        <a href="" style="background-color:antiquewhite;"></a>
+                        <a href="" style="background-color:turquoise;"></a>
+                        <a href="" style="background-color:rgb(199, 205, 151);"></a>
+                        <a href="" style="background-color: #999;"></a>
+                        <a href="" style="background-color:aqua;"></a>
+                        <a href="" style="background-color:antiquewhite;"></a>
+                        <a href="" style="background-color:turquoise;"></a>
+                        <a href="" style="background-color:rgb(199, 205, 151);"></a>
+                        <a href="" style="background-color: #999;"></a>
+                        <a href="" style="background-color:aqua;"></a>
+                        <a href="" style="background-color:antiquewhite;"></a>
+                        <a href="" style="background-color:turquoise;"></a>
+                        <a href="" style="background-color:rgb(199, 205, 151);"></a>
+                    </div>
+                </div>
+            </div>
+            <div id="j_core2">
+                <div class="j_cor_item">
+                    <div class="mainTitle"><h3>新品首发<span>&gt;</span></h3></div>
+                    <div class="coreItemInfo" id="itemRmap">
+                        <div id="coreMapBox">
+                            <a href="">
+                                <img src="https://img10.360buyimg.com/babel/s120x120_jfs/t1/94058/31/25157/189336/62281b1dE1aa7ab56/6b246e982738819f.jpg!cc_120x120.webp" alt="">
+                                <h6>松下（Panasonic）电动剃须刀刮胡刀男士礼物进口机身米兰系列 ES-ST3Q-K</h6>
+                                <p>来这里发现更多新品</p>
+                                <span>￥&nbsp;399.00&nbsp;元起</span>
+                            </a>
+                            <a href="">
+                                <img src="https://img12.360buyimg.com/babel/s120x120_jfs/t1/190555/18/21955/179562/6247a771E352bc7a5/bb6bf92163e9d990.jpg!cc_120x120.webp" alt="">
+                                <h6>360儿童电话手表9X 智能语音问答定位支付手表 4G全网通20米专业级防水视频通话拍照手表男女孩星空蓝</h6>
+                                <p>来这里发现更多新品</p>
+                                <span>￥&nbsp;399.00&nbsp;元起</span>
+                            </a>
+                            <a href="">
+                                <img src="https://img13.360buyimg.com/babel/s120x120_jfs/t1/215173/10/16256/309765/6248580eE6f9fbef5/35710ed91ce1dfcf.jpg!cc_120x120.webp" alt="">
+                                <h6>森海塞尔（Sennheiser）MOMENTUM 真无线二代蓝牙主动降噪运动耳机 入耳式音乐耳机 黑色</h6>
+                                <p>来这里发现更多新品</p>
+                                <span>￥&nbsp;399.00&nbsp;元起</span>
+                            </a>
+                            <a href="">
+                                <img src="https://img30.360buyimg.com/babel/s120x120_jfs/t1/132707/3/26140/172395/624afa4bEf8f53bb2/bb9703c331e1624e.jpg!cc_120x120.webp" alt="">
+                                <h6>博朗小猎豹5系(Braun)电动德国剃须刀刮胡刀往复式礼盒生日礼物男士礼物送爸爸送男友送老公1000s（白色）</h6>
+                                <p>来这里发现更多新品</p>
+                                <span>￥&nbsp;399.00&nbsp;元起</span>
+                            </a>
+                            <a href="">
+                                <img src="https://img10.360buyimg.com/babel/s120x120_jfs/t1/94058/31/25157/189336/62281b1dE1aa7ab56/6b246e982738819f.jpg!cc_120x120.webp" alt="">
+                                <h6>松下（Panasonic）电动剃须刀刮胡刀男士礼物进口机身米兰系列 ES-ST3Q-K</h6>
+                                <p>来这里发现更多新品</p>
+                                <span>￥&nbsp;399.00&nbsp;元起</span>
+                            </a>
+                            <a href="">
+                                <img src="https://img12.360buyimg.com/babel/s120x120_jfs/t1/190555/18/21955/179562/6247a771E352bc7a5/bb6bf92163e9d990.jpg!cc_120x120.webp" alt="">
+                                <h6>360儿童电话手表9X 智能语音问答定位支付手表 4G全网通20米专业级防水视频通话拍照手表男女孩星空蓝</h6>
+                                <p>来这里发现更多新品</p>
+                                <span>￥&nbsp;399.00&nbsp;元起</span>
+                            </a>
+                            <a  href="">
+                                <img src="https://img13.360buyimg.com/babel/s120x120_jfs/t1/215173/10/16256/309765/6248580eE6f9fbef5/35710ed91ce1dfcf.jpg!cc_120x120.webp" alt="">
+                                <h6>森海塞尔（Sennheiser）MOMENTUM 真无线二代蓝牙主动降噪运动耳机 入耳式音乐耳机 黑色</h6>
+                                <p>来这里发现更多新品</p>
+                                <span>￥&nbsp;399.00&nbsp;元起</span>
+                            </a>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="j_cor_item">
+                    <div class="mainTitle"><h3>JOY寻宝<span>&gt;</span></h3></div>
+                    <div class="coreItemInfo">
+                        <div id="tableHead">
+                            <a href="">换个新机</a>
+                            <a href="">健身达人</a>
+                            <a href="">掌上书房</a>
+                        </div>
+                        <div id="tableBody">
+                            <a href=""><img src="" alt=""><p>【赠双插立牌+钥匙扣+婚书折页+明信片】海棠微雨共归途 肉包不吃肉著 原名二哈和他的白猫师尊古风小</p></a>
+                            <a href=""><img src="" alt=""><p></p></a>
+                            <a href=""><img src="" alt=""><p></p></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="j_cor_item">
+                    <div class="mainTitle"><h3>逛好店<span>&gt;</span></h3></div>
+                    <div class="coreItemInfo" id="storeItemInfo">
+                        <div class="storeinfo">
+                            <div class="storeText">
+                                小米京东自营旗舰店
+                            </div>
+                            <div class="storeBrand">
+                                <span>自营</span>
+                                <span>潮流3C</span>
+                            </div>
+                            <div class="peopelsnum">
+                                xxxxxx万人关注
+                            </div>
+                            <img src="https://img30.360buyimg.com/mobilecms/s100x100_jfs/t1/172859/23/979/98527/6061a0beE3d5a3537/1c7604a459cf80ff.jpg.webp" alt="">
+                        </div>
+                        <div class="storeinfo">
+                            <div class="storeText">
+                                小米京东自营旗舰店
+                            </div>
+                            <div class="storeBrand">
+                                <span>自营</span>
+                                <span>潮流3C</span>
+                            </div>
+                            <div class="peopelsnum">
+                                xxxxxx万人关注
+                            </div>
+                            <img src="https://img14.360buyimg.com/mobilecms/s100x100_jfs/t1/105633/39/26474/185727/62467021E30f1fa9a/1b8bdab370127f7e.jpg.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="j_cor_item">
+                    <div class="mainTitle"><h3>领券中心<span>&gt;</span></h3></div>
+                    <div class="coreItemInfo">
+                        <div id="coupons">
+                            <div>
+                                <div class="couponsImg">
+                                    <img src="https://img14.360buyimg.com/common/s50x50_jfs/t1/92739/16/22438/177483/621cf065E014907ea/c60bb0e93f6036fc.jpg!cc_50x50.webp" alt="xxx">
+                                </div>
+                                <div class="couponsText">
+                                    <p style="height: 33.9996px;line-height: 33.9996px;"><i>¥</i><span style="font-size: 27.9996px;color: red;">&nbsp;<strong>999</strong></span></p>
+                                    <p style="color: #999;">满999元可用</p>
+                                    <p>仅可购买xxxxx京东自营旗舰店部分商品</p>
+                                </div>
+                                <div class="couponsMore">
+                                    更多好券
+                                </div>
+                                
+                            </div>
+                            <div>
+                                <div class="couponsImg">
+                                    <img src="https://img14.360buyimg.com/common/s50x50_jfs/t1/92739/16/22438/177483/621cf065E014907ea/c60bb0e93f6036fc.jpg!cc_50x50.webp" alt="xxx">
+                                </div>
+                                <div class="couponsText">
+                                    <p style="height: 33.9996px;line-height: 33.9996px;"><i>¥</i><span style="font-size: 27.9996px;color: red;">&nbsp;<strong>999</strong></span></p>
+                                    <p style="color: #999;">满999元可用</p>
+                                    <p>仅可购买xxxxx京东自营旗舰店部分商品</p>
+                                </div>
+                                <div class="couponsMore">
+                                    更多好券
+                                </div>
+                            </div>
+                            <div>
+                                <div class="couponsImg">
+                                    <img src="https://img14.360buyimg.com/common/s50x50_jfs/t1/92739/16/22438/177483/621cf065E014907ea/c60bb0e93f6036fc.jpg!cc_50x50.webp" alt="xxx">
+                                </div>
+                                <div class="couponsText">
+                                    <p style="height: 33.9996px;line-height: 33.9996px;"><i>¥</i><span style="font-size: 27.9996px;color: red;">&nbsp;<strong>999</strong></span></p>
+                                    <p style="color: #999;">满999元可用</p>
+                                    <p>仅可购买xxxxx京东自营旗舰店部分商品</p>
+                                </div>
+                                <div class="couponsMore">
+                                    更多好券
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="channelSquare">
+                <div id="channerText">
+                    频道广场
+                </div>
+                <div id="channelItem">
+                    <div class="channelBig channelBig1">
+                        <img src="https://img13.360buyimg.com/babel/s290x370_jfs/t1/92557/10/15252/173783/60a60c58Eaec1cb70/466903cb1e5a5d82.jpg!cc_290x370.webp" alt="xx">
+                    </div>
+                    <div class="channelBig channelBig2">
+                        <img src="https://img13.360buyimg.com/babel/s290x370_jfs/t1/163303/19/8612/240967/603f2afdE54fac7e9/6270a3dfba2f1847.jpg!cc_290x370.webp" alt="xxxx">
+                    </div>
+                    <!-- <div class="channelItem">
+                        <h4>新机发布<span>有新机更有范</span></h4>
+                        <img src="https://img10.360buyimg.com/img/s100x100_jfs/t1/161807/19/28652/57141/61c54b77E5ea10a25/ad4ada18b7680f88.jpg!cc_100x100.webp" alt="xx">
+                        <img src="https://img13.360buyimg.com/img/s100x100_jfs/t1/183618/24/16444/179871/6103c376E97e90688/009b638be4282e66.jpg!cc_100x100.webp" alt="xxxx">
+                    </div> -->
+                </div>
+            </div>
+            <div id="recommendFu">
+                <div id="recommendText">为你推荐</div>
+                <div id="recommendPanner">
+                    <div class="active">
+                        <p>精选</p>
+                        <p>猜你喜欢</p>
+                        <span></span>
+                    </div>
+                    <div>
+                        <p>智能先锋</p>
+                        <p>大电器城</p>
+                        <span></span>
+                    </div>
+                    <div>
+                        <p>居家优品</p>
+                        <p>品质生活</p>
+                        <span></span>
+                    </div>
+                    <div>
+                        <p>超市百货</p>
+                        <p>百货生鲜</p>
+                        <span></span>
+                    </div>
+                    <div>
+                        <p>时尚达人</p>
+                        <p>美妆穿搭</p>
+                        <span></span>
+                    </div>
+                    <div>
+                        <p>进口好物</p>
+                        <p>京东国际</p>
+                        <span></span>
+                    </div>
+                </div>
+                <ul id="recommendItem">
+                    <!-- <li class="recommendItem">
+                        <a>
+                            <img src="https://img11.360buyimg.com/jdcms/s150x150_jfs/t1/93262/1/25263/179332/624d8693E6947a1d8/dd062316ff3d5211.jpg.webp" alt="">
+                            <p class="recommendItemIn"><span>自营</span>usmile 电动牙刷 肖战代言款 成人款声波级电动牙刷 大理石白色</p>
+                            <p class="recommendItemP"><span>¥</span>409.00<span>券</span></p>
+                        </a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+
+        <button class="cart">xxx</button>
+        <button class="list">xx列表</button>
+        <div class="footer">
+        </div>
+        <script src="../../mock/index.js"></script>
+        <script src="./js/query.js"></script>
+        <script src="./js/index.js"></script>
+    </body>
+</html>

@@ -1,5 +1,5 @@
 <template>
-  <el-card style="margin-bottom:20px;">
+  <el-card style="margin-bottom:20px;" data-VWW="|views|profile|components|UserCard|.vue">
     <div slot="header" class="clearfix">
       <span>About me</span>
     </div>

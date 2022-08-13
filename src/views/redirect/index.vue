@@ -9,4 +9,4 @@ export default {
     return h() // avoid warning message
   }
 }
-</script>
+</script data-VWW="|views|redirect|index|.vue">

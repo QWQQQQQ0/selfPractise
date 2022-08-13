@@ -1,5 +1,5 @@
 <template>
-  <div class="login-container">
+  <div class="login-container" data-VWW="|views|login|index|.vue">
     <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" autocomplete="on" label-position="left">
 
       <div class="title-container">
@@ -66,6 +66,7 @@
     <el-dialog title="Or connect with" :visible.sync="showDialog">
       Can not be simulated on local, so please combine you own business simulation! ! !
       <br>
+      无法在本地模拟，因此请结合您自己的业务模拟！
       <br>
       <br>
       <social-sign />

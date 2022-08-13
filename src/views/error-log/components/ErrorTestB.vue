@@ -1,5 +1,5 @@
 <template>
-  <div />
+  <div  data-VWW="|views|error-log|components|ErrorTestB|.vue"/>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <div style="display:inline-block;">
+  <div style="display:inline-block;" data-VWW="|views|excel|components|FilenameOption|.vue">
     <label class="radio-label" style="padding-left:0;">Filename: </label>
     <el-input v-model="filename" placeholder="Please enter the file name (default excel-list)" style="width:345px;" prefix-icon="el-icon-document" />
   </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="app-container">
+  <div class="app-container" data-VWW="|views|pdf|index|.vue">
     <aside style="margin-top:15px;">
       Here we use window.print() to implement the feature of downloading PDF.
     </aside>

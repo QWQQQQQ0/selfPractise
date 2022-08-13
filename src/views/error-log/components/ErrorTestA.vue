@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div data-VWW="|views|error-log|components|ErrorTestA|.vue">
     <!--error code-->
     {{ a.a }}
     <!--error code-->

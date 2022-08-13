@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div data-VWW="|views|components-demo|sticky|.vue">
     <sticky :z-index="10" class-name="sub-navbar">
       <el-dropdown trigger="click">
         <el-button plain>

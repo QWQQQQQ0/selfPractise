@@ -1,5 +1,5 @@
 <template>
-  <div class="social-signup-container">
+  <div class="social-signup-container" data-VWW="|views|login|components|SocialSignin|.vue">
     <div class="sign-btn" @click="wechatHandleClick('wechat')">
       <span class="wx-svg-container"><svg-icon icon-class="wechat" class="icon" /></span>
       WeChat

@@ -1,5 +1,5 @@
 <template>
-  <section class="app-main">
+  <section class="app-main" data-VWW="|layout|components|AppMain|.vue">
     <transition name="fade-transform" mode="out-in">
       <keep-alive :include="cachedViews">
         <router-view :key="key" />

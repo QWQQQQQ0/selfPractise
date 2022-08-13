@@ -1,5 +1,5 @@
 <template>
-  <div class="app-container">
+  <div class="app-container" data-VWW="|views|table|dynamic-table|components|UnfixedThead|.vue">
     <div class="filter-container">
       <el-checkbox-group v-model="formThead">
         <el-checkbox label="apple">

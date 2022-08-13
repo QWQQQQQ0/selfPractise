@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboard-container">
+  <div class="dashboard-container" data-VWW="|views|dashboard|index|.vue">
     <component :is="currentRole" />
   </div>
 </template>

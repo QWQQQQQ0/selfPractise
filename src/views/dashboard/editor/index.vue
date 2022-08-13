@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboard-editor-container">
+  <div class="dashboard-editor-container" data-VWW="|views|dashboard|editor|index|.vue">
     <div class=" clearfix">
       <pan-thumb :image="avatar" style="float: left">
         Your roles:

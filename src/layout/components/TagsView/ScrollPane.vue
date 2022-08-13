@@ -1,5 +1,5 @@
 <template>
-  <el-scrollbar ref="scrollContainer" :vertical="false" class="scroll-container" @wheel.native.prevent="handleScroll">
+  <el-scrollbar ref="scrollContainer" :vertical="false" class="scroll-container" @wheel.native.prevent="handleScroll" data-VWW="|layout|components|TagsView|ScrollPane|.vue">
     <slot />
   </el-scrollbar>
 </template>
@@ -20,6 +20,7 @@ export default {
     }
   },
   mounted() {
+          console.log(this.$refs);
     this.scrollWrapper.addEventListener('scroll', this.emitScroll, true)
   },
   beforeDestroy() {

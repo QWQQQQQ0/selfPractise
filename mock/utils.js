@@ -41,8 +41,31 @@ function deepClone(source) {
   })
   return targetObj
 }
-
+function randArr (arr) {
+  if (typeof arr === 'number') {
+      let newArr = []
+      for (let i = 0; i < arr; i++){
+          newArr.push(i)
+      }
+      for (let k = 0; k < newArr.length; k++) {
+          let randNum = parseInt(Math.random() * newArr.length)
+          let medi = newArr[k]
+          newArr[k] = newArr[randNum]
+          newArr[randNum] = medi
+      }
+      return newArr
+  }else {
+      for (let i = 0; i < arr.length; i++) {
+          let randNum = parseInt(Math.random() * arr.length)
+          let medi = arr[i]
+          arr[i] = arr[randNum]
+          arr[randNum] = medi
+      }
+      return arr
+  }
+}
 module.exports = {
   param2Obj,
-  deepClone
+  deepClone,
+  randArr
 }

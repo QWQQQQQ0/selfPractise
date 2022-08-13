@@ -1,5 +1,5 @@
 <template>
-  <div class="singleImageUpload2 upload-container">
+  <div class="singleImageUpload2 upload-container" data-VWW="|components|Upload|SingleImage2|.vue">
     <el-upload
       :data="dataObj"
       :multiple="false"

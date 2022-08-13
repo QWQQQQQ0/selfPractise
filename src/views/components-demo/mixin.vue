@@ -1,5 +1,5 @@
 <template>
-  <div class="mixin-components-container">
+  <div class="mixin-components-container" data-VWW="|views|components-demo|mixin|.vue">
     <el-row>
       <el-card class="box-card">
         <div slot="header" class="clearfix">

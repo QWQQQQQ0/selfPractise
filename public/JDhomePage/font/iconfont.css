@@ -1,0 +1,139 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3174012 */
+  src: url('iconfont.woff2?t=1648656814473') format('woff2'),
+       url('iconfont.woff?t=1648656814473') format('woff'),
+       url('iconfont.ttf?t=1648656814473') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-wxbbiaowang:before {
+  content: "\e619";
+}
+
+.icon-wxbmingxingdianpu:before {
+  content: "\e61c";
+}
+
+.icon-wxbzhuye:before {
+  content: "\e61f";
+}
+
+.icon-wxbdingwei:before {
+  content: "\e624";
+}
+
+.icon-iconfontxingxing:before {
+  content: "\e628";
+}
+
+.icon-iconfontriyongbaihuo:before {
+  content: "\e62c";
+}
+
+.icon-iconfontphone:before {
+  content: "\e634";
+}
+
+.icon-iconfonthuangguan:before {
+  content: "\e63c";
+}
+
+.icon-iconfontxiebaopeishi:before {
+  content: "\e644";
+}
+
+.icon-iconfontgongyichongwu:before {
+  content: "\e649";
+}
+
+.icon-iconfontfuzhuangneiyi:before {
+  content: "\e64b";
+}
+
+.icon-huanhuobz:before {
+  content: "\e654";
+}
+
+.icon-jingpaicaigoushang:before {
+  content: "\e655";
+}
+
+.icon-jisukuikuan:before {
+  content: "\e657";
+}
+
+.icon-24xiaoshifahuo:before {
+  content: "\e66f";
+}
+
+.icon-caigouziying:before {
+  content: "\e673";
+}
+
+.icon-good:before {
+  content: "\e699";
+}
+
+.icon-down:before {
+  content: "\e6a8";
+}
+
+.icon-link:before {
+  content: "\e6bc";
+}
+
+.icon-atm:before {
+  content: "\e6bd";
+}
+
+.icon-text:before {
+  content: "\e6c4";
+}
+
+.icon-renminbi1688:before {
+  content: "\e6cb";
+}
+
+.icon-7tianbaotui:before {
+  content: "\e6cc";
+}
+
+.icon-fangdajing:before {
+  content: "\e653";
+}
+
+.icon-gouwuchekong:before {
+  content: "\e600";
+}
+
+.icon-icon-test:before {
+  content: "\e63b";
+}
+
+.icon-aixin:before {
+  content: "\e8ab";
+}
+
+.icon-bianji:before {
+  content: "\e8ac";
+}
+
+.icon-Dyanjing:before {
+  content: "\e8ad";
+}
+
+.icon-caidan:before {
+  content: "\e8ae";
+}
+
+.icon-anquan:before {
+  content: "\e8af";
+}
+

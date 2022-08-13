@@ -1,5 +1,5 @@
 <template>
-  <el-form>
+  <el-form data-VWW="|views|profile|components|Account|.vue">
     <el-form-item label="Name">
       <el-input v-model.trim="user.name" />
     </el-form-item>

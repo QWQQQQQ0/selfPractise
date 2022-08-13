@@ -1,5 +1,5 @@
 <template>
-  <div class="app-container">
+  <div class="app-container" data-VWW="|views|excel|export-excel|.vue">
 
     <div>
       <FilenameOption v-model="filename" />

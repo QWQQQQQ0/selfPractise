@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div data-VWW="|components|Screenfull|index|.vue">
     <svg-icon :icon-class="isFullscreen?'exit-fullscreen':'fullscreen'" @click="click" />
   </div>
 </template>

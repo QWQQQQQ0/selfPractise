@@ -1,5 +1,5 @@
 <template>
-  <div class="errPage-container">
+  <div class="errPage-container" data-VWW="|views|error-log|index|.vue">
     <ErrorA />
     <ErrorB />
     <h3>Please click the bug icon in the upper right corner</h3>

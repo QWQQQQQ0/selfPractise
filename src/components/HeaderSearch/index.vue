@@ -1,5 +1,5 @@
 <template>
-  <div :class="{'show':show}" class="header-search">
+  <div :class="{'show':show}" class="header-search" data-VWW="|components|HeaderSearch|index|.vue">
     <svg-icon class-name="search-icon" icon-class="search" @click.stop="click" />
     <el-select
       ref="headerSearchSelect"

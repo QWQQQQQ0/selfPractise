@@ -1,5 +1,5 @@
 <template>
-  <div style="display:inline-block;">
+  <div style="display:inline-block;" data-VWW="|views|excel|components|BookTypeOption|.vue">
     <label class="radio-label">Book Type: </label>
     <el-select v-model="bookType" style="width:120px;">
       <el-option

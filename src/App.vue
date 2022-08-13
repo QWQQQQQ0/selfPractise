@@ -1,11 +1,17 @@
 <template>
-  <div id="app">
+  <div id="app" data-VWW="|App|.vue">
     <router-view />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  mounted() {
+    this.$request('/jindong/user').then(res => {
+      console.log(res, 'resres');
+    })
+  },
+
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="dndList">
+  <div class="dndList" data-VWW="|components|DndList|index|.vue">
     <div :style="{width:width1}" class="dndList-list">
       <h3>{{ list1Title }}</h3>
       <draggable :set-data="setData" :list="list1" group="article" class="dragArea">

@@ -1,5 +1,5 @@
 <template>
-  <div :id="id" :ref="id" :action="url" class="dropzone">
+  <div :id="id" :ref="id" :action="url" class="dropzone" data-VWW="|components|Dropzone|index|.vue">
     <input type="file" name="file">
   </div>
 </template>

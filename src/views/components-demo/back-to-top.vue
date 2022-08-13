@@ -1,5 +1,5 @@
 <template>
-  <div class="components-container">
+  <div class="components-container" data-VWW="|views|components-demo|back-to-top|.vue">
     <aside>
       When the page is scrolled to the specified position, the Back to Top button appears in the lower right corner
     </aside>

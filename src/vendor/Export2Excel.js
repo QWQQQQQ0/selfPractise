@@ -157,7 +157,6 @@ export function export_json_to_excel({
   filename = filename || 'excel-list'
   data = [...data]
   data.unshift(header);
-
   for (let i = multiHeader.length - 1; i > -1; i--) {
     data.unshift(multiHeader[i])
   }
@@ -172,7 +171,7 @@ export function export_json_to_excel({
       ws['!merges'].push(XLSX.utils.decode_range(item))
     })
   }
-
+  console.log(data, 'ddaattaa', multiHeader,ws,merges);
   if (autoWidth) {
     /*设置worksheet每列的最大宽度*/
     const colWidth = data.map(row => row.map(val => {

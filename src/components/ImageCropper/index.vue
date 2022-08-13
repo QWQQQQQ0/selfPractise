@@ -1,5 +1,5 @@
 <template>
-  <div v-show="value" class="vue-image-crop-upload">
+  <div v-show="value" class="vue-image-crop-upload" data-VWW="|components|ImageCropper|index|.vue">
     <div class="vicp-wrap">
       <div class="vicp-close" @click="off">
         <i class="vicp-icon4" />
@@ -136,7 +136,6 @@
 
 <script>
 'use strict'
-import request from '@/utils/request'
 import language from './utils/language.js'
 import mimes from './utils/mimes.js'
 import data2blob from './utils/data2blob.js'
@@ -791,7 +790,7 @@ export default {
       this.reset()
       this.loading = 1
       this.setStep(3)
-      request({
+      this.$request({
         url,
         method: 'post',
         data: fmData

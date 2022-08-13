@@ -1,5 +1,5 @@
 <template>
-  <div :style="{height:height+'px',zIndex:zIndex}">
+  <div :style="{height:height+'px',zIndex:zIndex}" data-VWW="|components|Sticky|index|.vue">
     <div
       :class="className"
       :style="{top:(isSticky ? stickyTop +'px' : ''),zIndex:zIndex,position:position,width:width,height:height+'px'}"

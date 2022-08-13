@@ -1,5 +1,5 @@
 <template>
-  <el-dropdown :show-timeout="100" trigger="click">
+  <el-dropdown :show-timeout="100" trigger="click" data-VWW="|views|example|components|Dropdown|Comment|.vue">
     <el-button plain>
       {{ !comment_disabled?'Comment: opened':'Comment: closed' }}
       <i class="el-icon-caret-bottom el-icon--right" />

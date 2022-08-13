@@ -1,5 +1,5 @@
 <template>
-  <li :class="{ completed: todo.done, editing: editing }" class="todo">
+  <li :class="{ completed: todo.done, editing: editing }" class="todo" data-VWW="|views|dashboard|admin|components|TodoList|Todo|.vue">
     <div class="view">
       <input
         :checked="todo.done"

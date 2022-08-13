@@ -1,5 +1,5 @@
 <template>
-  <div :class="{'hidden':hidden}" class="pagination-container">
+  <div :class="{'hidden':hidden}" class="pagination-container" data-VWW="|components|Pagination|index|.vue">
     <el-pagination
       :background="background"
       :current-page.sync="currentPage"

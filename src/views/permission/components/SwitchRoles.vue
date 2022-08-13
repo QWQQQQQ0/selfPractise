@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div data-VWW="|views|permission|components|SwitchRoles|.vue">
     <div style="margin-bottom:15px;">
       Your roles: {{ roles }}
     </div>

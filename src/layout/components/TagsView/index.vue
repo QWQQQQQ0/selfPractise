@@ -1,5 +1,5 @@
 <template>
-  <div id="tags-view-container" class="tags-view-container">
+  <div id="tags-view-container" class="tags-view-container" data-VWW="|layout|components|TagsView|index|.vue">
     <scroll-pane ref="scrollPane" class="tags-view-wrapper" @scroll="handleScroll">
       <router-link
         v-for="tag in visitedViews"
@@ -191,6 +191,7 @@ export default {
       this.visible = false
     },
     handleScroll() {
+      console.log('scroll');
       this.closeMenu()
     }
   }

@@ -1,5 +1,5 @@
 <template>
-  <div :class="computedClasses" class="material-input__component">
+  <div :class="computedClasses" class="material-input__component" data-VWW="|components|MDinput|index|.vue">
     <div :class="{iconClass:icon}">
       <i v-if="icon" :class="['el-icon-' + icon]" class="el-input__icon material-input__icon" />
       <input

@@ -1,5 +1,5 @@
 <template>
-  <div class="app-container">
+  <div class="app-container" data-VWW="|views|clipboard|index|.vue">
     <el-tabs v-model="activeName">
       <el-tab-pane label="use clipboard  directly" name="directly">
         <el-input v-model="inputData" placeholder="Please input" style="width:400px;max-width:100%;" />

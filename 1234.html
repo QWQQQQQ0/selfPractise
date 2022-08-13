@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <canvas id="canvas">
+
+  </canvas>
+  <canvas id="opacity">
+
+  </canvas>
+  <script>
+
+    // HSV (1978) = H: Hue / S: Saturation / V: Value
+const canvas = document.querySelector('#canvas')
+const opacity = document.querySelector('#opacity')
+var canvas1 = document.createElement("canvas");
+canvas.onclick = e => {
+  console.log(e);
+}
+var lightMix = function(canvas2) {
+  var ctx = canvas2.getContext("2d");
+  ctx.save();
+  ctx.globalCompositeOperation = "lighter";
+  ctx.beginPath();
+  ctx.fillStyle = "rgba(255,0,0,1)";
+  ctx.arc(50, 50, 50, Math.PI*2, 0, false);
+  ctx.fill()
+  ctx.beginPath();
+  ctx.fillStyle = "rgba(0,0,255,1)";
+  ctx.arc(100, 50, 50, Math.PI*2, 0, false);
+  ctx.fill()
+  ctx.beginPath();
+  ctx.fillStyle = "rgba(0,255,0,1)";
+  ctx.arc(75, 100, 50, Math.PI*2, 0, false);
+  ctx.fill();
+  ctx.restore();
+  ctx.beginPath();
+  ctx.fillStyle = "#f00";
+  ctx.fillRect(0,0,30,30)
+  ctx.fill();
+};
+lightMix(canvas)
+
+var ctx = opacity.getContext('2d');
+        ctx.clearRect(0, 0, 300, 150)
+        ctx.save();
+        ctx.drawImage(canvas1, 0, 0, 300/2, 150/2);
+        ctx.fillStyle = "rgba(0,0,0,0.8)";
+        ctx.fillRect(0, 150/2 - 20, 300/2, 20);
+        ctx.fillStyle = "#FFF";
+        ctx.font = "14px arial";
+        ctx.fillText('existing content', 5, 150/2 - 5);
+        ctx.restore();
+  </script>
+</body>
+</html>

@@ -5,7 +5,7 @@
     class="theme-picker"
     popper-class="theme-picker-dropdown"
   />
-</template>
+</template data-VWW="|components|ThemePicker|index|.vue">
 
 <script>
 const version = require('element-ui/package.json').version // element-ui version from node_modules

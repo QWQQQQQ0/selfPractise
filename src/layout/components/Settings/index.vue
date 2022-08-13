@@ -1,5 +1,5 @@
 <template>
-  <div class="drawer-container">
+  <div class="drawer-container" data-VWW="|layout|components|Settings|index|.vue">
     <div>
       <h3 class="drawer-title">Page style setting</h3>
 
@@ -9,7 +9,7 @@
       </div>
 
       <div class="drawer-item">
-        <span>Open Tags-View</span>
+        <span>打开 Tags-View</span>
         <el-switch v-model="tagsView" class="drawer-switch" />
       </div>
 

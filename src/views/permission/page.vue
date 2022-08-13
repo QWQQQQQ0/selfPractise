@@ -1,5 +1,5 @@
 <template>
-  <div class="app-container">
+  <div class="app-container" data-VWW="|views|permission|page|.vue">
     <switch-roles @change="handleRolesChange" />
   </div>
 </template>

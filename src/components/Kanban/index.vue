@@ -1,5 +1,5 @@
 <template>
-  <div class="board-column">
+  <div class="board-column" data-VWW="|components|Kanban|index|.vue">
     <div class="board-column-header">
       {{ headerText }}
     </div>

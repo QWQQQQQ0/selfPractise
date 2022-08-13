@@ -1,5 +1,5 @@
 <template>
-  <div class="block">
+  <div class="block" data-VWW="|views|profile|components|Timeline|.vue">
     <el-timeline>
       <el-timeline-item v-for="(item,index) of timeline" :key="index" :timestamp="item.timestamp" placement="top">
         <el-card>

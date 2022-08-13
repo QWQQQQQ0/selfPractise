@@ -1,5 +1,5 @@
 <template>
-  <section class="todoapp">
+  <section class="todoapp" data-VWW="|views|dashboard|admin|components|TodoList|index|.vue">
     <!-- header -->
     <header class="header">
       <input class="new-todo" autocomplete="off" placeholder="Todo List" @keyup.enter="addTodo">

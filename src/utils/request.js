@@ -82,4 +82,10 @@ service.interceptors.response.use(
   }
 )
 
-export default service
+export default {
+  instance: service,
+  install(Vue) {
+    if (Vue.prototype.$request) return;
+    Vue.prototype.$request = this.instance;
+  }
+}

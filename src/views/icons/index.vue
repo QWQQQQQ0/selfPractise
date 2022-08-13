@@ -1,5 +1,5 @@
 <template>
-  <div class="icons-container">
+  <div class="icons-container" data-VWW="|views|icons|index|.vue">
     <aside>
       <a href="https://panjiachen.github.io/vue-element-admin-site/guide/advanced/icon.html" target="_blank">Add and use
       </a>

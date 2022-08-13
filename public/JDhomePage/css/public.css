@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    user-select:none;
+    font-size: 12px;
+}
+html{
+    background-color: #f3f3f3;
+}
+
+ul, li, ol{
+    list-style: none;
+}
+input, button, textarea{
+    outline: none;
+}
+a, a:hover, a:active, a:link{
+    text-decoration: none;
+    color: #333;
+}
+a, img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.header{
+    margin: 0 auto;
+    width: 1200px;
+    height: 32.0004px;
+    background-color: #e3e4e5;
+    color: #999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+
+/* 登录注册样式 */
+.header > div{
+    display: none;
+
+}
+.header > div.message{
+    display: block;
+}
+.header > div.address{
+    display: block;
+}
+.header > div > #username{
+    color: red;
+    font-size: 12px;
+}
+.header > div.active{
+    margin-left: 39.9996px;
+    display: flex;
+}
+.header > div > span{
+    margin: 0 9.9996px;
+}
+.header > div > a{
+    width: auto;
+}
+.header > div > a:hover{
+    color: red;
+}
+
+.footer{
+    width: 1200px;
+    margin: 0 auto;
+    background-color: rgb(145, 198, 219);
+    position: relative;
+    height: 80.0004px;
+    color: #fff;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: .5004px solid rgb(177, 177, 177);
+}

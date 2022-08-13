@@ -1,5 +1,5 @@
 <template>
-  <div class="components-container">
+  <div class="components-container" data-VWW="|views|components-demo|count-to|.vue">
     <aside>
       <a href="https://github.com/PanJiaChen/vue-countTo" target="_blank">countTo-component</a>
     </aside>

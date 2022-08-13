@@ -1,5 +1,5 @@
 <template>
-  <div class="user-activity">
+  <div class="user-activity" data-VWW="|views|profile|components|Activity|.vue">
     <div class="post">
       <div class="user-block">
         <img class="img-circle" :src="'https://wpimg.wallstcn.com/57ed425a-c71e-4201-9428-68760c0537c4.jpg'+avatarPrefix">

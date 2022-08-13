@@ -1,5 +1,5 @@
 <template>
-  <div class="app-container">
+  <div class="app-container" data-VWW="|views|profile|index|.vue">
     <div v-if="user">
       <el-row :gutter="20">
 

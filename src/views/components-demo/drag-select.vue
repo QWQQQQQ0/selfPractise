@@ -1,5 +1,5 @@
 <template>
-  <div class="components-container">
+  <div class="components-container" data-VWW="|views|components-demo|drag-select|.vue">
     <el-drag-select v-model="value" style="width:500px;" multiple placeholder="请选择">
       <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
     </el-drag-select>

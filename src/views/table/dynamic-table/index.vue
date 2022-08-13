@@ -1,5 +1,5 @@
 <template>
-  <div class="app-container">
+  <div class="app-container" data-VWW="|views|table|dynamic-table|index|.vue">
     <div style="margin:0 0 5px 20px">
       Fixed header, sorted by header order,
     </div>

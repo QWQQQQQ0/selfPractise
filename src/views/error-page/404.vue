@@ -1,5 +1,5 @@
 <template>
-  <div class="wscn-http404-container">
+  <div class="wscn-http404-container" data-VWW="|views|error-page|404|.vue">
     <div class="wscn-http404">
       <div class="pic-404">
         <img class="pic-404__parent" src="@/assets/404_images/404.png" alt="404">

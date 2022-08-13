@@ -12,4 +12,4 @@ export default {
     return h() // avoid warning message
   }
 }
-</script>
+</script data-VWW="|views|login|auth-redirect|.vue">

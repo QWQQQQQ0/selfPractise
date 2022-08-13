@@ -1,5 +1,5 @@
 <template>
-  <el-dropdown :show-timeout="100" trigger="click">
+  <el-dropdown :show-timeout="100" trigger="click" data-VWW="|views|example|components|Dropdown|SourceUrl|.vue">
     <el-button plain>
       Link
       <i class="el-icon-caret-bottom el-icon--right" />

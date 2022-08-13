@@ -1,5 +1,5 @@
 <template>
-  <div class="components-container">
+  <div class="components-container" data-VWW="|views|components-demo|drag-dialog|.vue">
     <el-button type="primary" @click="dialogTableVisible = true">
       open a Drag Dialog
     </el-button>

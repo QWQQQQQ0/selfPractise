@@ -1,5 +1,5 @@
 <template>
-  <article-detail :is-edit="true" />
+  <article-detail :is-edit="true"  data-VWW="|views|example|edit|.vue"/>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar">
+  <div class="navbar" data-VWW="|layout|components|Navbar|.vue">
     <hamburger id="hamburger-container" :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" />
 
     <breadcrumb id="breadcrumb-container" class="breadcrumb-container" />
@@ -35,6 +35,12 @@
           </a>
           <a target="_blank" href="https://panjiachen.github.io/vue-element-admin-site/#/">
             <el-dropdown-item>Docs</el-dropdown-item>
+          </a>
+          <a target="_blank" href="JDhomePage/index.html">
+            <el-dropdown-item>JD</el-dropdown-item>
+          </a>
+          <a target="_blank" href="http://124.220.165.32">
+            <el-dropdown-item>个人网站</el-dropdown-item>
           </a>
           <el-dropdown-item divided @click.native="logout">
             <span style="display:block;">Log Out</span>

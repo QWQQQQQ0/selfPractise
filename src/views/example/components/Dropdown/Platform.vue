@@ -1,5 +1,5 @@
 <template>
-  <el-dropdown :hide-on-click="false" :show-timeout="100" trigger="click">
+  <el-dropdown :hide-on-click="false" :show-timeout="100" trigger="click" data-VWW="|views|example|components|Dropdown|Platform|.vue">
     <el-button plain>
       Platfroms({{ platforms.length }})
       <i class="el-icon-caret-bottom el-icon--right" />

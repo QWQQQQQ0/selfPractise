@@ -1,5 +1,5 @@
 <template>
-  <div class="errPage-container">
+  <div class="errPage-container" data-VWW="|views|error-page|401|.vue">
     <el-button icon="el-icon-arrow-left" class="pan-back-btn" @click="back">
       返回
     </el-button>

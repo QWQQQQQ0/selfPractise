@@ -1,5 +1,5 @@
 <template>
-  <div class="createPost-container">
+  <div class="createPost-container" data-VWW="|views|example|components|ArticleDetail|.vue">
     <el-form ref="postForm" :model="postForm" :rules="rules" class="form-container">
 
       <sticky :z-index="10" :class-name="'sub-navbar '+postForm.status">

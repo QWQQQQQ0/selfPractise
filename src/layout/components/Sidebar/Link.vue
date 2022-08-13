@@ -1,5 +1,5 @@
 <template>
-  <component :is="type" v-bind="linkProps(to)">
+  <component :is="type" v-bind="linkProps(to)" data-VWW="|layout|components|Sidebar|Link|.vue">
     <slot />
   </component>
 </template>

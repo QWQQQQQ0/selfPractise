@@ -1,5 +1,5 @@
 <template>
-  <el-dropdown trigger="click" @command="handleSetSize">
+  <el-dropdown trigger="click" @command="handleSetSize" data-VWW="|components|SizeSelect|index|.vue">
     <div>
       <svg-icon class-name="size-icon" icon-class="size" />
     </div>

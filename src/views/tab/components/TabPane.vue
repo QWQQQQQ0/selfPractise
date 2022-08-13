@@ -1,5 +1,5 @@
 <template>
-  <el-table :data="list" border fit highlight-current-row style="width: 100%">
+  <el-table :data="list" border fit highlight-current-row style="width: 100%" data-VWW="|views|tab|components|TabPane|.vue">
     <el-table-column
       v-loading="loading"
       align="center"
