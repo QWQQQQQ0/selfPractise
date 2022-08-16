@@ -5,14 +5,15 @@
       action="https://jsonplaceholder.typicode.com/posts/"
       multiple
       :limit="3"
-      :file-list="fileList">
+      :file-list="fileList"
+    >
       <el-select slot="tip" v-model="uploadMethod" placeholder="">
         <el-option
           v-for="item in options"
           :key="item.value"
           :label="item.label"
-          :value="item.value">
-        </el-option>
+          :value="item.value"
+        />
       </el-select>
       <el-button size="small" type="primary">点击上传</el-button>
     </el-upload>
@@ -51,8 +52,8 @@
         <template slot-scope="scope">
           <el-button
             size="mini"
-            @click="handleEdit(scope.$index, scope.row)"
             type="primary"
+            @click="handleEdit(scope.$index, scope.row)"
           >导出</el-button>
           <el-button
             size="mini"
@@ -72,8 +73,8 @@
       :visible.sync="dialogVisible"
       width="60%"
       append-to-body
-      >
-      <dynamic-form-show v-el-drag-dialog :activeForm="activeForm.controlList" :key="activeForm.formId"/>
+    >
+      <dynamic-form-show :key="activeForm.formId" v-el-drag-dialog :activeForm="activeForm.controlList"/>
       <span>这是一段信息</span>
     </el-dialog>
   </div>
@@ -83,6 +84,7 @@
 
 import DynamicFormShow from '@/components/DynamicFormShow.vue'
 export default {
+  components: { DynamicFormShow },
   data() {
     return {
       fileList: [],
@@ -99,25 +101,27 @@ export default {
       activeForm: []
     }
   },
-  components: { DynamicFormShow },
   mounted() {
     this.requestByPage(1)
+  },
+  destroyed() {
+
   },
   methods: {
     requestByPage(page) {
       if (this.pageCache[page]) {
         this.currentPage = page
-        return this.tableData = this.pageCache[page]
+        this.tableData = this.pageCache[page]
+        return this.tableData
       }
       this.$request({
-      url: '/vue-self/form/list',
-      method: 'get',
-      params: { page: page, limit: 10 }
+        url: '/vue-self/form/list',
+        method: 'get',
+        params: { page: page, limit: 10 }
       }).then(res => {
         this.tableData = res.data
         this.totalCount = res.totalCount
         this.currentPage = page
-
       })
     },
     handleEdit(index, item) {
@@ -136,13 +140,12 @@ export default {
       this.requestByPage(page)
       this.$nextTick(() => {
         if (this.selectedRow[page]) {
-          for (let i in this.selectedRow[page]) {
-            let row = this.selectedRow[page][i]
+          for (const i in this.selectedRow[page]) {
+            const row = this.selectedRow[page][i]
             this.$refs.multipleTable.toggleRowSelection(row);
             console.log(i);
           }
         }
-        
       })
     },
     handleSeletcRow(selection, row) {
@@ -155,12 +158,7 @@ export default {
         this.selectedRow[this.currentPage][row.formId] = row
       }
       console.log(this.selectedRow);
-      
-
     }
-  },
-  destroyed() {
-    
   }
 }
 </script>

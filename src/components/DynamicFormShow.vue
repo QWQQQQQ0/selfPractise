@@ -1,128 +1,126 @@
 <template>
-    <el-form
-    :model="bindValue"
+  <el-form
     ref="bindValue"
+    :key="rulesLength"
+    :model="bindValue"
     class="demo-dynamic"
     :rules="rules"
     :label-position="'left'"
     :label-width="'100px'"
-    :key="rulesLength">
-      <form-producer
-        v-for="item in activeForm"
-        :key="item.model"
-        :preInfo="item"
-        :bindValues="bindValue">
-      </form-producer>
-        <div style="height:40px"><el-button style="position:absolute;right: 30px;" type="primary" @click="submitForm('dynamicValidateForm')" right>提交</el-button></div>
-      <el-dialog
-        title="提示"
-        :visible.sync="dialogVisible"
-        width="60%"
-        append-to-body
-        v-dialogDrag>
-          <component
-          :is="dialogComponent" 
-          :dialogItem="dialogItem"
-          :key="dialogItem.key" 
-          @receiveSelect="handleDialogInfoSelect"
-          :bindValues="bindValue">
-          </component>
-        <span slot="footer" class="dialog-footer">
-          <el-button @click="dialogVisible = false">取 消</el-button>
-          <el-button type="primary" @click="handleConfirm">确 定</el-button>
-        </span>
-      </el-dialog>
-    </el-form>
+  >
+    <form-producer
+      v-for="item in activeForm"
+      :key="item.model"
+      :preInfo="item"
+      :bindValues="bindValue"
+    />
+    <div style="height:40px"><el-button style="position:absolute;right: 30px;" type="primary" right @click="submitForm('dynamicValidateForm')">提交</el-button></div>
+    <el-dialog
+      v-dialogDrag
+      title="提示"
+      :visible.sync="dialogVisible"
+      width="60%"
+      append-to-body
+    >
+      <component
+        :is="dialogComponent"
+        :key="dialogItem.key"
+        :dialogItem="dialogItem"
+        :bindValues="bindValue"
+        @receiveSelect="handleDialogInfoSelect"
+      />
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="dialogVisible = false">取 消</el-button>
+        <el-button type="primary" @click="handleConfirm">确 定</el-button>
+      </span>
+    </el-dialog>
+  </el-form>
 </template>
 
 <script>
 import FormProducer from '@/components/dragdesign/FormProducer.vue';
 import DialogBox from '@/components/formdialog/DialogBox.vue';
 export default {
-    props: {
-      activeForm: {
-        type: Array,
-        required: true
-      },
-      dialogComponent: {
-        type: Object,
-        required: false,
-        default: () => DialogBox
-      }
+  components: { FormProducer, DialogBox },
+  props: {
+    activeForm: {
+      type: Array,
+      required: true
     },
-    components: { FormProducer, DialogBox },
-    provide() {
-      return {
-        handleRule: (item) => {
-          return
-          // if (item.rules.length) {
-          //   item.rules.forEach(ele => {
-          //     if (ele.pattern) {
-          //       let reg = ele.pattern.toString().replace(/\//g, '')
-          //       ele.pattern = new RegExp(reg)
-          //     } else {
-          //       this.$set(ele, 'trigger', 'blur')
-          //     }
-          //   })
-          // }
-          // if (!this.rules[item.model]) {
-          //   this.$set(this.rules, item.model, item.rules)
-          // }
-          // this.rulesLength = Object.keys(this.rules).length
-        },
-        handleDialog: (item) => {
-          this.dialogItem = item
-          this.dialogVisible = true
+    dialogComponent: {
+      type: Object,
+      required: false,
+      default: () => DialogBox
+    }
+  },
+  provide() {
+    return {
+      handleRule: (item) => {
+        return
+        // if (item.rules.length) {
+        //   item.rules.forEach(ele => {
+        //     if (ele.pattern) {
+        //       let reg = ele.pattern.toString().replace(/\//g, '')
+        //       ele.pattern = new RegExp(reg)
+        //     } else {
+        //       this.$set(ele, 'trigger', 'blur')
+        //     }
+        //   })
+        // }
+        // if (!this.rules[item.model]) {
+        //   this.$set(this.rules, item.model, item.rules)
+        // }
+        // this.rulesLength = Object.keys(this.rules).length
+      },
+      handleDialog: (item) => {
+        this.dialogItem = item
+        this.dialogVisible = true
+      }
+    }
+  },
+  data() {
+    return {
+      bindValue: {},
+      rules: {},
+      rulesLength: 0,
+      dialogVisible: false,
+      dialogItem: {}
+    };
+  },
+  mounted() {
+    const tempRuleBox = {}
+    for (const i in this.activeForm) {
+      if (this.activeForm[i].rules) {
+        if (this.activeForm[i].rules.length) {
+          this.activeForm[i].rules.forEach(ele => {
+            if (ele.pattern) {
+              const reg = ele.pattern.toString().replace(/\//g, '')
+              ele.pattern = new RegExp(reg)
+            } else {
+              this.$set(ele, 'trigger', 'blur')
+            }
+          })
         }
       }
+      tempRuleBox[this.activeForm[i].model] = this.activeForm[i].rules
+    }
+    this.rules = tempRuleBox
+  },
+  methods: {
+    submitForm(formName) {
+      console.log(this.rules, 'rulerule', this.bindValue)
     },
-    data() {
-      return {
-          bindValue: {},
-          rules: {},
-          rulesLength:0,
-          dialogVisible:false,
-          dialogItem:{}
-      };
-    },
-    mounted() {
-      let tempRuleBox = {}
-      for (let i in this.activeForm) {
-        if (this.activeForm[i].rules) {
-          if (this.activeForm[i].rules.length) {
-            this.activeForm[i].rules.forEach(ele => {
-              if (ele.pattern) {
-                let reg = ele.pattern.toString().replace(/\//g, '')
-                ele.pattern = new RegExp(reg)
-              } else {
-                this.$set(ele, 'trigger', 'blur')
-              }
-            })
-          }
-        }
-        tempRuleBox[this.activeForm[i].model] = this.activeForm[i].rules
-      }
-      this.rules = tempRuleBox
-    },
-    methods: {
-      submitForm(formName) {
-        console.log(this.rules, 'rulerule', this.bindValue)
-      },
-      handleReceiveChange(emit) {
+    handleReceiveChange(emit) {
 
-      },
-      handleConfirm() {
-        this.dialogVisible = false
-      },
-      handleDialogInfoSelect(params) {
-        console.log(params);
-      }
     },
+    handleConfirm() {
+      this.dialogVisible = false
+    },
+    handleDialogInfoSelect(params) {
+      console.log(params);
+    }
+  }
 }
-
-
-
-
 
 /**
  * <template>
@@ -176,7 +174,7 @@ export default {
             })
           }
           if (!this.rules[item.model]) {
-            
+
             this.$set(this.rules, item.model, item.rules)
           }
           this.$set(this.bindValue, item.model,'')
@@ -239,7 +237,7 @@ export default {
 }
 
 </style>
- * 
+ *
  */
 
 </script>
@@ -250,6 +248,4 @@ export default {
 }
 
 </style>
-
-
 

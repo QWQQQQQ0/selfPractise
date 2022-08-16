@@ -1,5 +1,5 @@
 <template>
-  <div :class="className" :style="{height:height,width:width}"  data-VWW="|views|dashboard|admin|components|BarChart|.vue"/>
+  <div :class="className" :style="{height:height,width:width}" data-VWW="|views|dashboard|admin|components|BarChart|.vue"/>
 </template>
 
 <script>

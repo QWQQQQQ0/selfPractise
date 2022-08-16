@@ -1,10 +1,10 @@
 <template>
-<el-tree
-  :props="props"
-  :load="loadNode"
-  lazy
-  show-checkbox>
-</el-tree>
+  <el-tree
+    :props="props"
+    :load="loadNode"
+    lazy
+    show-checkbox
+  />
 </template>
 
 <script>
@@ -19,24 +19,24 @@ export default {
     return {
       props: {
         label: 'roleName',
-        nodeData:[]
+        nodeData: []
 
       }
-    }
-  },
-  methods: {
-    loadNode(node, resolve) {
-      console.log(node, resolve);
     }
   },
 
   mounted() {
     this.$request({
-      url:'http://127.0.0.1:3688/api/public/listRole.json'
+      url: 'http://127.0.0.1:3688/api/public/listRole.json'
     }).then(res => {
       console.log(res);
     })
   },
+  methods: {
+    loadNode(node, resolve) {
+      console.log(node, resolve);
+    }
+  }
 }
 </script>
 

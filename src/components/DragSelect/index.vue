@@ -1,5 +1,5 @@
 <template>
-  <el-select ref="dragSelect" v-model="selectVal" v-bind="$attrs" class="drag-select" multiple v-on="$listeners" data-VWW="|components|DragSelect|index|.vue">
+  <el-select ref="dragSelect" v-model="selectVal" v-bind="$attrs" class="drag-select" multiple data-VWW="|components|DragSelect|index|.vue" v-on="$listeners">
     <slot />
   </el-select>
 </template>

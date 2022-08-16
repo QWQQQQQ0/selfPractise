@@ -1,5 +1,5 @@
 <template>
-  <div v-if="isExternal" :style="styleExternalIcon" class="svg-external-icon svg-icon" v-on="$listeners"  data-VWW="|components|SvgIcon|index|.vue"/>
+  <div v-if="isExternal" :style="styleExternalIcon" class="svg-external-icon svg-icon" data-VWW="|components|SvgIcon|index|.vue" v-on="$listeners"/>
   <svg v-else :class="svgClass" aria-hidden="true" v-on="$listeners">
     <use :xlink:href="iconName" />
   </svg>

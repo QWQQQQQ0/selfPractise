@@ -1,6 +1,6 @@
 function CACHE() {
   let catchDic = {}
-  return function (key, value = null) {
+  return function(key, value = null) {
     if (catchDic[key] && !value) {
       return [true, catchDic[key]]
     }
@@ -9,7 +9,6 @@ function CACHE() {
       catchDic = {}
     } else {
       if (value) {
-
         catchDic[key] = value
       }
     }
@@ -18,7 +17,7 @@ function CACHE() {
 }
 export default {
   instance: CACHE(),
-  //注册插件
+  // 注册插件
   install(Vue) {
     Vue.prototype.CACHE = this.instance;
   }

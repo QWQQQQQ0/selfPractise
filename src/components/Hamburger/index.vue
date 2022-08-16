@@ -1,5 +1,5 @@
 <template>
-  <div style="padding: 0 15px;" @click="toggleClick" data-VWW="|components|Hamburger|index|.vue">
+  <div style="padding: 0 15px;" data-VWW="|components|Hamburger|index|.vue" @click="toggleClick">
     <svg
       :class="{'is-active':isActive}"
       class="hamburger"

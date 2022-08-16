@@ -22,7 +22,7 @@ module.exports = {
       }
     }],
     "vue/attribute-hyphenation": 'off',
-    // "vue/singleline-html-element-content-newline": "off",
+    "vue/singleline-html-element-content-newline": "off",
     "vue/multiline-html-element-content-newline": "off",
     "vue/html-closing-bracket-spacing": [0],
     "vue/name-property-casing": ["error", "PascalCase"],

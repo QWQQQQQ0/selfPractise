@@ -11,7 +11,7 @@ export default {
     this.$request('/jindong/user').then(res => {
       console.log(res, 'resres');
     })
-  },
+  }
 
 }
 </script>

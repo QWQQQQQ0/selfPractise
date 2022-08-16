@@ -1,5 +1,5 @@
 <template>
-  <article-detail :is-edit="false"  data-VWW="|views|example|create|.vue"/>
+  <article-detail :is-edit="false" data-VWW="|views|example|create|.vue"/>
 </template>
 
 <script>

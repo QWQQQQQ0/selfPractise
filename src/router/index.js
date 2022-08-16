@@ -11,13 +11,7 @@ import componentsRouter from './modules/components'
 import chartsRouter from './modules/charts'
 import tableRouter from './modules/table'
 import nestedRouter from './modules/nested'
-function addHidd(list) {
-  for (let i in list) {
-    if (list[i]['hidden'] !== false) {
-      list[i]['hidden'] = true
-    }
-  }
-}
+
 /**
  * Note: sub-menu only appear when route children.length >= 1
  * Detail see: https://panjiachen.github.io/vue-element-admin-site/guide/essentials/router-and-nav.html
@@ -440,6 +434,13 @@ const asyncRoutes = [
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
 ]
+// function addHidd(list) {
+//   for (const i in list) {
+//     if (list[i]['hidden'] !== false) {
+//       list[i]['hidden'] = true
+//     }
+//   }
+// }
 // addHidd(constantRoutes)
 // addHidd(asyncRoutes)
 export { constantRoutes, asyncRoutes }

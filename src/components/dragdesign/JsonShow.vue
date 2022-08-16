@@ -20,7 +20,6 @@ import 'codemirror/addon/fold/foldgutter'
 import 'codemirror/addon/fold/brace-fold'
 import 'codemirror/addon/fold/comment-fold'
 
-
 export default {
   /* eslint-disable vue/require-prop-types */
   props: {
@@ -52,10 +51,10 @@ export default {
       lineWrapping: true,
       readOnly: this.readOnly,
       gutters: [
-      "CodeMirror-lint-markers",
-      "CodeMirror-linenumbers",
-      "CodeMirror-foldgutter"
-      ],
+        'CodeMirror-lint-markers',
+        'CodeMirror-linenumbers',
+        'CodeMirror-foldgutter'
+      ]
     })
     this.jsonEditor.setValue(JSON.stringify(this.data, null, 2))
     this.jsonEditor.on('change', cm => {

@@ -21,8 +21,7 @@
     :bindValues="bindValues"
     :columData="preInfo.tableColumns"
     :tableData="preInfo.tableData"
-  >
-  </component>
+  />
 </template>
 
 <script>
@@ -55,10 +54,6 @@ export default {
     preInfo: {
       type: Object,
       required: true
-    },
-    CompleteInformation: {
-      type: Object,
-      default: () => {}
     },
     bindValues: {
       type: [Object, Array],
@@ -133,7 +128,7 @@ export default {
   },
   methods: {
     checkType(type) {
-      let typeDic = {
+      const typeDic = {
         number: true, radio: true, text: true, current_user: true, file_upload: true,
         image_upload: true, year: true, datetime: true, month: true, datas: true,
         data: true, year_mounth: true, switch: true, checkbox: true, multiple_select: true,

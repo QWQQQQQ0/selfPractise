@@ -5,13 +5,14 @@ Vue.directive('dialogDrag', {
     let timeControl = 0
     let timer = false
     let cursorStyle
-    let minWidth = 400;
-    let minHeight = 300;
+    const minWidth = 400;
+    const minHeight = 300;
     let isFullScreen = false;
     let nowWidth = 0;
-    let nowHight = 0;
     let nowMarginTop = 0;
     let selectedEl
+    let nowHight
+    console.log(nowHight)
     let resize
     const dialogHeaderEl = el.querySelector('.el-dialog__header');
     const dragDom = el.querySelector('.el-dialog');
@@ -22,10 +23,10 @@ Vue.directive('dialogDrag', {
         }, time);
       })
     }
-    dragDom.style.overflow = "auto";
+    dragDom.style.overflow = 'auto';
     const sty = dragDom.currentStyle || window.getComputedStyle(dragDom, null);
-    let moveDown = async (e) => {
-      document.onmouseup = function (e) {
+    const moveDown = async(e) => {
+      document.onmouseup = function(e) {
         if (!timer) {
           clearTimeout(timeControl)
         } else {
@@ -48,8 +49,8 @@ Vue.directive('dialogDrag', {
       } else {
         styL = +sty.left.replace(/\px/g, '');
         styT = +sty.top.replace(/\px/g, '');
-      };
-      document.onmousemove = function (e) {
+      }
+      document.onmousemove = function(e) {
         if (!timer) {
           return false
         }
@@ -60,20 +61,20 @@ Vue.directive('dialogDrag', {
       };
     }
     dialogHeaderEl.ondblclick = (e) => {
-      if (isFullScreen == false) {
+      if (isFullScreen === false) {
         nowHight = dragDom.clientHeight;
         nowWidth = dragDom.clientWidth;
         nowMarginTop = dragDom.style.marginTop;
         dragDom.style.left = 0;
         dragDom.style.top = 0;
-        dragDom.style.height = "100VH";
-        dragDom.style.width = "100VW";
+        dragDom.style.height = '100VH';
+        dragDom.style.width = '100VW';
         dragDom.style.marginTop = 0;
         isFullScreen = true;
         dialogHeaderEl.style.cursor = 'initial';
         dialogHeaderEl.onmousedown = null;
       } else {
-        dragDom.style.height = "auto";
+        dragDom.style.height = 'auto';
         dragDom.style.width = nowWidth + 'px';
         dragDom.style.marginTop = nowMarginTop;
         isFullScreen = false;
@@ -81,8 +82,7 @@ Vue.directive('dialogDrag', {
         dialogHeaderEl.onmousedown = moveDown;
       }
     }
-    dragDom.onmousemove = function (e) {
-      let moveE = e;
+    dragDom.onmousemove = function(e) {
       if (e.clientX > dragDom.offsetLeft + dragDom.clientWidth - 10 || dragDom.offsetLeft + 10 > e.clientX) {
         dragDom.style.cursor = 'w-resize';
         resize = true
@@ -97,16 +97,16 @@ Vue.directive('dialogDrag', {
       dragDom.onmousedown = resize ? (e) => {
         const clientX = e.clientX;
         const clientY = e.clientY;
-        let elW = dragDom.clientWidth;
-        let elH = dragDom.clientHeight;
-        let EloffsetLeft = dragDom.offsetLeft;
-        let EloffsetTop = dragDom.offsetTop;
+        const elW = dragDom.clientWidth;
+        const elH = dragDom.clientHeight;
+        const EloffsetLeft = dragDom.offsetLeft;
+        const EloffsetTop = dragDom.offsetTop;
         dragDom.style.userSelect = 'none';
-        let ELscrollTop = el.scrollTop;
+        const ELscrollTop = el.scrollTop;
         if (clientX > EloffsetLeft && clientX < EloffsetLeft + elW && clientY > EloffsetTop && clientY < EloffsetTop + 100) {
           console.log('fffff');
         } else {
-          document.onmousemove = function (e) {
+          document.onmousemove = function(e) {
             e.preventDefault();
             if (clientX > EloffsetLeft && clientX < EloffsetLeft + 20) {
               if (clientX > e.clientX) {
@@ -114,6 +114,7 @@ Vue.directive('dialogDrag', {
               }
               if (clientX < e.clientX) {
                 if (dragDom.clientWidth < minWidth) {
+                  console.log('<')
                 } else {
                   dragDom.style.width = elW - (e.clientX - clientX) * 2 + 'px';
                 }
@@ -122,6 +123,7 @@ Vue.directive('dialogDrag', {
             if (clientX > EloffsetLeft + elW - 10 && clientX < EloffsetLeft + elW) {
               if (clientX > e.clientX) {
                 if (dragDom.clientWidth < minWidth) {
+                  console.log('<')
                 } else {
                   dragDom.style.width = elW - (clientX - e.clientX) * 2 + 'px';
                 }
@@ -133,6 +135,7 @@ Vue.directive('dialogDrag', {
             if (ELscrollTop + clientY > EloffsetTop + elH - 20 && ELscrollTop + clientY < EloffsetTop + elH) {
               if (clientY > e.clientY) {
                 if (dragDom.clientHeight < minHeight) {
+                  console.log('<')
                 } else {
                   dragDom.style.height = elH - (clientY - e.clientY) * 2 + 'px';
                 }
@@ -142,7 +145,7 @@ Vue.directive('dialogDrag', {
               }
             }
           };
-          document.onmouseup = function (e) {
+          document.onmouseup = function(e) {
             resize = false
             document.onmousemove = null;
             document.onmouseup = null;
@@ -154,9 +157,9 @@ Vue.directive('dialogDrag', {
 })
 Vue.directive('wheelModel', {
   bind(el, binding, vnode, oldVnode) {
-    let key = binding.value.key
-    let isPercent = { width: true }
-    let options = binding.value.option
+    const key = binding.value.key
+    const isPercent = { width: true }
+    const options = binding.value.option
     el.onmousewheel = e => {
       e.preventDefault();
       if (e.deltaY > 0) {

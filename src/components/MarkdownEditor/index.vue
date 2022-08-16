@@ -1,5 +1,5 @@
 <template>
-  <div :id="id"  data-VWW="|components|MarkdownEditor|index|.vue"/>
+  <div :id="id" data-VWW="|components|MarkdownEditor|index|.vue"/>
 </template>
 
 <script>

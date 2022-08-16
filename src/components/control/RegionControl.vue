@@ -1,15 +1,16 @@
 <template>
-   <el-form-item
-      :prop="preInfo.model"
-      :label="intable?'' :preInfo.name"
-      :label-width="preInfo.labelWidth?preInfo.labelWidth:''"
-      :error="preInfo.error?preInfo.error:''"
-      :required="preInfo.required?preInfo.required:false"
-      :inlineMessage="preInfo.inlineMessage?preInfo.inlineMssage:false"
-      :showMessage="preInfo.showMessage?preInfo.showMessage:true"
-      :size="preInfo.size?preInfo.size:''">
-      <region-select :handleRegionSelect="handleRegionInfo" :intable="intable"></region-select>
-    </el-form-item>
+  <el-form-item
+    :prop="preInfo.model"
+    :label="intable?'' :preInfo.name"
+    :label-width="preInfo.labelWidth?preInfo.labelWidth:''"
+    :error="preInfo.error?preInfo.error:''"
+    :required="preInfo.required?preInfo.required:false"
+    :inlineMessage="preInfo.inlineMessage?preInfo.inlineMssage:false"
+    :showMessage="preInfo.showMessage?preInfo.showMessage:true"
+    :size="preInfo.size?preInfo.size:''"
+  >
+    <region-select :handleRegionSelect="handleRegionInfo" :intable="intable"/>
+  </el-form-item>
 </template>
 
 <script>
@@ -20,28 +21,28 @@ export default {
   props: {
     preInfo: {
       type: Object,
-      required: true,
+      required: true
     },
     bindValues: {
       type: Object,
-      require: true,
+      require: true
     },
     intable: {
       type: Boolean,
       default: () => false
-    },
+    }
 
+  },
+  mounted() {
+    console.log(this.bindValues);
+  },
+  destroyed() {
   },
   methods: {
     handleRegionInfo(region) {
       this.bindValues[this.preInfo.model] = region
       console.log(this.bindValues, 'bindvv', region);
     }
-  },
-  mounted() {
-    console.log(this.bindValues);
-  },
-  destroyed() {
   }
 
 }

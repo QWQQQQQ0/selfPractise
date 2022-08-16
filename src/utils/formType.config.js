@@ -14,8 +14,8 @@ export default {
         pattern: '',
         placeholder: '',
         disabled: false,
-        isControlled: false,
-      },
+        isControlled: false
+      }
     },
     {
       type: 'textarea',
@@ -30,8 +30,8 @@ export default {
         disabled: false,
         pattern: '',
         placeholder: '',
-        isControlled: false,
-      },
+        isControlled: false
+      }
     },
     {
       type: 'text',
@@ -53,11 +53,11 @@ export default {
         width: '40%',
         defaultValue: '',
         required: false,
-        pattern: "/^1([34578])\\d{9}$/",
+        pattern: '/^1([34578])\\d{9}$/',
         placeholder: '',
         disabled: false,
-        isControlled: false,
-      },
+        isControlled: false
+      }
     },
     {
       type: 'telephone',
@@ -69,11 +69,11 @@ export default {
         width: '40%',
         defaultValue: '',
         required: false,
-        pattern: "/^0\\d{2,3}-?\\d{7,8}$/",
+        pattern: '/^0\\d{2,3}-?\\d{7,8}$/',
         placeholder: '',
         disabled: false,
-        isControlled: false,
-      },
+        isControlled: false
+      }
     },
     {
       type: 'email',
@@ -85,11 +85,11 @@ export default {
         width: '40%',
         defaultValue: '',
         required: false,
-        pattern: "/^([a-zA-Z0-9_.\\-])+@(([a-zA-Z0-9\\-])+\\.)+([a-zA-Z0-9]{2,4})+$/",
+        pattern: '/^([a-zA-Z0-9_.\\-])+@(([a-zA-Z0-9\\-])+\\.)+([a-zA-Z0-9]{2,4})+$/',
         placeholder: '',
         disabled: false,
-        isControlled: false,
-      },
+        isControlled: false
+      }
     },
     {
       type: 'postalCode',
@@ -101,11 +101,11 @@ export default {
         width: '40%',
         defaultValue: '',
         required: false,
-        pattern: "/^[1-9][0-9]{5}$/",
+        pattern: '/^[1-9][0-9]{5}$/',
         placeholder: '',
         disabled: false,
-        isControlled: false,
-      },
+        isControlled: false
+      }
     },
     {
       type: 'website',
@@ -117,11 +117,11 @@ export default {
         width: '40%',
         defaultValue: '',
         required: false,
-        pattern: "/((https|http|ftp|rtsp|mms):\\/\\/)?(([0-9a-zA-Z_!~*'().&=+$%-]+:)?[0-9a-zA-Z_!~*'().&=+$%-]+@)?(([0-9]{1,3}\\.){3}[0-9]{1,3}|([0-9a-zA-Z_!~*'()-]+\\.)*([0-9a-zA-Z][0-9a-zA-Z-]{0,61})?[0-9a-zA-Z]\\.[a-zA-Z]{2,6})(:[0-9]{1,4})?((\\/?)|(\\/[0-9a-zA-Z_!~*'().;?:@&=+$,%#-]+)+\\/?)/g",
+        pattern: `/((https|http|ftp|rtsp|mms):\\/\\/)?(([0-9a-zA-Z_!~*'().&=+$%-]+:)?[0-9a-zA-Z_!~*'().&=+$%-]+@)?(([0-9]{1,3}\\.){3}[0-9]{1,3}|([0-9a-zA-Z_!~*'()-]+\\.)*([0-9a-zA-Z][0-9a-zA-Z-]{0,61})?[0-9a-zA-Z]\\.[a-zA-Z]{2,6})(:[0-9]{1,4})?((\\/?)|(\\/[0-9a-zA-Z_!~*'().;?:@&=+$,%#-]+)+\\/?)/g`,
         placeholder: '',
         disabled: false,
-        isControlled: false,
-      },
+        isControlled: false
+      }
     },
     {
       type: 'inputNumber',
@@ -133,14 +133,14 @@ export default {
         editShowFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
         defaultValue: '',
         required: false,
-        pattern: "/^-?\\d+(\\.\\d+)?$/",
+        pattern: `/^-?\\d+(\\.\\d+)?$/`,
         placeholder: '',
         disabled: false,
         isControlled: false,
         min: 0,
         max: 10,
-        enableMinMax: false,
-      },
+        enableMinMax: false
+      }
     },
     {
       type: 'int',
@@ -152,14 +152,14 @@ export default {
         width: '40%',
         defaultValue: '',
         required: false,
-        pattern: "/^-?\\d+$/",
+        pattern: '/^-?\\d+$/',
         placeholder: '',
         disabled: false,
         isControlled: false,
         min: 0,
         max: 10,
-        enableMinMax: false,
-      },
+        enableMinMax: false
+      }
     },
     {
       type: 'intLong',
@@ -171,14 +171,14 @@ export default {
         editShowFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
         defaultValue: '',
         required: false,
-        pattern: "/^-?\\d+$/",
+        pattern: '/^-?\\d+$/',
         placeholder: '',
         disabled: false,
         isControlled: false,
         min: 0,
         max: 10,
-        enableMinMax: false,
-      },
+        enableMinMax: false
+      }
     },
     {
       type: 'number',
@@ -195,8 +195,8 @@ export default {
         step: 1,
         disabled: false,
         controlsPosition: '',
-        isControlled: false,
-      },
+        isControlled: false
+      }
     },
     {
       type: 'radio',
@@ -235,7 +235,7 @@ export default {
         },
         remoteCall: '',
         disabled: false,
-        isControlled: false,
+        isControlled: false
       }
     },
     {
@@ -271,7 +271,7 @@ export default {
         },
         remoteCall: '',
         disabled: false,
-        isControlled: false,
+        isControlled: false
       }
     },
     {
@@ -295,7 +295,7 @@ export default {
         format: 'yyyy',
         timestamp: false,
         required: false,
-        isControlled: false,
+        isControlled: false
       }
     },
     {
@@ -319,7 +319,7 @@ export default {
         format: 'MM',
         timestamp: false,
         required: false,
-        isControlled: false,
+        isControlled: false
       }
     },
     {
@@ -343,7 +343,7 @@ export default {
         format: 'yyyy-MM',
         timestamp: false,
         required: false,
-        isControlled: false,
+        isControlled: false
       }
     },
     {
@@ -367,7 +367,7 @@ export default {
         format: 'yyyy-MM-dd',
         timestamp: false,
         required: false,
-        isControlled: false,
+        isControlled: false
       }
     },
     {
@@ -391,7 +391,7 @@ export default {
         format: 'yyyy-MM-dd',
         timestamp: false,
         required: false,
-        isControlled: false,
+        isControlled: false
       }
     },
     {
@@ -415,7 +415,7 @@ export default {
         arrowControl: true,
         format: 'HH:mm:ss',
         required: false,
-        isControlled: false,
+        isControlled: false
       }
     },
     {
@@ -438,7 +438,7 @@ export default {
         format: 'yyyy-MM-dd HH:mm:ss',
         timestamp: false,
         required: false,
-        isControlled: false,
+        isControlled: false
       }
     },
     {
@@ -461,7 +461,7 @@ export default {
         format: 'yyyy-MM-dd HH:mm:ss',
         timestamp: false,
         required: false,
-        isControlled: false,
+        isControlled: false
       }
     },
     {
@@ -484,7 +484,7 @@ export default {
         format: 'yyyy-MM-dd HH:mm:ss',
         timestamp: false,
         required: false,
-        isControlled: false,
+        isControlled: false
       }
     },
     {
@@ -507,7 +507,7 @@ export default {
         format: 'yyyy-MM-dd HH:mm:ss',
         timestamp: false,
         required: false,
-        isControlled: false,
+        isControlled: false
       }
     },
     {
@@ -564,7 +564,7 @@ export default {
           label: 'label'
         },
         remoteCall: '',
-        isControlled: false,
+        isControlled: false
       }
     },
     {
@@ -607,9 +607,9 @@ export default {
           label: 'label'
         },
         remoteCall: '',
-        isControlled: false,
+        isControlled: false
       }
-    },
+    }
   ],
   advance: [
     {
@@ -627,7 +627,7 @@ export default {
         length: 3,
         maxFileSize: 1,
         isControlled: false,
-        presetImgs: "",
+        presetImgs: ''
       }
     },
     {
@@ -644,7 +644,7 @@ export default {
         maxFileSize: 10,
         // 最大上传数
         length: 3,
-        isControlled: false,
+        isControlled: false
       }
     },
     {
@@ -661,17 +661,17 @@ export default {
         // 最大上传数
         length: 3,
         maxFileSize: 1,
-        isControlled: false,
+        isControlled: false
       }
     },
     {
       type: 'm_data_ref',
       name: '数据引用',
       icon: 'icon-data-select',
-      key_name: "", // 数据控件隐藏域key对应数据库的备注
-      label_name: "", //  数据控件显示Label信息对应的表结构字段备注信息
-      label_model: "", // 数据控件显示Label信息对应的表结构字段
-      title: "",  // 数据选择页面标题设置:用户选择
+      key_name: '', // 数据控件隐藏域key对应数据库的备注
+      label_name: '', //  数据控件显示Label信息对应的表结构字段备注信息
+      label_model: '', // 数据控件显示Label信息对应的表结构字段
+      title: '', // 数据选择页面标题设置:用户选择
       options: {
         showFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
         editShowFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
@@ -682,32 +682,32 @@ export default {
         disabled: false,
         isControlled: false,
         dsConf: {
-          formId: "",
-          formName: "",
-          key: "",
-          subKey: "",
+          formId: '',
+          formName: '',
+          key: '',
+          subKey: '',
           mapping: {},
           columns: [],
           condFilters: [],
-          defaultSelect: false,
+          defaultSelect: false
         },
-        multiple: false,      // 是否支持多选
+        multiple: false, // 是否支持多选
         props: {
-          label: "",      // 对应Vue的Tree组件的设置,对应于maps.name
+          label: '', // 对应Vue的Tree组件的设置,对应于maps.name
           children: 'zones'
         },
-        remoteUrl: "",  // 数据控件后台访问接口,
-        displayModel: "table" // 数据选择页面的展现形式
+        remoteUrl: '', // 数据控件后台访问接口,
+        displayModel: 'table' // 数据选择页面的展现形式
       }
     },
     {
       type: 'data_select',
       name: '通用数据',
       icon: 'icon-data-select',
-      key_name: "", // 数据控件隐藏域key对应数据库的备注
-      label_name: "", //  数据控件显示Label信息对应的表结构字段备注信息
-      label_model: "", // 数据控件显示Label信息对应的表结构字段
-      title: "",  // 数据选择页面标题设置:用户选择
+      key_name: '', // 数据控件隐藏域key对应数据库的备注
+      label_name: '', //  数据控件显示Label信息对应的表结构字段备注信息
+      label_model: '', // 数据控件显示Label信息对应的表结构字段
+      title: '', // 数据选择页面标题设置:用户选择
       options: {
         showFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
         editShowFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
@@ -718,35 +718,35 @@ export default {
         disabled: false,
         isControlled: false,
         maps: {
-          key: "",   // 映射源数据的主键 (组织架构ID:id)
-          name: "",  // 映射源数据字段用于显示 (组织架构名称:orgName)
-          title: "选择",  // 数据选择页面标题设置:用户选择
+          key: '', // 映射源数据的主键 (组织架构ID:id)
+          name: '', // 映射源数据字段用于显示 (组织架构名称:orgName)
+          title: '选择', // 数据选择页面标题设置:用户选择
           mapping: [],
           source: {
-            datasource: "", // 预留字段,关联数据源
-            table: "",
+            datasource: '', // 预留字段,关联数据源
+            table: '',
             columns: [] // 列表选择展示的列
           }
         },
-        multiple: false,      // 是否支持多选
+        multiple: false, // 是否支持多选
         props: {
-          label: "",      // 对应Vue的Tree组件的设置,对应于maps.name
+          label: '', // 对应Vue的Tree组件的设置,对应于maps.name
           children: 'zones'
         },
-        remoteUrl: "",  // 数据控件后台访问接口,
-        displayModel: "table", // 数据选择页面的展现形式
-        dataSelectType: "0", //0 表单数据 1 接口数据
-        remoteDataPoint: "datas", // 返回数据节点
+        remoteUrl: '', // 数据控件后台访问接口,
+        displayModel: 'table', // 数据选择页面的展现形式
+        dataSelectType: '0', // 0 表单数据 1 接口数据
+        remoteDataPoint: 'datas' // 返回数据节点
       }
     },
     {
       type: 'm_data_select',
       name: '通用数据(多选)',
       icon: 'icon-data-select',
-      key_name: "", // 数据控件隐藏域key对应数据库的备注
-      label_name: "", //  数据控件显示Label信息对应的表结构字段备注信息
-      label_model: "", // 数据控件显示Label信息对应的表结构字段
-      title: "",  // 数据选择页面标题设置:用户选择
+      key_name: '', // 数据控件隐藏域key对应数据库的备注
+      label_name: '', //  数据控件显示Label信息对应的表结构字段备注信息
+      label_model: '', // 数据控件显示Label信息对应的表结构字段
+      title: '', // 数据选择页面标题设置:用户选择
       options: {
         showFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
         editShowFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
@@ -757,33 +757,33 @@ export default {
         disabled: false,
         isControlled: false,
         maps: {
-          key: "",   // 映射源数据的主键 (组织架构ID:id)
-          name: "",  // 映射源数据字段用于显示 (组织架构名称:orgName)
-          title: "选择",  // 数据选择页面标题设置:用户选择
+          key: '', // 映射源数据的主键 (组织架构ID:id)
+          name: '', // 映射源数据字段用于显示 (组织架构名称:orgName)
+          title: '选择', // 数据选择页面标题设置:用户选择
           mapping: [],
           source: {
-            datasource: "", // 预留字段,关联数据源
-            table: "",
+            datasource: '', // 预留字段,关联数据源
+            table: '',
             columns: [] // 列表选择展示的列
           }
         },
-        multiple: false,      // 是否支持多选
+        multiple: false, // 是否支持多选
         props: {
-          label: "",      // 对应Vue的Tree组件的设置,对应于maps.name
+          label: '', // 对应Vue的Tree组件的设置,对应于maps.name
           children: 'zones'
         },
-        remoteUrl: "",  // 数据控件后台访问接口,
-        displayModel: "table" // 数据选择页面的展现形式
+        remoteUrl: '', // 数据控件后台访问接口,
+        displayModel: 'table' // 数据选择页面的展现形式
       }
     },
     {
       type: 'org_select',
       name: '组织机构',
       icon: 'icon-org-select',
-      key_name: "", // 数据控件隐藏域key对应数据库的备注
-      label_name: "", //  数据控件显示Label信息对应的表结构字段备注信息
-      label_model: "", // 数据控件显示Label信息对应的表结构字段
-      title: "组织机构",  // 数据选择页面标题设置:用户选择
+      key_name: '', // 数据控件隐藏域key对应数据库的备注
+      label_name: '', //  数据控件显示Label信息对应的表结构字段备注信息
+      label_model: '', // 数据控件显示Label信息对应的表结构字段
+      title: '组织机构', // 数据选择页面标题设置:用户选择
       options: {
         showFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
         editShowFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
@@ -794,28 +794,28 @@ export default {
         disabled: false,
         isControlled: false,
         maps: {
-          key: "",   // 映射源数据的主键 (组织架构ID:id)
-          name: "",  // 映射源数据字段用于显示 (组织架构名称:orgName)
-          title: "",  // 数据选择页面标题设置:用户选择
-          mapping: [],
+          key: '', // 映射源数据的主键 (组织架构ID:id)
+          name: '', // 映射源数据字段用于显示 (组织架构名称:orgName)
+          title: '', // 数据选择页面标题设置:用户选择
+          mapping: []
         },
-        multiple: false,      // 是否支持多选
+        multiple: false, // 是否支持多选
         props: {
-          label: "",      // 对应Vue的Tree组件的设置,对应于maps.name
+          label: '', // 对应Vue的Tree组件的设置,对应于maps.name
           children: 'zones'
         },
-        remoteUrl: "",  // 数据控件后台访问接口,
-        displayModel: "tree" // 数据选择页面的展现形式
+        remoteUrl: '', // 数据控件后台访问接口,
+        displayModel: 'tree' // 数据选择页面的展现形式
       }
     },
     {
       type: 'm_org_select',
       name: '组织机构(多选)',
       icon: 'icon-org-select',
-      key_name: "", // 数据控件隐藏域key对应数据库的备注
-      label_name: "", //  数据控件显示Label信息对应的表结构字段备注信息
-      label_model: "", // 数据控件显示Label信息对应的表结构字段
-      title: "组织机构",  // 数据选择页面标题设置:用户选择
+      key_name: '', // 数据控件隐藏域key对应数据库的备注
+      label_name: '', //  数据控件显示Label信息对应的表结构字段备注信息
+      label_model: '', // 数据控件显示Label信息对应的表结构字段
+      title: '组织机构', // 数据选择页面标题设置:用户选择
       options: {
         showFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
         editShowFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
@@ -826,28 +826,28 @@ export default {
         disabled: false,
         isControlled: false,
         maps: {
-          key: "",   // 映射源数据的主键 (组织架构ID:id)
-          name: "",  // 映射源数据字段用于显示 (组织架构名称:orgName)
-          title: "",  // 数据选择页面标题设置:用户选择
-          mapping: [],
+          key: '', // 映射源数据的主键 (组织架构ID:id)
+          name: '', // 映射源数据字段用于显示 (组织架构名称:orgName)
+          title: '', // 数据选择页面标题设置:用户选择
+          mapping: []
         },
-        multiple: false,      // 是否支持多选
+        multiple: false, // 是否支持多选
         props: {
-          label: "",      // 对应Vue的Tree组件的设置,对应于maps.name
+          label: '', // 对应Vue的Tree组件的设置,对应于maps.name
           children: 'zones'
         },
-        remoteUrl: "",  // 数据控件后台访问接口,
-        displayModel: "tree" // 数据选择页面的展现形式
+        remoteUrl: '', // 数据控件后台访问接口,
+        displayModel: 'tree' // 数据选择页面的展现形式
       }
     },
     {
       type: 'user_select',
       name: '用户',
       icon: 'icon-user-select',
-      key_name: "", // 数据控件隐藏域key对应数据库的备注
-      label_name: "", //  数据控件显示Label信息对应的表结构字段备注信息
-      label_model: "", // 数据控件显示Label信息对应的表结构字段
-      title: "用户",  // 数据选择页面标题设置:用户选择
+      key_name: '', // 数据控件隐藏域key对应数据库的备注
+      label_name: '', //  数据控件显示Label信息对应的表结构字段备注信息
+      label_model: '', // 数据控件显示Label信息对应的表结构字段
+      title: '用户', // 数据选择页面标题设置:用户选择
       options: {
         showFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
         editShowFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
@@ -859,28 +859,28 @@ export default {
         disabled: false,
         isControlled: false,
         maps: {
-          key: "",   // 映射源数据的主键 (组织架构ID:id)
-          name: "",  // 映射源数据字段用于显示 (组织架构名称:orgName)
-          title: "",  // 数据选择页面标题设置:用户选择
-          mapping: [],
+          key: '', // 映射源数据的主键 (组织架构ID:id)
+          name: '', // 映射源数据字段用于显示 (组织架构名称:orgName)
+          title: '', // 数据选择页面标题设置:用户选择
+          mapping: []
         },
-        multiple: false,      // 是否支持多选
+        multiple: false, // 是否支持多选
         props: {
-          label: "",      // 对应Vue的Tree组件的设置,对应于maps.name
+          label: '', // 对应Vue的Tree组件的设置,对应于maps.name
           children: 'zones'
         },
-        remoteUrl: "",  // 数据控件后台访问接口,
-        displayModel: "table" // 数据选择页面的展现形式
+        remoteUrl: '', // 数据控件后台访问接口,
+        displayModel: 'table' // 数据选择页面的展现形式
       }
     },
     {
       type: 'm_user_select',
       name: '用户(多选)',
       icon: 'icon-user-select',
-      key_name: "", // 数据控件隐藏域key对应数据库的备注
-      label_name: "", //  数据控件显示Label信息对应的表结构字段备注信息
-      label_model: "", // 数据控件显示Label信息对应的表结构字段
-      title: "用户",  // 数据选择页面标题设置:用户选择
+      key_name: '', // 数据控件隐藏域key对应数据库的备注
+      label_name: '', //  数据控件显示Label信息对应的表结构字段备注信息
+      label_model: '', // 数据控件显示Label信息对应的表结构字段
+      title: '用户', // 数据选择页面标题设置:用户选择
       options: {
         showFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
         editShowFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
@@ -891,28 +891,28 @@ export default {
         disabled: false,
         isControlled: false,
         maps: {
-          key: "",   // 映射源数据的主键 (组织架构ID:id)
-          name: "",  // 映射源数据字段用于显示 (组织架构名称:orgName)
-          title: "",  // 数据选择页面标题设置:用户选择
-          mapping: [],
+          key: '', // 映射源数据的主键 (组织架构ID:id)
+          name: '', // 映射源数据字段用于显示 (组织架构名称:orgName)
+          title: '', // 数据选择页面标题设置:用户选择
+          mapping: []
         },
-        multiple: false,      // 是否支持多选
+        multiple: false, // 是否支持多选
         props: {
-          label: "",      // 对应Vue的Tree组件的设置,对应于maps.name
+          label: '', // 对应Vue的Tree组件的设置,对应于maps.name
           children: 'zones'
         },
-        remoteUrl: "",  // 数据控件后台访问接口,
-        displayModel: "table" // 数据选择页面的展现形式
+        remoteUrl: '', // 数据控件后台访问接口,
+        displayModel: 'table' // 数据选择页面的展现形式
       }
     },
     {
       type: 'role_select',
       name: '角色',
       icon: 'icon-role-select',
-      key_name: "", // 数据控件隐藏域key对应数据库的备注
-      label_name: "", //  数据控件显示Label信息对应的表结构字段备注信息
-      label_model: "", // 数据控件显示Label信息对应的表结构字段
-      title: "角色",  // 数据选择页面标题设置:用户选择
+      key_name: '', // 数据控件隐藏域key对应数据库的备注
+      label_name: '', //  数据控件显示Label信息对应的表结构字段备注信息
+      label_model: '', // 数据控件显示Label信息对应的表结构字段
+      title: '角色', // 数据选择页面标题设置:用户选择
       options: {
         width: '40%',
         showFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
@@ -923,28 +923,28 @@ export default {
         disabled: false,
         isControlled: false,
         maps: {
-          key: "",   // 映射源数据的主键 (组织架构ID:id)
-          name: "",  // 映射源数据字段用于显示 (组织架构名称:orgName)
-          title: "",  // 数据选择页面标题设置:用户选择
-          mapping: [],
+          key: '', // 映射源数据的主键 (组织架构ID:id)
+          name: '', // 映射源数据字段用于显示 (组织架构名称:orgName)
+          title: '', // 数据选择页面标题设置:用户选择
+          mapping: []
         },
-        multiple: false,      // 是否支持多选
+        multiple: false, // 是否支持多选
         props: {
-          label: "",      // 对应Vue的Tree组件的设置,对应于maps.name
+          label: '', // 对应Vue的Tree组件的设置,对应于maps.name
           children: 'zones'
         },
-        remoteUrl: "",  // 数据控件后台访问接口,
-        displayModel: "tree" // 数据选择页面的展现形式
+        remoteUrl: '', // 数据控件后台访问接口,
+        displayModel: 'tree' // 数据选择页面的展现形式
       }
     },
     {
       type: 'm_role_select',
       name: '角色(多选)',
       icon: 'icon-role-select',
-      key_name: "", // 数据控件隐藏域key对应数据库的备注
-      label_name: "", //  数据控件显示Label信息对应的表结构字段备注信息
-      label_model: "", // 数据控件显示Label信息对应的表结构字段
-      title: "角色",  // 数据选择页面标题设置:用户选择
+      key_name: '', // 数据控件隐藏域key对应数据库的备注
+      label_name: '', //  数据控件显示Label信息对应的表结构字段备注信息
+      label_model: '', // 数据控件显示Label信息对应的表结构字段
+      title: '角色', // 数据选择页面标题设置:用户选择
       options: {
         width: '40%',
         showFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
@@ -955,28 +955,28 @@ export default {
         disabled: false,
         isControlled: false,
         maps: {
-          key: "",   // 映射源数据的主键 (组织架构ID:id)
-          name: "",  // 映射源数据字段用于显示 (组织架构名称:orgName)
-          title: "",  // 数据选择页面标题设置:用户选择
-          mapping: [],
+          key: '', // 映射源数据的主键 (组织架构ID:id)
+          name: '', // 映射源数据字段用于显示 (组织架构名称:orgName)
+          title: '', // 数据选择页面标题设置:用户选择
+          mapping: []
         },
-        multiple: false,      // 是否支持多选
+        multiple: false, // 是否支持多选
         props: {
-          label: "",      // 对应Vue的Tree组件的设置,对应于maps.name
+          label: '', // 对应Vue的Tree组件的设置,对应于maps.name
           children: 'zones'
         },
-        remoteUrl: "",  // 数据控件后台访问接口,
-        displayModel: "tree" // 数据选择页面的展现形式
+        remoteUrl: '', // 数据控件后台访问接口,
+        displayModel: 'tree' // 数据选择页面的展现形式
       }
     },
     {
       type: 'company_select',
       name: '企业',
       icon: 'icon-company-select',
-      key_name: "", // 数据控件隐藏域key对应数据库的备注
-      label_name: "", //  数据控件显示Label信息对应的表结构字段备注信息
-      label_model: "", // 数据控件显示Label信息对应的表结构字段
-      title: "企业",  // 数据选择页面标题设置:用户选择
+      key_name: '', // 数据控件隐藏域key对应数据库的备注
+      label_name: '', //  数据控件显示Label信息对应的表结构字段备注信息
+      label_model: '', // 数据控件显示Label信息对应的表结构字段
+      title: '企业', // 数据选择页面标题设置:用户选择
       options: {
         width: '40%',
         showFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
@@ -987,28 +987,28 @@ export default {
         disabled: false,
         isControlled: false,
         maps: {
-          key: "",   // 映射源数据的主键 (组织架构ID:id)
-          name: "",  // 映射源数据字段用于显示 (组织架构名称:orgName)
-          title: "",  // 数据选择页面标题设置:用户选择
-          mapping: [],
+          key: '', // 映射源数据的主键 (组织架构ID:id)
+          name: '', // 映射源数据字段用于显示 (组织架构名称:orgName)
+          title: '', // 数据选择页面标题设置:用户选择
+          mapping: []
         },
-        multiple: false,      // 是否支持多选
+        multiple: false, // 是否支持多选
         props: {
-          label: "",      // 对应Vue的Tree组件的设置,对应于maps.name
+          label: '', // 对应Vue的Tree组件的设置,对应于maps.name
           children: 'zones'
         },
-        remoteUrl: "",  // 数据控件后台访问接口,
-        displayModel: "table" // 数据选择页面的展现形式
+        remoteUrl: '', // 数据控件后台访问接口,
+        displayModel: 'table' // 数据选择页面的展现形式
       }
     },
     {
       type: 'm_company_select',
       name: '企业(多选)',
       icon: 'icon-company-select',
-      key_name: "", // 数据控件隐藏域key对应数据库的备注
-      label_name: "", //  数据控件显示Label信息对应的表结构字段备注信息
-      label_model: "", // 数据控件显示Label信息对应的表结构字段
-      title: "企业",  // 数据选择页面标题设置:用户选择
+      key_name: '', // 数据控件隐藏域key对应数据库的备注
+      label_name: '', //  数据控件显示Label信息对应的表结构字段备注信息
+      label_model: '', // 数据控件显示Label信息对应的表结构字段
+      title: '企业', // 数据选择页面标题设置:用户选择
       options: {
         width: '40%',
         showFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
@@ -1019,29 +1019,29 @@ export default {
         disabled: false,
         isControlled: false,
         maps: {
-          key: "",   // 映射源数据的主键 (组织架构ID:id)
-          name: "",  // 映射源数据字段用于显示 (组织架构名称:orgName)
-          title: "",  // 数据选择页面标题设置:用户选择
-          mapping: [],
+          key: '', // 映射源数据的主键 (组织架构ID:id)
+          name: '', // 映射源数据字段用于显示 (组织架构名称:orgName)
+          title: '', // 数据选择页面标题设置:用户选择
+          mapping: []
         },
-        multiple: false,      // 是否支持多选
+        multiple: false, // 是否支持多选
         props: {
-          label: "",      // 对应Vue的Tree组件的设置,对应于maps.name
+          label: '', // 对应Vue的Tree组件的设置,对应于maps.name
           children: 'zones'
         },
-        remoteUrl: "",  // 数据控件后台访问接口,
-        displayModel: "table" // 数据选择页面的展现形式
+        remoteUrl: '', // 数据控件后台访问接口,
+        displayModel: 'table' // 数据选择页面的展现形式
       }
     },
     {
       type: 'dic_select',
       name: '数据字典',
       icon: 'icon-dic-select',
-      typeCode: "", // 数据字典类型
-      key_name: "", // 数据控件隐藏域key对应数据库的备注
-      label_name: "", //  数据控件显示Label信息对应的表结构字段备注信息
-      label_model: "", // 数据控件显示Label信息对应的表结构字段
-      title: "数据字典",  // 数据选择页面标题设置:用户选择
+      typeCode: '', // 数据字典类型
+      key_name: '', // 数据控件隐藏域key对应数据库的备注
+      label_name: '', //  数据控件显示Label信息对应的表结构字段备注信息
+      label_model: '', // 数据控件显示Label信息对应的表结构字段
+      title: '数据字典', // 数据选择页面标题设置:用户选择
       options: {
         width: '40%',
         defaultValue: '',
@@ -1052,29 +1052,29 @@ export default {
         disabled: false,
         isControlled: false,
         maps: {
-          key: "",   // 映射源数据的主键 (组织架构ID:id)
-          name: "",  // 映射源数据字段用于显示 (组织架构名称:orgName)
-          title: "",  // 数据选择页面标题设置:用户选择
-          mapping: [],
+          key: '', // 映射源数据的主键 (组织架构ID:id)
+          name: '', // 映射源数据字段用于显示 (组织架构名称:orgName)
+          title: '', // 数据选择页面标题设置:用户选择
+          mapping: []
         },
-        multiple: false,      // 是否支持多选
+        multiple: false, // 是否支持多选
         props: {
-          label: "",      // 对应Vue的Tree组件的设置,对应于maps.name
+          label: '', // 对应Vue的Tree组件的设置,对应于maps.name
           children: 'zones'
         },
-        remoteUrl: "",  // 数据控件后台访问接口,
-        displayModel: "tree" // 数据选择页面的展现形式
+        remoteUrl: '', // 数据控件后台访问接口,
+        displayModel: 'tree' // 数据选择页面的展现形式
       }
     },
     {
       type: 'm_dic_select',
       name: '数据字典(多选)',
       icon: 'icon-dic-select',
-      typeCode: "", // 数据字典类型
-      key_name: "", // 数据控件隐藏域key对应数据库的备注
-      label_name: "", //  数据控件显示Label信息对应的表结构字段备注信息
-      label_model: "", // 数据控件显示Label信息对应的表结构字段
-      title: "数据字典",  // 数据选择页面标题设置:用户选择
+      typeCode: '', // 数据字典类型
+      key_name: '', // 数据控件隐藏域key对应数据库的备注
+      label_name: '', //  数据控件显示Label信息对应的表结构字段备注信息
+      label_model: '', // 数据控件显示Label信息对应的表结构字段
+      title: '数据字典', // 数据选择页面标题设置:用户选择
       options: {
         width: '40%',
         defaultValue: '',
@@ -1085,18 +1085,18 @@ export default {
         disabled: false,
         isControlled: false,
         maps: {
-          key: "",   // 映射源数据的主键 (组织架构ID:id)
-          name: "",  // 映射源数据字段用于显示 (组织架构名称:orgName)
-          title: "",  // 数据选择页面标题设置:用户选择
-          mapping: [],
+          key: '', // 映射源数据的主键 (组织架构ID:id)
+          name: '', // 映射源数据字段用于显示 (组织架构名称:orgName)
+          title: '', // 数据选择页面标题设置:用户选择
+          mapping: []
         },
-        multiple: false,      // 是否支持多选
+        multiple: false, // 是否支持多选
         props: {
-          label: "",      // 对应Vue的Tree组件的设置,对应于maps.name
+          label: '', // 对应Vue的Tree组件的设置,对应于maps.name
           children: 'zones'
         },
-        remoteUrl: "",  // 数据控件后台访问接口,
-        displayModel: "tree" // 数据选择页面的展现形式
+        remoteUrl: '', // 数据控件后台访问接口,
+        displayModel: 'tree' // 数据选择页面的展现形式
       }
     },
     {
@@ -1116,18 +1116,18 @@ export default {
         zoom: 13,
         lat: 28.683016,
         lnt: 115.857963,
-        city: "南昌",
-        gisType: "高德",
+        city: '南昌',
+        gisType: '高德',
         allowLocation: false,
         positions: []
       },
       modelExt: {
-        lat: "lat",
-        lnt: "lng",
-        address: "address",
-        latName: "经度",
-        lntName: "纬度",
-        addressName: "详细地址",
+        lat: 'lat',
+        lnt: 'lng',
+        address: 'address',
+        latName: '经度',
+        lntName: '纬度',
+        addressName: '详细地址'
       }
     },
     {
@@ -1143,31 +1143,31 @@ export default {
         required: false,
         pattern: '',
         placeholder: '',
-        isControlled: false,
+        isControlled: false
       },
       modelExt: {
-        province: "province",
-        provinceName: "省份",
-        provinceCode: "province_code",
-        provinceCodeName: "省份代码",
-        city: "city",
-        cityName: "市",
-        cityCode: "city_code",
-        cityCodeName: "市代码",
-        area: "area",
-        areaName: "区县",
-        areaCode: "area_code",
-        areaCodeName: "县区代码"
+        province: 'province',
+        provinceName: '省份',
+        provinceCode: 'province_code',
+        provinceCodeName: '省份代码',
+        city: 'city',
+        cityName: '市',
+        cityCode: 'city_code',
+        cityCodeName: '市代码',
+        area: 'area',
+        areaName: '区县',
+        areaCode: 'area_code',
+        areaCodeName: '县区代码'
       }
     },
     {
       type: 'current_user',
       name: '当前用户',
       icon: 'icon-user-select',
-      key_name: "", // 数据控件隐藏域key对应数据库的备注
-      label_name: "", //  数据控件显示Label信息对应的表结构字段备注信息
-      label_model: "", // 数据控件显示Label信息对应的表结构字段
-      title: "用户",  // 数据选择页面标题设置:用户选择
+      key_name: '', // 数据控件隐藏域key对应数据库的备注
+      label_name: '', //  数据控件显示Label信息对应的表结构字段备注信息
+      label_model: '', // 数据控件显示Label信息对应的表结构字段
+      title: '用户', // 数据选择页面标题设置:用户选择
       options: {
         showFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
         editShowFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
@@ -1177,22 +1177,22 @@ export default {
         placeholder: '',
         disabled: false,
         isControlled: false,
-        multiple: false,      // 是否支持多选
-        remoteUrl: "",  // 数据控件后台访问接口,
+        multiple: false, // 是否支持多选
+        remoteUrl: '' // 数据控件后台访问接口,
       }
     },
     {
-      type: "table",
-      icon: "icon-table",
+      type: 'table',
+      icon: 'icon-table',
       options: {
         isControlled: false,
         gutter: 0,
         justify: 'start',
         align: 'top',
-        addModel: "single",
+        addModel: 'single',
         dsConf: {
-          formId: "",
-          formName: "",
+          formId: '',
+          formName: '',
           subKey: '',
           mapping: [],
           columns: [],
@@ -1201,34 +1201,34 @@ export default {
         }
       },
       tableColumns: [],
-      name: "子表单",
-      key: "",
-      model: "",
+      name: '子表单',
+      key: '',
+      model: ''
     },
     {
-      name: "计算公式",
-      icon: "icon-number",
+      name: '计算公式',
+      icon: 'icon-number',
       options: {
         isControlled: false,
-        defaultValue: "",
-        dateType: "number",
-        width: "40%",
-        pattern: "",
+        defaultValue: '',
+        dateType: 'number',
+        width: '40%',
+        pattern: '',
         disabled: false,
         showFields: false,
-        placeholder: "",
+        placeholder: '',
         editShowFields: false,
         required: false,
         formula: {
-          type: "number", //number/year/year_month/date/datetime
+          type: 'number', // number/year/year_month/date/datetime
           exp: [],
-          decimal: 2 //$decimal: "小数点位数，只有类型为number需要设置",
+          decimal: 2 // $decimal: "小数点位数，只有类型为number需要设置",
         }
       },
-      model: "",
+      model: '',
       rules: [],
-      type: "calculate_formula",
-      key: "",
+      type: 'calculate_formula',
+      key: '',
       show: true
     }
   ],
@@ -1248,7 +1248,7 @@ export default {
         // 最大上传数
         length: 3,
         maxFileSize: 1,
-        isControlled: false,
+        isControlled: false
       }
     },
     {
@@ -1265,7 +1265,7 @@ export default {
         maxFileSize: 10,
         // 最大上传数
         length: 3,
-        isControlled: false,
+        isControlled: false
       }
     },
     {
@@ -1282,17 +1282,17 @@ export default {
         // 最大上传数
         length: 3,
         maxFileSize: 1,
-        isControlled: false,
+        isControlled: false
       }
     },
     {
       type: 'm_data_ref',
       name: '数据引用',
       icon: 'icon-data-select',
-      key_name: "", // 数据控件隐藏域key对应数据库的备注
-      label_name: "", //  数据控件显示Label信息对应的表结构字段备注信息
-      label_model: "", // 数据控件显示Label信息对应的表结构字段
-      title: "",  // 数据选择页面标题设置:用户选择
+      key_name: '', // 数据控件隐藏域key对应数据库的备注
+      label_name: '', //  数据控件显示Label信息对应的表结构字段备注信息
+      label_model: '', // 数据控件显示Label信息对应的表结构字段
+      title: '', // 数据选择页面标题设置:用户选择
       options: {
         showFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
         editShowFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
@@ -1303,32 +1303,32 @@ export default {
         disabled: false,
         isControlled: false,
         dsConf: {
-          formId: "",
-          formName: "",
-          key: "",
-          subKey: "",
+          formId: '',
+          formName: '',
+          key: '',
+          subKey: '',
           mapping: {},
           columns: [],
           condFilters: [],
           defaultSelect: false
         },
-        multiple: false,      // 是否支持多选
+        multiple: false, // 是否支持多选
         props: {
-          label: "",      // 对应Vue的Tree组件的设置,对应于maps.name
+          label: '', // 对应Vue的Tree组件的设置,对应于maps.name
           children: 'zones'
         },
-        remoteUrl: "",  // 数据控件后台访问接口,
-        displayModel: "table" // 数据选择页面的展现形式
+        remoteUrl: '', // 数据控件后台访问接口,
+        displayModel: 'table' // 数据选择页面的展现形式
       }
     },
     {
       type: 'data_select',
       name: '通用数据',
       icon: 'icon-data-select',
-      key_name: "", // 数据控件隐藏域key对应数据库的备注
-      label_name: "", //  数据控件显示Label信息对应的表结构字段备注信息
-      label_model: "", // 数据控件显示Label信息对应的表结构字段
-      title: "",  // 数据选择页面标题设置:用户选择
+      key_name: '', // 数据控件隐藏域key对应数据库的备注
+      label_name: '', //  数据控件显示Label信息对应的表结构字段备注信息
+      label_model: '', // 数据控件显示Label信息对应的表结构字段
+      title: '', // 数据选择页面标题设置:用户选择
       options: {
         showFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
         editShowFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
@@ -1339,33 +1339,33 @@ export default {
         disabled: false,
         isControlled: false,
         maps: {
-          key: "",   // 映射源数据的主键 (组织架构ID:id)
-          name: "",  // 映射源数据字段用于显示 (组织架构名称:orgName)
-          title: "选择",  // 数据选择页面标题设置:用户选择
+          key: '', // 映射源数据的主键 (组织架构ID:id)
+          name: '', // 映射源数据字段用于显示 (组织架构名称:orgName)
+          title: '选择', // 数据选择页面标题设置:用户选择
           mapping: [],
           source: {
-            datasource: "", // 预留字段,关联数据源
-            table: "",
+            datasource: '', // 预留字段,关联数据源
+            table: '',
             columns: [] // 列表选择展示的列
           }
         },
-        multiple: false,      // 是否支持多选
+        multiple: false, // 是否支持多选
         props: {
-          label: "",      // 对应Vue的Tree组件的设置,对应于maps.name
+          label: '', // 对应Vue的Tree组件的设置,对应于maps.name
           children: 'zones'
         },
-        remoteUrl: "",  // 数据控件后台访问接口,
-        displayModel: "table" // 数据选择页面的展现形式
+        remoteUrl: '', // 数据控件后台访问接口,
+        displayModel: 'table' // 数据选择页面的展现形式
       }
     },
     {
       type: 'm_data_select',
       name: '通用数据（多选）',
       icon: 'icon-data-select',
-      key_name: "", // 数据控件隐藏域key对应数据库的备注
-      label_name: "", //  数据控件显示Label信息对应的表结构字段备注信息
-      label_model: "", // 数据控件显示Label信息对应的表结构字段
-      title: "",  // 数据选择页面标题设置:用户选择
+      key_name: '', // 数据控件隐藏域key对应数据库的备注
+      label_name: '', //  数据控件显示Label信息对应的表结构字段备注信息
+      label_model: '', // 数据控件显示Label信息对应的表结构字段
+      title: '', // 数据选择页面标题设置:用户选择
       options: {
         showFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
         editShowFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
@@ -1376,33 +1376,33 @@ export default {
         disabled: false,
         isControlled: false,
         maps: {
-          key: "",   // 映射源数据的主键 (组织架构ID:id)
-          name: "",  // 映射源数据字段用于显示 (组织架构名称:orgName)
-          title: "选择",  // 数据选择页面标题设置:用户选择
+          key: '', // 映射源数据的主键 (组织架构ID:id)
+          name: '', // 映射源数据字段用于显示 (组织架构名称:orgName)
+          title: '选择', // 数据选择页面标题设置:用户选择
           mapping: [],
           source: {
-            datasource: "", // 预留字段,关联数据源
-            table: "",
+            datasource: '', // 预留字段,关联数据源
+            table: '',
             columns: [] // 列表选择展示的列
           }
         },
-        multiple: false,      // 是否支持多选
+        multiple: false, // 是否支持多选
         props: {
-          label: "",      // 对应Vue的Tree组件的设置,对应于maps.name
+          label: '', // 对应Vue的Tree组件的设置,对应于maps.name
           children: 'zones'
         },
-        remoteUrl: "",  // 数据控件后台访问接口,
-        displayModel: "table" // 数据选择页面的展现形式
+        remoteUrl: '', // 数据控件后台访问接口,
+        displayModel: 'table' // 数据选择页面的展现形式
       }
     },
     {
       type: 'org_select',
       name: '组织机构',
       icon: 'icon-org-select',
-      key_name: "", // 数据控件隐藏域key对应数据库的备注
-      label_name: "", //  数据控件显示Label信息对应的表结构字段备注信息
-      label_model: "", // 数据控件显示Label信息对应的表结构字段
-      title: "组织机构",  // 数据选择页面标题设置:用户选择
+      key_name: '', // 数据控件隐藏域key对应数据库的备注
+      label_name: '', //  数据控件显示Label信息对应的表结构字段备注信息
+      label_model: '', // 数据控件显示Label信息对应的表结构字段
+      title: '组织机构', // 数据选择页面标题设置:用户选择
       options: {
         showFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
         editShowFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
@@ -1413,28 +1413,28 @@ export default {
         disabled: false,
         isControlled: false,
         maps: {
-          key: "",   // 映射源数据的主键 (组织架构ID:id)
-          name: "",  // 映射源数据字段用于显示 (组织架构名称:orgName)
-          title: "",  // 数据选择页面标题设置:用户选择
-          mapping: [],
+          key: '', // 映射源数据的主键 (组织架构ID:id)
+          name: '', // 映射源数据字段用于显示 (组织架构名称:orgName)
+          title: '', // 数据选择页面标题设置:用户选择
+          mapping: []
         },
-        multiple: false,      // 是否支持多选
+        multiple: false, // 是否支持多选
         props: {
-          label: "",      // 对应Vue的Tree组件的设置,对应于maps.name
+          label: '', // 对应Vue的Tree组件的设置,对应于maps.name
           children: 'zones'
         },
-        remoteUrl: "",  // 数据控件后台访问接口,
-        displayModel: "tree" // 数据选择页面的展现形式
+        remoteUrl: '', // 数据控件后台访问接口,
+        displayModel: 'tree' // 数据选择页面的展现形式
       }
     },
     {
       type: 'm_org_select',
       name: '组织机构(多选)',
       icon: 'icon-org-select',
-      key_name: "", // 数据控件隐藏域key对应数据库的备注
-      label_name: "", //  数据控件显示Label信息对应的表结构字段备注信息
-      label_model: "", // 数据控件显示Label信息对应的表结构字段
-      title: "组织机构",  // 数据选择页面标题设置:用户选择
+      key_name: '', // 数据控件隐藏域key对应数据库的备注
+      label_name: '', //  数据控件显示Label信息对应的表结构字段备注信息
+      label_model: '', // 数据控件显示Label信息对应的表结构字段
+      title: '组织机构', // 数据选择页面标题设置:用户选择
       options: {
         showFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
         editShowFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
@@ -1445,28 +1445,28 @@ export default {
         disabled: false,
         isControlled: false,
         maps: {
-          key: "",   // 映射源数据的主键 (组织架构ID:id)
-          name: "",  // 映射源数据字段用于显示 (组织架构名称:orgName)
-          title: "",  // 数据选择页面标题设置:用户选择
-          mapping: [],
+          key: '', // 映射源数据的主键 (组织架构ID:id)
+          name: '', // 映射源数据字段用于显示 (组织架构名称:orgName)
+          title: '', // 数据选择页面标题设置:用户选择
+          mapping: []
         },
-        multiple: false,      // 是否支持多选
+        multiple: false, // 是否支持多选
         props: {
-          label: "",      // 对应Vue的Tree组件的设置,对应于maps.name
+          label: '', // 对应Vue的Tree组件的设置,对应于maps.name
           children: 'zones'
         },
-        remoteUrl: "",  // 数据控件后台访问接口,
-        displayModel: "tree" // 数据选择页面的展现形式
+        remoteUrl: '', // 数据控件后台访问接口,
+        displayModel: 'tree' // 数据选择页面的展现形式
       }
     },
     {
       type: 'user_select',
       name: '用户',
       icon: 'icon-user-select',
-      key_name: "", // 数据控件隐藏域key对应数据库的备注
-      label_name: "", //  数据控件显示Label信息对应的表结构字段备注信息
-      label_model: "", // 数据控件显示Label信息对应的表结构字段
-      title: "用户",  // 数据选择页面标题设置:用户选择
+      key_name: '', // 数据控件隐藏域key对应数据库的备注
+      label_name: '', //  数据控件显示Label信息对应的表结构字段备注信息
+      label_model: '', // 数据控件显示Label信息对应的表结构字段
+      title: '用户', // 数据选择页面标题设置:用户选择
       options: {
         showFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
         editShowFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
@@ -1477,28 +1477,28 @@ export default {
         disabled: false,
         isControlled: false,
         maps: {
-          key: "",   // 映射源数据的主键 (组织架构ID:id)
-          name: "",  // 映射源数据字段用于显示 (组织架构名称:orgName)
-          title: "",  // 数据选择页面标题设置:用户选择
-          mapping: [],
+          key: '', // 映射源数据的主键 (组织架构ID:id)
+          name: '', // 映射源数据字段用于显示 (组织架构名称:orgName)
+          title: '', // 数据选择页面标题设置:用户选择
+          mapping: []
         },
-        multiple: false,      // 是否支持多选
+        multiple: false, // 是否支持多选
         props: {
-          label: "",      // 对应Vue的Tree组件的设置,对应于maps.name
+          label: '', // 对应Vue的Tree组件的设置,对应于maps.name
           children: 'zones'
         },
-        remoteUrl: "",  // 数据控件后台访问接口,
-        displayModel: "table" // 数据选择页面的展现形式
+        remoteUrl: '', // 数据控件后台访问接口,
+        displayModel: 'table' // 数据选择页面的展现形式
       }
     },
     {
       type: 'm_user_select',
       name: '用户(多选)',
       icon: 'icon-user-select',
-      key_name: "", // 数据控件隐藏域key对应数据库的备注
-      label_name: "", //  数据控件显示Label信息对应的表结构字段备注信息
-      label_model: "", // 数据控件显示Label信息对应的表结构字段
-      title: "用户",  // 数据选择页面标题设置:用户选择
+      key_name: '', // 数据控件隐藏域key对应数据库的备注
+      label_name: '', //  数据控件显示Label信息对应的表结构字段备注信息
+      label_model: '', // 数据控件显示Label信息对应的表结构字段
+      title: '用户', // 数据选择页面标题设置:用户选择
       options: {
         showFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
         editShowFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
@@ -1509,18 +1509,18 @@ export default {
         disabled: false,
         isControlled: false,
         maps: {
-          key: "",   // 映射源数据的主键 (组织架构ID:id)
-          name: "",  // 映射源数据字段用于显示 (组织架构名称:orgName)
-          title: "",  // 数据选择页面标题设置:用户选择
-          mapping: [],
+          key: '', // 映射源数据的主键 (组织架构ID:id)
+          name: '', // 映射源数据字段用于显示 (组织架构名称:orgName)
+          title: '', // 数据选择页面标题设置:用户选择
+          mapping: []
         },
-        multiple: false,      // 是否支持多选
+        multiple: false, // 是否支持多选
         props: {
-          label: "",      // 对应Vue的Tree组件的设置,对应于maps.name
+          label: '', // 对应Vue的Tree组件的设置,对应于maps.name
           children: 'zones'
         },
-        remoteUrl: "",  // 数据控件后台访问接口,
-        displayModel: "table" // 数据选择页面的展现形式
+        remoteUrl: '', // 数据控件后台访问接口,
+        displayModel: 'table' // 数据选择页面的展现形式
       }
     },
 
@@ -1528,10 +1528,10 @@ export default {
       type: 'role_select',
       name: '角色',
       icon: 'icon-role-select',
-      key_name: "", // 数据控件隐藏域key对应数据库的备注
-      label_name: "", //  数据控件显示Label信息对应的表结构字段备注信息
-      label_model: "", // 数据控件显示Label信息对应的表结构字段
-      title: "角色",  // 数据选择页面标题设置:用户选择
+      key_name: '', // 数据控件隐藏域key对应数据库的备注
+      label_name: '', //  数据控件显示Label信息对应的表结构字段备注信息
+      label_model: '', // 数据控件显示Label信息对应的表结构字段
+      title: '角色', // 数据选择页面标题设置:用户选择
       options: {
         width: '40%',
         showFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
@@ -1542,28 +1542,28 @@ export default {
         disabled: false,
         isControlled: false,
         maps: {
-          key: "",   // 映射源数据的主键 (组织架构ID:id)
-          name: "",  // 映射源数据字段用于显示 (组织架构名称:orgName)
-          title: "",  // 数据选择页面标题设置:用户选择
-          mapping: [],
+          key: '', // 映射源数据的主键 (组织架构ID:id)
+          name: '', // 映射源数据字段用于显示 (组织架构名称:orgName)
+          title: '', // 数据选择页面标题设置:用户选择
+          mapping: []
         },
-        multiple: false,      // 是否支持多选
+        multiple: false, // 是否支持多选
         props: {
-          label: "",      // 对应Vue的Tree组件的设置,对应于maps.name
+          label: '', // 对应Vue的Tree组件的设置,对应于maps.name
           children: 'zones'
         },
-        remoteUrl: "",  // 数据控件后台访问接口,
-        displayModel: "tree" // 数据选择页面的展现形式
+        remoteUrl: '', // 数据控件后台访问接口,
+        displayModel: 'tree' // 数据选择页面的展现形式
       }
     },
     {
       type: 'm_role_select',
       name: '角色(多选)',
       icon: 'icon-role-select',
-      key_name: "", // 数据控件隐藏域key对应数据库的备注
-      label_name: "", //  数据控件显示Label信息对应的表结构字段备注信息
-      label_model: "", // 数据控件显示Label信息对应的表结构字段
-      title: "角色",  // 数据选择页面标题设置:用户选择
+      key_name: '', // 数据控件隐藏域key对应数据库的备注
+      label_name: '', //  数据控件显示Label信息对应的表结构字段备注信息
+      label_model: '', // 数据控件显示Label信息对应的表结构字段
+      title: '角色', // 数据选择页面标题设置:用户选择
       options: {
         width: '40%',
         showFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
@@ -1574,28 +1574,28 @@ export default {
         disabled: false,
         isControlled: false,
         maps: {
-          key: "",   // 映射源数据的主键 (组织架构ID:id)
-          name: "",  // 映射源数据字段用于显示 (组织架构名称:orgName)
-          title: "",  // 数据选择页面标题设置:用户选择
-          mapping: [],
+          key: '', // 映射源数据的主键 (组织架构ID:id)
+          name: '', // 映射源数据字段用于显示 (组织架构名称:orgName)
+          title: '', // 数据选择页面标题设置:用户选择
+          mapping: []
         },
-        multiple: false,      // 是否支持多选
+        multiple: false, // 是否支持多选
         props: {
-          label: "",      // 对应Vue的Tree组件的设置,对应于maps.name
+          label: '', // 对应Vue的Tree组件的设置,对应于maps.name
           children: 'zones'
         },
-        remoteUrl: "",  // 数据控件后台访问接口,
-        displayModel: "tree" // 数据选择页面的展现形式
+        remoteUrl: '', // 数据控件后台访问接口,
+        displayModel: 'tree' // 数据选择页面的展现形式
       }
     },
     {
       type: 'company_select',
       name: '企业',
       icon: 'icon-company-select',
-      key_name: "", // 数据控件隐藏域key对应数据库的备注
-      label_name: "", //  数据控件显示Label信息对应的表结构字段备注信息
-      label_model: "", // 数据控件显示Label信息对应的表结构字段
-      title: "企业",  // 数据选择页面标题设置:用户选择
+      key_name: '', // 数据控件隐藏域key对应数据库的备注
+      label_name: '', //  数据控件显示Label信息对应的表结构字段备注信息
+      label_model: '', // 数据控件显示Label信息对应的表结构字段
+      title: '企业', // 数据选择页面标题设置:用户选择
       options: {
         width: '40%',
         showFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
@@ -1606,28 +1606,28 @@ export default {
         disabled: false,
         isControlled: false,
         maps: {
-          key: "",   // 映射源数据的主键 (组织架构ID:id)
-          name: "",  // 映射源数据字段用于显示 (组织架构名称:orgName)
-          title: "",  // 数据选择页面标题设置:用户选择
-          mapping: [],
+          key: '', // 映射源数据的主键 (组织架构ID:id)
+          name: '', // 映射源数据字段用于显示 (组织架构名称:orgName)
+          title: '', // 数据选择页面标题设置:用户选择
+          mapping: []
         },
-        multiple: false,      // 是否支持多选
+        multiple: false, // 是否支持多选
         props: {
-          label: "",      // 对应Vue的Tree组件的设置,对应于maps.name
+          label: '', // 对应Vue的Tree组件的设置,对应于maps.name
           children: 'zones'
         },
-        remoteUrl: "",  // 数据控件后台访问接口,
-        displayModel: "table" // 数据选择页面的展现形式
+        remoteUrl: '', // 数据控件后台访问接口,
+        displayModel: 'table' // 数据选择页面的展现形式
       }
     },
     {
       type: 'm_company_select',
       name: '企业(多选)',
       icon: 'icon-company-select',
-      key_name: "", // 数据控件隐藏域key对应数据库的备注
-      label_name: "", //  数据控件显示Label信息对应的表结构字段备注信息
-      label_model: "", // 数据控件显示Label信息对应的表结构字段
-      title: "企业",  // 数据选择页面标题设置:用户选择
+      key_name: '', // 数据控件隐藏域key对应数据库的备注
+      label_name: '', //  数据控件显示Label信息对应的表结构字段备注信息
+      label_model: '', // 数据控件显示Label信息对应的表结构字段
+      title: '企业', // 数据选择页面标题设置:用户选择
       options: {
         width: '40%',
         showFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
@@ -1638,29 +1638,29 @@ export default {
         disabled: false,
         isControlled: false,
         maps: {
-          key: "",   // 映射源数据的主键 (组织架构ID:id)
-          name: "",  // 映射源数据字段用于显示 (组织架构名称:orgName)
-          title: "",  // 数据选择页面标题设置:用户选择
-          mapping: [],
+          key: '', // 映射源数据的主键 (组织架构ID:id)
+          name: '', // 映射源数据字段用于显示 (组织架构名称:orgName)
+          title: '', // 数据选择页面标题设置:用户选择
+          mapping: []
         },
-        multiple: false,      // 是否支持多选
+        multiple: false, // 是否支持多选
         props: {
-          label: "",      // 对应Vue的Tree组件的设置,对应于maps.name
+          label: '', // 对应Vue的Tree组件的设置,对应于maps.name
           children: 'zones'
         },
-        remoteUrl: "",  // 数据控件后台访问接口,
-        displayModel: "table" // 数据选择页面的展现形式
+        remoteUrl: '', // 数据控件后台访问接口,
+        displayModel: 'table' // 数据选择页面的展现形式
       }
     },
     {
       type: 'dic_select',
       name: '数据字典',
       icon: 'icon-dic-select',
-      typeCode: "", // 数据字典类型
-      key_name: "", // 数据控件隐藏域key对应数据库的备注
-      label_name: "", //  数据控件显示Label信息对应的表结构字段备注信息
-      label_model: "", // 数据控件显示Label信息对应的表结构字段
-      title: "数据字典",  // 数据选择页面标题设置:用户选择
+      typeCode: '', // 数据字典类型
+      key_name: '', // 数据控件隐藏域key对应数据库的备注
+      label_name: '', //  数据控件显示Label信息对应的表结构字段备注信息
+      label_model: '', // 数据控件显示Label信息对应的表结构字段
+      title: '数据字典', // 数据选择页面标题设置:用户选择
       options: {
         width: '40%',
         defaultValue: '',
@@ -1671,29 +1671,29 @@ export default {
         disabled: false,
         isControlled: false,
         maps: {
-          key: "",   // 映射源数据的主键 (组织架构ID:id)
-          name: "",  // 映射源数据字段用于显示 (组织架构名称:orgName)
-          title: "",  // 数据选择页面标题设置:用户选择
-          mapping: [],
+          key: '', // 映射源数据的主键 (组织架构ID:id)
+          name: '', // 映射源数据字段用于显示 (组织架构名称:orgName)
+          title: '', // 数据选择页面标题设置:用户选择
+          mapping: []
         },
-        multiple: false,      // 是否支持多选
+        multiple: false, // 是否支持多选
         props: {
-          label: "",      // 对应Vue的Tree组件的设置,对应于maps.name
+          label: '', // 对应Vue的Tree组件的设置,对应于maps.name
           children: 'zones'
         },
-        remoteUrl: "",  // 数据控件后台访问接口,
-        displayModel: "tree" // 数据选择页面的展现形式
+        remoteUrl: '', // 数据控件后台访问接口,
+        displayModel: 'tree' // 数据选择页面的展现形式
       }
     },
     {
       type: 'm_dic_select',
       name: '数据字典(多选)',
       icon: 'icon-dic-select',
-      typeCode: "", // 数据字典类型
-      key_name: "", // 数据控件隐藏域key对应数据库的备注
-      label_name: "", //  数据控件显示Label信息对应的表结构字段备注信息
-      label_model: "", // 数据控件显示Label信息对应的表结构字段
-      title: "数据字典",  // 数据选择页面标题设置:用户选择
+      typeCode: '', // 数据字典类型
+      key_name: '', // 数据控件隐藏域key对应数据库的备注
+      label_name: '', //  数据控件显示Label信息对应的表结构字段备注信息
+      label_model: '', // 数据控件显示Label信息对应的表结构字段
+      title: '数据字典', // 数据选择页面标题设置:用户选择
       options: {
         width: '40%',
         defaultValue: '',
@@ -1704,18 +1704,18 @@ export default {
         disabled: false,
         isControlled: false,
         maps: {
-          key: "",   // 映射源数据的主键 (组织架构ID:id)
-          name: "",  // 映射源数据字段用于显示 (组织架构名称:orgName)
-          title: "",  // 数据选择页面标题设置:用户选择
-          mapping: [],
+          key: '', // 映射源数据的主键 (组织架构ID:id)
+          name: '', // 映射源数据字段用于显示 (组织架构名称:orgName)
+          title: '', // 数据选择页面标题设置:用户选择
+          mapping: []
         },
-        multiple: false,      // 是否支持多选
+        multiple: false, // 是否支持多选
         props: {
-          label: "",      // 对应Vue的Tree组件的设置,对应于maps.name
+          label: '', // 对应Vue的Tree组件的设置,对应于maps.name
           children: 'zones'
         },
-        remoteUrl: "",  // 数据控件后台访问接口,
-        displayModel: "tree" // 数据选择页面的展现形式
+        remoteUrl: '', // 数据控件后台访问接口,
+        displayModel: 'tree' // 数据选择页面的展现形式
       }
     },
     {
@@ -1735,18 +1735,18 @@ export default {
         zoom: 13,
         lat: 28.683016,
         lnt: 115.857963,
-        city: "南昌",
-        gisType: "高德",
+        city: '南昌',
+        gisType: '高德',
         allowLocation: false,
         positions: []
       },
       modelExt: {
-        lat: "lat",
-        lnt: "lnt",
-        address: "address",
-        latName: "经度",
-        lntName: "纬度",
-        addressName: "详细地址",
+        lat: 'lat',
+        lnt: 'lnt',
+        address: 'address',
+        latName: '经度',
+        lntName: '纬度',
+        addressName: '详细地址'
       }
     },
     {
@@ -1762,31 +1762,31 @@ export default {
         required: false,
         pattern: '',
         placeholder: '',
-        isControlled: false,
+        isControlled: false
       },
       modelExt: {
-        province: "province",
-        provinceName: "省份",
-        provinceCode: "province_code",
-        provinceCodeName: "省份代码",
-        city: "city",
-        cityName: "市",
-        cityCode: "city_code",
-        cityCodeName: "市代码",
-        area: "area",
-        areaName: "区县",
-        areaCode: "area_code",
-        areaCodeName: "县区代码"
+        province: 'province',
+        provinceName: '省份',
+        provinceCode: 'province_code',
+        provinceCodeName: '省份代码',
+        city: 'city',
+        cityName: '市',
+        cityCode: 'city_code',
+        cityCodeName: '市代码',
+        area: 'area',
+        areaName: '区县',
+        areaCode: 'area_code',
+        areaCodeName: '县区代码'
       }
     },
     {
       type: 'current_user',
       name: '当前用户',
       icon: 'icon-user-select',
-      key_name: "", // 数据控件隐藏域key对应数据库的备注
-      label_name: "", //  数据控件显示Label信息对应的表结构字段备注信息
-      label_model: "", // 数据控件显示Label信息对应的表结构字段
-      title: "用户",  // 数据选择页面标题设置:用户选择
+      key_name: '', // 数据控件隐藏域key对应数据库的备注
+      label_name: '', //  数据控件显示Label信息对应的表结构字段备注信息
+      label_model: '', // 数据控件显示Label信息对应的表结构字段
+      title: '用户', // 数据选择页面标题设置:用户选择
       options: {
         showFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
         editShowFields: false, // 表单新增时是否显示字段,是显示,否隐藏;
@@ -1796,13 +1796,13 @@ export default {
         placeholder: '',
         disabled: false,
         isControlled: false,
-        multiple: false,      // 是否支持多选
-        remoteUrl: "",  // 数据控件后台访问接口,
+        multiple: false, // 是否支持多选
+        remoteUrl: '' // 数据控件后台访问接口,
       }
     },
     {
-      type: "flow_table",
-      icon: "icon-flow-table",
+      type: 'flow_table',
+      icon: 'icon-flow-table',
       options: {
         isControlled: false,
         gutter: 0,
@@ -1810,49 +1810,49 @@ export default {
         align: 'top'
       },
       tableColumns: [],
-      name: "审批填报项",
-      key: "",
-      model: ""
+      name: '审批填报项',
+      key: '',
+      model: ''
     },
     {
-      type: "table",
-      icon: "icon-table",
+      type: 'table',
+      icon: 'icon-table',
       options: {
         isControlled: false,
         gutter: 0,
         justify: 'start',
         align: 'top',
-        addModel: "batch"
+        addModel: 'batch'
       },
       tableColumns: [],
-      name: "子表单",
-      key: "",
-      model: "",
+      name: '子表单',
+      key: '',
+      model: ''
     },
     {
-      name: "计算公式",
-      icon: "icon-number",
+      name: '计算公式',
+      icon: 'icon-number',
       options: {
         isControlled: false,
-        defaultValue: "",
-        dateType: "number",
-        width: "40%",
-        pattern: "",
+        defaultValue: '',
+        dateType: 'number',
+        width: '40%',
+        pattern: '',
         disabled: false,
         showFields: false,
-        placeholder: "",
+        placeholder: '',
         editShowFields: false,
         required: false,
         formula: {
-          type: "number", //number/year/year_month/date/datetime
+          type: 'number', // number/year/year_month/date/datetime
           exp: [],
-          decimal: 2 //$decimal: "小数点位数，只有类型为number需要设置",
+          decimal: 2 // $decimal: "小数点位数，只有类型为number需要设置",
         }
       },
-      model: "",
+      model: '',
       rules: [],
-      type: "calculate_formula",
-      key: "",
+      type: 'calculate_formula',
+      key: '',
       show: true
     }
   ],

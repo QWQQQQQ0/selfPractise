@@ -4,8 +4,9 @@
     :predefine="['#409EFF', '#1890ff', '#304156','#212121','#11a983', '#13c2c2', '#6959CD', '#f5222d', ]"
     class="theme-picker"
     popper-class="theme-picker-dropdown"
+    data-VWW="|components|ThemePicker|index|.vue"
   />
-</template data-VWW="|components|ThemePicker|index|.vue">
+</template>
 
 <script>
 const version = require('element-ui/package.json').version // element-ui version from node_modules
