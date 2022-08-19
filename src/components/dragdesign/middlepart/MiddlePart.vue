@@ -3,12 +3,6 @@
     <el-button type="text" @click="preview=true">
       预览
     </el-button>
-    <el-button type="text">
-      发布
-    </el-button>
-    <el-button type="text">
-      导入json
-    </el-button>
     <el-button type="text" @click="dialogShow=true">
       导出json
     </el-button>

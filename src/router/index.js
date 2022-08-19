@@ -434,15 +434,15 @@ const asyncRoutes = [
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
 ]
-// function addHidd(list) {
-//   for (const i in list) {
-//     if (list[i]['hidden'] !== false) {
-//       list[i]['hidden'] = true
-//     }
-//   }
-// }
-// addHidd(constantRoutes)
-// addHidd(asyncRoutes)
+function addHidd(list) {
+  for (const i in list) {
+    if (list[i]['hidden'] !== false) {
+      list[i]['hidden'] = true
+    }
+  }
+}
+addHidd(constantRoutes)
+addHidd(asyncRoutes)
 export { constantRoutes, asyncRoutes }
 const createRouter = () => new Router({
   // mode: 'history', // require service support

@@ -1,4 +1,6 @@
-
+import goodsList from '../json/list.js'
+import Sourse from '../json/sourse.js'
+import RecommendList from '../json/recommend.js'
 const Onbox = document.querySelector('.on')
 const Offbox = document.querySelector('.off')
 const nameBox = Onbox.querySelector('#username')
@@ -7,6 +9,7 @@ const input = document.querySelector('#headPic')
 const picImg = document.querySelector('label > img')
 let time
 let banner
+console.log(goodsList, 'goodlist')
 // 进入页面默认事件
 
 // (function(){
@@ -132,12 +135,13 @@ class RotationMap {
     this.autoPlay()
   }
   setPoint() {
-
+    let picBox = ['https://img14.360buyimg.com/pop/s590x470_jfs/t1/207188/5/25011/73811/62fc430fEeac3aeee/92538e37ef89ce34.jpg.avif','https://imgcps.jd.com/img-cubic/creative_server_cid/v2/2000366/10048047908329/FocusFullshop/CkNqZnMvdDEvMTM1NjQ5LzIwLzI5NjA4LzEwOTc0LzYyZWFjYzNjRThhMzQxZWZmL2JmYThiZGFiYWM4NzY3NDkucG5nEgkzLXR5XzBfNTQwAjjui3pCEAoM5rW35bCU5Yaw566xEAFCEQoN56eS5p2A5Lu3MzU2OBACQhAKDOeri-WNs-aKoui0rRAGQgoKBuenjeiNiRAHWOmLzvK3pAI/cr/s/q.jpg',
+                  'https://imgcps.jd.com/ling4/100032226552/5Lqs6YCJ5aW96LSn/5L2g5YC85b6X5oul5pyJ/p-5f3a47329785549f6bc7a6f6/dfc64d6c/cr/s/q.jpg', 'https://imgcps.jd.com/img-cubic/creative_server_cid/v2/2000367/7214578/FocusFullshop/CkNqZnMvdDEvMjIyMDMyLzIwLzE5ODY4Lzc0NDA1LzYyZjQwOGZmRTAyZTU1MjA1LzFkNDBkNWM0YTNjMmFjOTgucG5nEgk0LXR5XzBfNTUwAjjvi3pCFgoS6KW_6Zeo5a2Q5rSX56KX5py6EAFCEAoM6ZyH5pK85p2l5Li0EAJCEAoM56uL5Y2z5oqi6LStEAZCCgoG6LaF5YC8EAdY8qu4Aw/cr/s/q.jpg', 'https://img30.360buyimg.com/pop/s590x470_jfs/t1/201288/25/23710/64955/62f070fdE95cb4f47/22b916d938a43bb5.jpg.avif']
     for (let i = 0; i < this.bannerNum; i++) {
       let li = document.createElement('li')
       let bannerImg = document.createElement('img')
       li.dataset.point = i
-      bannerImg.src = `http://127.0.0.1:3007/api/banner/${i + 1}.jpg`
+      bannerImg.src = picBox[i]
       this.pointer.appendChild(li)
       this.main.appendChild(bannerImg)
     }
@@ -200,11 +204,14 @@ goods()
 async function goods() {
   let categories = []
   let categoriesLink = []
-  const res = await pAjax({
-    url: 'http://127.0.0.1:3007/api/goods/list',
-    method: 'post',
-    dataType: 'json'
-  })
+  // const res = await pAjax({
+  //   url: 'http://127.0.0.1:3007/api/goods/list',
+  //   method: 'post',
+  //   dataType: 'json'
+  // })
+  const res = {data: goodsList}
+  console.log(goodsList, 'gggggggggggggggggggggggg',res)
+  // const res = {data: goodsList}
   for (let i in res.data) {
     categories[i] = []
     categoriesLink[i] = []
@@ -253,7 +260,7 @@ function categoriesShow(res) {
   document.querySelectorAll('ul.left > li').forEach(item => {
     item.onmouseover = function (e) {
       e = e || window.event
-      target = e.target || e.srcElement
+      let target = e.target || e.srcElement
       if (target.nodeName === 'A') {
         target = e.path[1]
       }
@@ -600,29 +607,42 @@ const pro = newProduct()
 // 频道广场
 function inputContent() {
   const channelItem = document.querySelector("#channelItem")
-
-  const xhr = new XMLHttpRequest()
-  xhr.open('get', 'http://127.0.0.1:3007/api/json/sourse.json')
-  xhr.onload = () => {
-    // console.log(JSON.parse(xhr.responseText)['京东'].sort((a, b) => {
-    //     return a.pcpPrice - b.pcpPrice
-    // }))
-    const res = JSON.parse(xhr.responseText).name.channelSquare
-    let arr = randArr(res.h4.length)
-    for (let i in arr) {
-      let div = document.createElement('div')
-      div.className = 'channelItem'
-      let innerStr = `
-                <h4>${res.h4[arr[i]]}<span>${res.span[arr[i]]}</span></h4>
-                <img src="${res.img[arr[i]][0]}" alt="xx">
-                <img src="${res.img[arr[i]][1]}" alt="xxxx">
-            `
-      div.innerHTML = innerStr
-      channelItem.appendChild(div)
-    }
-  }
-  xhr.send()
-}
+  const res = Sourse.name.channelSquare
+  console.log(Sourse, 'sourse')
+  let arr = randArr(res.h4.length)
+  for (let i in arr) {
+    let div = document.createElement('div')
+    div.className = 'channelItem'
+    let innerStr = `
+              <h4>${res.h4[arr[i]]}<span>${res.span[arr[i]]}</span></h4>
+              <img src="${res.img[arr[i]][0]}" alt="xx">
+              <img src="${res.img[arr[i]][1]}" alt="xxxx">
+          `
+    div.innerHTML = innerStr
+    channelItem.appendChild(div)
+  // const xhr = new XMLHttpRequest()
+//   xhr.open('get', 'http://127.0.0.1:3007/api/json/sourse.json')
+//   xhr.onload = () => {
+//     // console.log(JSON.parse(xhr.responseText)['京东'].sort((a, b) => {
+//     //     return a.pcpPrice - b.pcpPrice
+//     // }))
+//     // const res = JSON.parse(xhr.responseText).name.channelSquare
+//     // const res = Sourse.name.channelSquare
+//     // let arr = randArr(res.h4.length)
+//     // for (let i in arr) {
+//     //   let div = document.createElement('div')
+//     //   div.className = 'channelItem'
+//     //   let innerStr = `
+//     //             <h4>${res.h4[arr[i]]}<span>${res.span[arr[i]]}</span></h4>
+//     //             <img src="${res.img[arr[i]][0]}" alt="xx">
+//     //             <img src="${res.img[arr[i]][1]}" alt="xxxx">
+//     //         `
+//     //   div.innerHTML = innerStr
+//     //   channelItem.appendChild(div)
+//     }
+//   }
+//   xhr.send()
+}}
 
 
 // 打乱数组
@@ -687,12 +707,13 @@ function seekScroll() {
       if (footer.offsetTop > 12000) return
       flag = false
       async function p() {
-        const res = await pAjax({
-          url: 'http://127.0.0.1:3007/api/goods/list',
-          method: 'post',
-          dataType: 'json',
-          data: queryStringify({ number: number })
-        })
+        // const res = await pAjax({
+        //   url: 'http://127.0.0.1:3007/api/goods/list',
+        //   method: 'post',
+        //   dataType: 'json',
+        //   data: queryStringify({ number: number })
+        // })
+        const res = RecommendList
         let scrollFra = document.createDocumentFragment()
         for (let i = 0; i < 20; i++) {
           const li = document.createElement('li')

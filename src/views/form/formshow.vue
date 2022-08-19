@@ -1,22 +1,5 @@
 <template>
   <div>
-    <el-upload
-      class="upload-demo"
-      action="https://jsonplaceholder.typicode.com/posts/"
-      multiple
-      :limit="3"
-      :file-list="fileList"
-    >
-      <el-select slot="tip" v-model="uploadMethod" placeholder="">
-        <el-option
-          v-for="item in options"
-          :key="item.value"
-          :label="item.label"
-          :value="item.value"
-        />
-      </el-select>
-      <el-button size="small" type="primary">点击上传</el-button>
-    </el-upload>
     <el-table
       ref="multipleTable"
       :data="tableData"
@@ -36,18 +19,6 @@
         prop="formName"
         label="表单名称"
       />
-      <el-table-column label="处理方式">
-        <template slot-scope="scope">
-          <el-select v-model="scope.row.handleMethod" placeholder="请选择" value="2">
-            <el-option
-              v-for="item in options"
-              :key="item.value"
-              :label="item.label"
-              :value="item.value"
-            />
-          </el-select>
-        </template>
-      </el-table-column>
       <el-table-column label="操作">
         <template slot-scope="scope">
           <el-button
@@ -68,6 +39,7 @@
       :total="totalCount"
       @current-change="handlePageChange"
     />
+
     <el-dialog
       title="提示"
       :visible.sync="dialogVisible"
@@ -157,7 +129,6 @@ export default {
       } else {
         this.selectedRow[this.currentPage][row.formId] = row
       }
-      console.log(this.selectedRow);
     }
   }
 }

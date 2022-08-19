@@ -6,6 +6,9 @@
     <div>
       宽度: <el-input :key="selectedFormItem.model" v-model="selectedFormItem.options.width" v-wheelModel="{key: 'width', option: selectedFormItem.options}" placeholder="请输入内容"/>
     </div>
+    <div>
+      计算公式: <el-input :key="selectedFormItem.model" v-model="selectedFormItem.options.method" v-wheelModel="{key: 'width', option: selectedFormItem.options}" placeholder="请输入内容"/>
+    </div>
     <template v-if="selectedFormItem.type === 'grid'">
       <el-input-number
         v-for="(span, index) in selectedFormItem.columns"
