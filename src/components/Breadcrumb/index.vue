@@ -6,6 +6,10 @@
         <a v-else @click.prevent="handleLink(item)">{{ item.meta.title }}</a>
       </el-breadcrumb-item>
     </transition-group>
+    <el-breadcrumb-item style="margin-left: 60px; font-size: 20px;">
+      <span class="no-redirect" style="color: rgb(255, 165, 165)">整体框架使用github开源框架</span>
+      <a href="https://panjiachen.github.io/vue-element-admin" target="blank" style="cursor: pointer">vue-element-admin</a>
+    </el-breadcrumb-item>
   </el-breadcrumb>
 </template>
 
@@ -73,7 +77,7 @@ export default {
   font-size: 14px;
   line-height: 50px;
   margin-left: 8px;
-
+  color: rgb(255, 165, 165);
   .no-redirect {
     color: #97a8be;
     cursor: text;
