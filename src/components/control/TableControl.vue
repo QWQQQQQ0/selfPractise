@@ -66,7 +66,8 @@ export default {
       required: true
     },
     tableData: {
-
+      type: Array,
+      default: () => []
     }
   },
   data() {

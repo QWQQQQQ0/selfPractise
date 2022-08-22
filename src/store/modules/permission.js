@@ -44,6 +44,9 @@ const mutations = {
     state.addRoutes = routes
     state.routes = constantRoutes.concat(routes)
   }
+  // SHOW_ROUTES: (state, routes) => {
+  //   state
+  // }
 }
 
 const actions = {

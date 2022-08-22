@@ -25,7 +25,7 @@
             size="mini"
             type="primary"
             @click="handleEdit(scope.$index, scope.row)"
-          >导出</el-button>
+          >预览</el-button>
           <el-button
             size="mini"
             type="danger"

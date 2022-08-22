@@ -117,7 +117,6 @@ export default {
       this.dialogVisible = false
     },
     handleDialogInfoSelect(params) {
-      console.log(params);
     }
   }
 }

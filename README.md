@@ -1,6 +1,6 @@
 
 ## Introduction
-框架采用[vue-element-admin](https://panjiachen.github.io/vue-element-admin)仅对路由文件及mock.js配置修改用于展示。
+框架采用[vue-element-admin](https://panjiachen.github.io/vue-element-admin)对路由文件及mock.js配置修改用于展示。
 
 
 

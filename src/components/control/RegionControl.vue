@@ -34,14 +34,12 @@ export default {
 
   },
   mounted() {
-    console.log(this.bindValues);
   },
   destroyed() {
   },
   methods: {
     handleRegionInfo(region) {
       this.bindValues[this.preInfo.model] = region
-      console.log(this.bindValues, 'bindvv', region);
     }
   }
 

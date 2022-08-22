@@ -133,7 +133,7 @@ export default {
         image_upload: true, year: true, datetime: true, month: true, datas: true,
         data: true, year_mounth: true, switch: true, checkbox: true, multiple_select: true,
         select: true, grid: true, table: true, region_select: true, input: true, textarea: true,
-        mobile: true, telephone: true, email: true, postalCode: true, inputNumber: true,
+        mobile: true, telephone: true, email: true, postalCode: true, intFloat: true,
         int: true, intLong: true, website: true
       }
       return typeDic[type]

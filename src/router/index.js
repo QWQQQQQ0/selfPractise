@@ -73,14 +73,20 @@ const constantRoutes = [
   {
     path: '/',
     component: Layout,
-    redirect: '/dashboard',
+    redirect: '/form',
     children: [
       {
-        path: 'dashboard',
-        component: () => import('@/views/dashboard/index'),
-        name: '控制台',
-        meta: { title: '控制台', icon: 'dashboard', affix: true }
+        path: 'form',
+        component: () => import('@/views/form/formshow'),
+        name: '表单显示',
+        meta: { title: '表单显示', icon: 'documentation', affix: true }
       }
+      // {
+      //   path: 'dashboard',
+      //   component: () => import('@/views/dashboard/index'),
+      //   name: '控制台',
+      //   meta: { title: '控制台', icon: 'dashboard', affix: true }
+      // }
     ]
   },
   {
@@ -299,7 +305,6 @@ const asyncRoutes = [
   {
     path: '/error-log',
     component: Layout,
-    hidden: true,
     children: [
       {
         path: 'log',
@@ -315,7 +320,6 @@ const asyncRoutes = [
     component: Layout,
     redirect: '/excel/export-excel',
     name: 'Excel',
-    hidden: true,
     meta: {
       title: 'Excel',
       icon: 'excel'

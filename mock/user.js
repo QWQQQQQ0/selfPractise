@@ -81,7 +81,6 @@ module.exports = [
     url: '/jindong/user',
     type: 'get',
     response: () => {
-      console.log('isrequest');
       return {
         code: 20000,
         data: Mock.mock({

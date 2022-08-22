@@ -7,6 +7,22 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <input id="input" type="number">
+  <script>
+    const button = document.createElement('button')
+    button.innerText = '添加文字'
+    document.body.appendChild(button)
+    const input = document.querySelector('#input')
+    input.oninput = e => {
+      e.returnValue = false
+      console.log([e.target], e)
+      
+    }
+    button.onclick = e => {
+      console.log([input])
+    }
+    
+    console.log(Object)
+  </script>
 </body>
 </html>

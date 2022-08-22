@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function *test1 () {
+      setTimeout(() => {
+        console.log('11111111111')
+      }, 1000);
+      let a = yield '小明'
+      setTimeout(() => {
+        console.log('22222222222')
+      }, 1000);
+      let b = yield '小红'
+      setTimeout(() => {
+        console.log('3333333333')
+      }, 1000);
+    }
+    function next(generater) {
+      let instance = generater.next()
+      if(instance.done) {
+        return
+      }else{
+        next(generater)
+      }
+    }
+    let a = test1()
+    next(a)
+    // console.log(a.next(1)) 
+    // console.log(a.next(2)) 
+    // console.log(a.next(3)) 
+  </script>
+</body>
+</html>

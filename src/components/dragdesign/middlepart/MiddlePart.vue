@@ -1,14 +1,6 @@
 <template>
   <el-main id="formDesignMiddle">
-    <el-button type="text" @click="preview=true">
-      预览
-    </el-button>
-    <el-button type="text" @click="dialogShow=true">
-      导出json
-    </el-button>
-    <el-button type="text" @click="resultForm=[]">
-      清空
-    </el-button>
+    <slot name="middleButton" :BTNinfo="BtnState"/>
     <el-form
       ref="bindValue"
       :model="bindvalues"
@@ -19,7 +11,6 @@
         :group="resultDesign"
         class="designPart"
         :sort="true"
-        @unchoose="handleUnchoose"
         @start="handleStart"
       >
         <transition-group style="height:660px; display: block;">
@@ -38,13 +29,13 @@
                   v-model="col.list"
                   :group="resultDesign"
                   class="designPart"
-                  @unchoose="handleUnchoose"
+
                   @start="handleStart"
                 >
                   <transition-group style="min-height:60px; display: block;">
-                    <template v-for="(span, index) in col.list">
+                    <template v-for="(span, inde) in col.list">
                       <div :key="span.key" class="middleDragItem" @click.stop="handleItemInfo(span)">
-                        <i class="el-icon-close" @click.self.stop="handleDeleteForm(col.list, index)"/>
+                        <i class="el-icon-close" @click.self.stop="handleDeleteForm(col.list, inde)"/>
                         <form-producer :preInfo="span" :bindValues="bindvalues"/>
                       </div>
                     </template>
@@ -52,6 +43,13 @@
                 </draggable>
               </el-col>
             </el-row>
+            <middle-part
+              v-else-if="item.type === 'table'"
+              :key="item.key"
+              :table="item"
+              :selectedItem.sync="selectedItem"
+              :bindvalues="bindvalues"
+            />
             <div v-else :key="item.key" class="middleDragItem" @click="handleItemInfo(item)" >
               <i class="el-icon-close" @click.self.stop="handleDeleteForm(resultForm, itemIndex)"/>
               <form-producer :key="item.key" :preInfo="item" :bindValues="bindvalues"/>
@@ -62,20 +60,20 @@
     </el-form>
     <el-dialog
       v-dialogDrag="{delay:300}"
-      :visible.sync="dialogShow"
+      :visible.sync="BtnState.dialogShow"
       width="60%"
       top="10vh"
       append-to-body
       :close-on-click-modal="false"
     >
-      <json-show v-if="dialogShow" :data="resultForm" :readOnly="true"/>
+      <json-show v-if="BtnState.dialogShow" :data="resultForm" :readOnly="true"/>
       <span slot="footer" class="dialog-footer">
         <el-button type="primary" class="copyClass" data-clipboard-action="copy" :data-clipboard-text="JSON.stringify(resultForm)" @click="handleCopy">复制内容</el-button>
       </span>
     </el-dialog>
     <el-dialog
       v-dialogDrag="{delay:300}"
-      :visible.sync="preview"
+      :visible.sync="BtnState.preview"
       width="60%"
       top="10vh"
       append-to-body
@@ -83,7 +81,7 @@
     >
       <dynamic-form-show :activeForm="resultForm"/>
       <span slot="footer" class="dialog-footer">
-        <el-button type="primary" @click="preview = false">返回</el-button>
+        <el-button type="primary" @click="BtnState.preview = false">返回</el-button>
       </span>
     </el-dialog>
   </el-main>
@@ -97,6 +95,7 @@ import DynamicFormShow from '@/components/DynamicFormShow.vue';
 import Clipboard from 'clipboard';
 import draggable from 'vuedraggable'
 export default {
+  name: 'MiddlePart',
   components: { JsonShow, draggable, FormProducer, DynamicFormShow },
   props: {
     bindvalues: {
@@ -104,9 +103,14 @@ export default {
       default: () => {}
     },
     selectedItem: {
-      type: Object
+      type: Object,
+      default: () => {}
+    },
+    table: {
+      type: Object,
+      default: () => {},
+      required: false
     }
-
   },
   data() {
     return {
@@ -114,30 +118,35 @@ export default {
       resultDesign: {
         name: 'designForm',
         put: (to, from, dragEl, evt) => {
-          if (sign) {
+          if (sign || (this.table && /middleDragItem/.test(dragEl.className))) {
+            sign = false
             return false
           }
         },
         pull: true
       },
-      dialogShow: false,
-      preview: false
+      BtnState: { dialogShow: false, preview: false }
+    }
+  },
+  watch: {
+    'resultForm.length': {
+      handler(newV, oldV) {
+        if (this.table) {
+          this.table.tableColumns = this.resultForm
+        }
+        return
+      }
     }
   },
   mounted() {
-
   },
   methods: {
     handleStart(item) {
-      if (item.item._underlying_vm_.type === 'grid') {
+      if (item.item._underlying_vm_.type === 'grid' || item.item._underlying_vm_.type === 'table') {
         sign = true
       }
     },
-    handleUnchoose() {
-      sign = false
-    },
     handleItemInfo(item) {
-      console.log(item, this.resultForm)
       this.$emit('update:selectedItem', item)
     },
     async handleCopy() {

@@ -30,6 +30,7 @@
       :show-password="(preInfo.options&&preInfo.options.showPassword)?preInfo.options.showPassword:false"
       :disabled="(preInfo.options&&preInfo.options.disabled)?preInfo.options.disabled:false"
       :size="(preInfo.options&&preInfo.options.size)?preInfo.options.size:''"
+      @change="handleFormula"
     />
   </el-form-item>
 </template>
@@ -58,15 +59,29 @@ export default {
   watch: {
     'preInfo.options.width': {
       handler(newV, oldV) {
-        console.log('change', newV);
       }
     }
   },
+  created() {
+    this.$set(this.bindValues, this.preInfo.model, '')
+    // if(this.preInfo.type === 'inputNumber' || this.preInfo.type === 'intLong' || this.preInfo.type === 'int') {
+    //   this.bindValues[this.preInfo.model] = 0
+    // }
+  },
   mounted() {
+  },
+  methods: {
+    handleFormula() {
+      if (this.preInfo.options && this.preInfo.options.calculaFormula) {
+        for (const i in this.preInfo.options.calculaFormula) {
+          eval(this.preInfo.options.calculaFormula[i])
+        }
+      }
+    }
   }
 }
 </script>
 
-<style>
+<style lang="less" scoped>
 
 </style>
