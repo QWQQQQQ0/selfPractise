@@ -3,7 +3,7 @@ export default {
     {
       type: 'input',
       name: '单行文本',
-      icon: 'icon-input',
+
       options: {
         width: '40%',
         defaultValue: '',
@@ -11,28 +11,28 @@ export default {
         dataType: 'string',
         pattern: '',
         placeholder: '',
-        disabled: false,
-        isControlled: false
+        disabled: false
+
       }
     },
     {
       type: 'textarea',
       name: '多行文本',
-      icon: 'icon-textarea',
+
       options: {
         width: '40%',
         defaultValue: '',
         required: false,
         disabled: false,
         pattern: '',
-        placeholder: '',
-        isControlled: false
+        placeholder: ''
+
       }
     },
     {
       type: 'text',
       name: '文字',
-      icon: 'icon-text',
+
       options: {
         defaultValue: '这是一段文字'
       }
@@ -40,77 +40,77 @@ export default {
     {
       type: 'mobile',
       name: '手机号码',
-      icon: 'icon-input-mobile',
+
       options: {
         width: '40%',
         defaultValue: '',
         required: false,
         pattern: '/^1([34578])\\d{9}$/',
         placeholder: '',
-        disabled: false,
-        isControlled: false
+        disabled: false
+
       }
     },
     {
       type: 'telephone',
       name: '电话号码',
-      icon: 'icon-input-tel',
+
       options: {
         width: '40%',
         defaultValue: '',
         required: false,
         pattern: '/^0\\d{2,3}-?\\d{7,8}$/',
         placeholder: '',
-        disabled: false,
-        isControlled: false
+        disabled: false
+
       }
     },
     {
       type: 'email',
       name: '邮箱',
-      icon: 'icon-input-mail',
+
       options: {
         width: '40%',
         defaultValue: '',
         required: false,
         pattern: '/^([a-zA-Z0-9_.\\-])+@(([a-zA-Z0-9\\-])+\\.)+([a-zA-Z0-9]{2,4})+$/',
         placeholder: '',
-        disabled: false,
-        isControlled: false
+        disabled: false
+
       }
     },
     {
       type: 'postalCode',
       name: '邮政编码',
-      icon: 'icon-input-postal',
+
       options: {
         width: '40%',
         defaultValue: '',
         required: false,
         pattern: '/^[1-9][0-9]{5}$/',
         placeholder: '',
-        disabled: false,
-        isControlled: false
+        disabled: false
+
       }
     },
     {
       type: 'website',
       name: '网址',
-      icon: 'icon-input-website',
+
       options: {
         width: '40%',
         defaultValue: '',
         required: false,
         pattern: `/((https|http|ftp|rtsp|mms):\\/\\/)?(([0-9a-zA-Z_!~*'().&=+$%-]+:)?[0-9a-zA-Z_!~*'().&=+$%-]+@)?(([0-9]{1,3}\\.){3}[0-9]{1,3}|([0-9a-zA-Z_!~*'()-]+\\.)*([0-9a-zA-Z][0-9a-zA-Z-]{0,61})?[0-9a-zA-Z]\\.[a-zA-Z]{2,6})(:[0-9]{1,4})?((\\/?)|(\\/[0-9a-zA-Z_!~*'().;?:@&=+$,%#-]+)+\\/?)/g`,
         placeholder: '',
-        disabled: false,
-        isControlled: false
+        disabled: false
+
       }
     },
     {
       type: 'intFloat',
       name: '数字(浮点型)',
-      icon: 'icon-input-number',
+
       options: {
         width: '40%',
         defaultValue: '',
@@ -118,7 +118,7 @@ export default {
         pattern: `/^-?\\d+(\\.\\d+)?$/`,
         placeholder: '',
         disabled: false,
-        isControlled: false,
+
         min: 0,
         max: 10,
         enableMinMax: false
@@ -127,7 +127,7 @@ export default {
     {
       type: 'int',
       name: '数字(整型)',
-      icon: 'icon-input-number',
+
       options: {
 
         width: '40%',
@@ -136,7 +136,7 @@ export default {
         pattern: '/^-?\\d+$/',
         placeholder: '',
         disabled: false,
-        isControlled: false,
+
         min: 0,
         max: 10,
         enableMinMax: false
@@ -145,7 +145,7 @@ export default {
     {
       type: 'intLong',
       name: '数字(长整型)',
-      icon: 'icon-input-number',
+
       options: {
         width: '40%',
 
@@ -154,7 +154,7 @@ export default {
         pattern: '/^-?\\d+$/',
         placeholder: '',
         disabled: false,
-        isControlled: false,
+
         min: 0,
         max: 10,
         enableMinMax: false
@@ -163,7 +163,7 @@ export default {
     {
       type: 'number',
       name: '计数器',
-      icon: 'icon-number',
+
       options: {
         width: '40%',
 
@@ -173,14 +173,14 @@ export default {
         max: 10,
         step: 1,
         disabled: false,
-        controlsPosition: '',
-        isControlled: false
+        controlsPosition: ''
+
       }
     },
     {
       type: 'radio',
       name: '单选框',
-      icon: 'icon-radio',
+
       options: {
 
         inline: true,
@@ -212,14 +212,14 @@ export default {
           label: 'label'
         },
         remoteCall: '',
-        disabled: false,
-        isControlled: false
+        disabled: false
+
       }
     },
     {
       type: 'checkbox',
       name: '多选框',
-      icon: 'icon-check-box',
+
       options: {
 
         inline: false,
@@ -247,14 +247,14 @@ export default {
           label: 'label'
         },
         remoteCall: '',
-        disabled: false,
-        isControlled: false
+        disabled: false
+
       }
     },
     {
       type: 'year',
       name: '年份',
-      icon: 'icon-year',
+
       options: {
         width: '40%',
 
@@ -270,14 +270,14 @@ export default {
         type: 'year',
         format: 'yyyy',
         timestamp: false,
-        required: false,
-        isControlled: false
+        required: false
+
       }
     },
     {
       type: 'month',
       name: '月份',
-      icon: 'icon-month',
+
       options: {
         width: '40%',
 
@@ -293,14 +293,14 @@ export default {
         type: 'month',
         format: 'MM',
         timestamp: false,
-        required: false,
-        isControlled: false
+        required: false
+
       }
     },
     {
       type: 'year_month',
       name: '年月份',
-      icon: 'icon-month',
+
       options: {
         width: '40%',
 
@@ -316,14 +316,14 @@ export default {
         type: 'month',
         format: 'yyyy-MM',
         timestamp: false,
-        required: false,
-        isControlled: false
+        required: false
+
       }
     },
     {
       type: 'date',
       name: '日期',
-      icon: 'icon-date',
+
       options: {
         width: '40%',
 
@@ -339,14 +339,14 @@ export default {
         type: 'date',
         format: 'yyyy-MM-dd',
         timestamp: false,
-        required: false,
-        isControlled: false
+        required: false
+
       }
     },
     {
       type: 'dates',
       name: 'dates',
-      icon: 'icon-date',
+
       options: {
         width: '40%',
 
@@ -362,14 +362,14 @@ export default {
         type: 'dates',
         format: 'yyyy-MM-dd',
         timestamp: false,
-        required: false,
-        isControlled: false
+        required: false
+
       }
     },
     {
       type: 'week',
       name: '星期',
-      icon: 'icon-time',
+
       options: {
         width: '40%',
 
@@ -385,14 +385,14 @@ export default {
         isRange: false,
         arrowControl: true,
         format: 'HH:mm:ss',
-        required: false,
-        isControlled: false
+        required: false
+
       }
     },
     {
       type: 'datetime',
       name: '日期时间',
-      icon: 'icon-datetime',
+
       options: {
         width: '40%',
 
@@ -407,14 +407,14 @@ export default {
         endPlaceholder: '',
         format: 'yyyy-MM-dd HH:mm:ss',
         timestamp: false,
-        required: false,
-        isControlled: false
+        required: false
+
       }
     },
     {
       type: 'datetimerange',
       name: '日期时间范围',
-      icon: 'icon-datetime',
+
       options: {
         width: '40%',
 
@@ -429,14 +429,14 @@ export default {
         endPlaceholder: '',
         format: 'yyyy-MM-dd HH:mm:ss',
         timestamp: false,
-        required: false,
-        isControlled: false
+        required: false
+
       }
     },
     {
       type: 'daterange',
       name: '日期范围',
-      icon: 'icon-datetime',
+
       options: {
         width: '40%',
 
@@ -451,14 +451,14 @@ export default {
         endPlaceholder: '',
         format: 'yyyy-MM-dd HH:mm:ss',
         timestamp: false,
-        required: false,
-        isControlled: false
+        required: false
+
       }
     },
     {
       type: 'monthrange',
       name: '日期范围',
-      icon: 'icon-datetime',
+
       options: {
         width: '40%',
 
@@ -473,20 +473,20 @@ export default {
         endPlaceholder: '',
         format: 'yyyy-MM-dd HH:mm:ss',
         timestamp: false,
-        required: false,
-        isControlled: false
+        required: false
+
       }
     },
     {
       type: 'switch',
       name: '开关',
-      icon: 'icon-switch',
+
       options: {
 
         defaultValue: false,
         required: false,
         disabled: false,
-        isControlled: false,
+
         closeMsg: '已关闭',
         openMsg: '已开启'
       }
@@ -494,7 +494,7 @@ export default {
     {
       type: 'multiple_select',
       name: '多选下拉框',
-      icon: 'icon-multipleSelect',
+
       options: {
         width: '40%',
 
@@ -528,14 +528,14 @@ export default {
           value: 'value',
           label: 'label'
         },
-        remoteCall: '',
-        isControlled: false
+        remoteCall: ''
+
       }
     },
     {
       type: 'select',
       name: '下拉选择框',
-      icon: 'icon-select',
+
       options: {
         width: '40%',
 
@@ -570,8 +570,8 @@ export default {
           value: 'value',
           label: 'label'
         },
-        remoteCall: '',
-        isControlled: false
+        remoteCall: ''
+
       }
     }
   ],
@@ -579,7 +579,7 @@ export default {
     {
       type: 'image_upload',
       name: '图片',
-      icon: 'icon-imageUpload',
+
       options: {
         action: '',
 
@@ -589,14 +589,14 @@ export default {
         // 最大上传数
         length: 3,
         maxFileSize: 1,
-        isControlled: false,
+
         presetImgs: ''
       }
     },
     {
       type: 'file_upload',
       name: '附件',
-      icon: 'icon-fileUpload',
+
       options: {
         action: '',
 
@@ -605,14 +605,14 @@ export default {
         multiple: false,
         maxFileSize: 10,
         // 最大上传数
-        length: 3,
-        isControlled: false
+        length: 3
+
       }
     },
     {
       type: 'signature',
       name: '签名',
-      icon: 'icon-imageUpload',
+
       options: {
         action: '',
 
@@ -621,62 +621,37 @@ export default {
         multiple: false,
         // 最大上传数
         length: 3,
-        maxFileSize: 1,
-        isControlled: false
+        maxFileSize: 1
+
       }
     },
 
     {
       type: 'pop_up',
       name: '弹窗控件',
-      icon: 'icon-dic-select',
-      typeCode: '', // 数据字典类型
-      key_name: '', // 数据控件隐藏域key对应数据库的备注
-      label_name: '', //  数据控件显示Label信息对应的表结构字段备注信息
-      label_model: '', // 数据控件显示Label信息对应的表结构字段
-      title: '数据字典', // 数据选择页面标题设置:用户选择
       options: {
         width: '40%',
         defaultValue: '',
         required: false,
-
         placeholder: '',
         disabled: false,
-        isControlled: false,
-        maps: {
-          key: '', // 映射源数据的主键 (组织架构ID:id)
-          name: '', // 映射源数据字段用于显示 (组织架构名称:orgName)
-          title: '', // 数据选择页面标题设置:用户选择
-          mapping: []
-        },
-        multiple: false, // 是否支持多选
-        props: {
-          label: '', // 对应Vue的Tree组件的设置,对应于maps.name
-          children: 'zones'
-        },
-        remoteUrl: '', // 数据控件后台访问接口,
-        displayModel: 'tree' // 数据选择页面的展现形式
+        multiple: false
       }
     },
     {
-      type: 'gis_select',
+      type: 'gis_location',
       name: 'Gis定位',
-      icon: 'icon-gis-select',
       options: {
         width: '80%',
         defaultValue: '',
-
         required: false,
         pattern: '',
         placeholder: '',
         disabled: false,
-        isControlled: false,
         zoom: 13,
         lat: 28.683016,
         lnt: 115.857963,
         city: '南昌',
-        gisType: '高德',
-        allowLocation: false,
         positions: []
       },
       modelExt: {
@@ -691,16 +666,13 @@ export default {
     {
       type: 'region_select',
       name: '行政区划',
-      icon: 'icon-region-select',
       options: {
         width: '40%',
-
         defaultValue: '',
         disabled: false,
         required: false,
         pattern: '',
-        placeholder: '',
-        isControlled: false
+        placeholder: ''
       },
       modelExt: {
         province: 'province',
@@ -718,30 +690,8 @@ export default {
       }
     },
     {
-      type: 'current_user',
-      name: '当前用户',
-      icon: 'icon-user-select',
-      key_name: '', // 数据控件隐藏域key对应数据库的备注
-      label_name: '', //  数据控件显示Label信息对应的表结构字段备注信息
-      label_model: '', // 数据控件显示Label信息对应的表结构字段
-      title: '用户', // 数据选择页面标题设置:用户选择
-      options: {
-
-        width: '40%',
-        defaultValue: '',
-        required: false,
-        placeholder: '',
-        disabled: false,
-        isControlled: false,
-        multiple: false, // 是否支持多选
-        remoteUrl: '' // 数据控件后台访问接口,
-      }
-    },
-    {
       type: 'table',
-      icon: 'icon-table',
       options: {
-        isControlled: false,
         gutter: 0,
         justify: 'start',
         align: 'top',
@@ -766,7 +716,7 @@ export default {
     {
       type: 'grid',
       name: '栅格布局',
-      icon: 'icon-grid',
+
       columns: [
         {
           span: 12,

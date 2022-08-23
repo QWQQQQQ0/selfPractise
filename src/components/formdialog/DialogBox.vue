@@ -1,34 +1,15 @@
 <template>
-  <select-org
-    v-if="dialogItem.type === 'org_select' || dialogItem.type === 'm_org_select'"
-    :item="dialogItem"
-    @handleInfoSelect="handleBindValue"
-  />
-  <select-role
-    v-else-if="dialogItem.type === 'role_select' || dialogItem.type === 'm_role_select'"
-    :item="dialogItem"
-    @handleInfoSelect="handleBindValue"
-  />
-  <select-data
-    v-else-if="dialogItem.type === 'data_select' || dialogItem.type === 'm_data_select'"
-    :item="dialogItem"
-    @handleInfoSelect="handleBindValue"
-  />
-  <select-user
-    v-else-if="dialogItem.type === 'user_select' || dialogItem.type === 'm_user_select'"
-    :item="dialogItem"
+  <gis-vue
+    v-if="dialogItem.type === 'gis_location'"
+    :dialogItem="dialogItem"
     @handleInfoSelect="handleBindValue"
   />
 </template>
 
 <script>
-import SelectData from './SelectData.vue';
-import SelectOrg from './SelectOrg.vue';
-// import SelectRefData from './SelectRefData.vue';
-import SelectRole from './SelectRole.vue';
-import SelectUser from './SelectUser.vue';
+import GisVue from '@/components/Widgets/GisVue.vue'
 export default {
-  components: { SelectRole, SelectData, SelectOrg, SelectUser },
+  components: { GisVue },
   props: {
     dialogItem: {
       type: Object,
@@ -42,6 +23,9 @@ export default {
       type: Function,
       required: false
     }
+  },
+  created() {
+    console.log(this.dialogItem)
   },
   methods: {
     handleBindValue(Info, ischeck, isChild) {

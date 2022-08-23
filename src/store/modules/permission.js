@@ -1,5 +1,4 @@
 import { asyncRoutes, constantRoutes } from '@/router'
-
 /**
  * Use meta.role to determine if the current user has permission
  * @param roles
@@ -36,17 +35,36 @@ export function filterAsyncRoutes(routes, roles) {
 
 const state = {
   routes: [],
-  addRoutes: []
+  addRoutes: [],
+  selfRoute: false
 }
-
+function addHidd(list) {
+  const returnList = []
+  for (const i in list) {
+    if (list[i]['hidden'] === false) {
+      list[i]['hidden'] === false
+    } else if (list[i]['hidden'] === true) {
+      delete list[i]['hidden']
+    } else {
+      list[i]['hidden'] = true
+    }
+    returnList.push(list[i])
+  }
+  return returnList
+}
+// addHidd(constantRoutes)
+// addHidd(asyncRoutes)
 const mutations = {
   SET_ROUTES: (state, routes) => {
     state.addRoutes = routes
     state.routes = constantRoutes.concat(routes)
+  },
+  SHOW_ROUTES: (state, routes) => {
+    // state.addRoutes = addHidd(state.addRoutes)
+    state.routes = addHidd(state.routes)
+    state.selfRoute = !state.selfRoute
+    console.log(state, routes, 'change')
   }
-  // SHOW_ROUTES: (state, routes) => {
-  //   state
-  // }
 }
 
 const actions = {
@@ -59,6 +77,7 @@ const actions = {
         accessedRoutes = filterAsyncRoutes(asyncRoutes, roles)
       }
       commit('SET_ROUTES', accessedRoutes)
+      commit('SHOW_ROUTES')
       resolve(accessedRoutes)
     })
   }

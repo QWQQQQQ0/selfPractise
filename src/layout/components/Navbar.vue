@@ -5,6 +5,9 @@
     <breadcrumb id="breadcrumb-container" class="breadcrumb-container" />
     <div class="right-menu">
       <template v-if="device!=='mobile'">
+        <el-tooltip class="item" effect="dark" :content="selfRoute?'显示个人组件':'显示所有组件'" placement="bottom">
+          <i style="font-weight: bold; line-height: 50px; cursor: pointer; font-size: 20px" :class="selfRoute?'el-icon-open ' : 'el-icon-turn-off'" class="right-menu-item" @click="handleRouteState" />
+        </el-tooltip>
         <search id="header-search" class="right-menu-item" />
 
         <error-log class="errLog-container right-menu-item hover-effect" />
@@ -72,7 +75,8 @@ export default {
     ...mapGetters([
       'sidebar',
       'avatar',
-      'device'
+      'device',
+      'selfRoute'
     ])
   },
   methods: {
@@ -82,6 +86,9 @@ export default {
     async logout() {
       await this.$store.dispatch('user/logout')
       this.$router.push(`/login?redirect=${this.$route.fullPath}`)
+    },
+    handleRouteState() {
+      this.$store.commit('permission/SHOW_ROUTES')
     }
   }
 }

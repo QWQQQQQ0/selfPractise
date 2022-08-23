@@ -16,7 +16,6 @@
     />
     <div style="height:40px"><el-button style="position:absolute;right: 30px;" type="primary" right @click="submitForm('dynamicValidateForm')">提交</el-button></div>
     <el-dialog
-      v-dialogDrag
       title="提示"
       :visible.sync="dialogVisible"
       width="60%"
@@ -57,22 +56,9 @@ export default {
     return {
       handleRule: (item) => {
         return
-        // if (item.rules.length) {
-        //   item.rules.forEach(ele => {
-        //     if (ele.pattern) {
-        //       let reg = ele.pattern.toString().replace(/\//g, '')
-        //       ele.pattern = new RegExp(reg)
-        //     } else {
-        //       this.$set(ele, 'trigger', 'blur')
-        //     }
-        //   })
-        // }
-        // if (!this.rules[item.model]) {
-        //   this.$set(this.rules, item.model, item.rules)
-        // }
-        // this.rulesLength = Object.keys(this.rules).length
       },
       handleDialog: (item) => {
+        console.log(item, 'iiiiiiiii')
         this.dialogItem = item
         this.dialogVisible = true
       }

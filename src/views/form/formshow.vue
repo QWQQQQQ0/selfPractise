@@ -46,7 +46,7 @@
       width="60%"
       append-to-body
     >
-      <dynamic-form-show :key="activeForm.formId" v-el-drag-dialog :activeForm="activeForm.controlList"/>
+      <dynamic-form-show :key="activeForm.formId" :activeForm="activeForm.controlList"/>
       <span>这是一段信息</span>
     </el-dialog>
   </div>

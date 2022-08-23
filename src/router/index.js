@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-
 Vue.use(Router)
 
 /* Layout */
@@ -42,7 +41,7 @@ const constantRoutes = [
   {
     path: '/redirect',
     component: Layout,
-    hidden: true,
+
     children: [
       {
         path: '/redirect/:path(.*)',
@@ -144,8 +143,8 @@ const constantRoutes = [
       {
         path: 'jdpage',
         component: () => import('@/views/jindong'),
-        name: '首页',
-        meta: { title: '首页', icon: 'guide', noCache: true }
+        name: '京东首页',
+        meta: { title: '京东首页', icon: 'guide', noCache: true }
       }
     ]
   },
@@ -153,7 +152,6 @@ const constantRoutes = [
     path: '/profile',
     component: Layout,
     redirect: '/profile/index',
-    hidden: true,
     children: [
       {
         path: 'index',
@@ -285,7 +283,7 @@ const asyncRoutes = [
       title: 'Error Pages',
       icon: '404'
     },
-    hidden: true,
+
     children: [
       {
         path: '401',
@@ -392,8 +390,7 @@ const asyncRoutes = [
   },
   {
     path: '/pdf/download',
-    component: () => import('@/views/pdf/download'),
-    hidden: true
+    component: () => import('@/views/pdf/download')
   },
 
   {
@@ -412,7 +409,7 @@ const asyncRoutes = [
   {
     path: '/clipboard',
     component: Layout,
-    hidden: true,
+
     children: [
       {
         path: 'index',
@@ -426,7 +423,7 @@ const asyncRoutes = [
   {
     path: 'external-link',
     component: Layout,
-    hidden: true,
+
     children: [
       {
         path: 'https://github.com/PanJiaChen/vue-element-admin',
@@ -438,15 +435,6 @@ const asyncRoutes = [
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
 ]
-function addHidd(list) {
-  for (const i in list) {
-    if (list[i]['hidden'] !== false) {
-      list[i]['hidden'] = true
-    }
-  }
-}
-addHidd(constantRoutes)
-addHidd(asyncRoutes)
 export { constantRoutes, asyncRoutes }
 const createRouter = () => new Router({
   // mode: 'history', // require service support
