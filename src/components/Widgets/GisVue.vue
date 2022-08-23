@@ -67,7 +67,7 @@ export default {
   methods: {
     initMap() {
       AMapLoader.load({
-        key: '6cbac8a382b160c28ec413c9a1c30312', // 申请好的Web端开发者Key，首次调用 load 时必填
+        key: '', // 申请好的Web端开发者Key，首次调用 load 时必填
         version: '2.0', // 指定要加载的 JSAPI 的版本，缺省时默认为 1.4.15
         plugins: ['AMap.ToolBar', 'AMap.Scale', 'AMap.HawkEye', 'AMap.MapType', 'AMap.Geolocation', 'AMap.PlaceSearch', 'AMap.AutoComplete'] // 需要使用的的插件列表，如比例尺'AMap.Scale'等
         // 需要使用的的插件列表，如比例尺'AMap.Scale'等
